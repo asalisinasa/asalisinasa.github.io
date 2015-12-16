@@ -3,17 +3,137 @@
 
 <head>
   <meta charset="utf-8">
-  <title>asalisinasa</title>
+  <title>Алина Степанова</title>
+  <!-- fonts -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <h1>Hello World!</h1>
-  <h3>Projects</h3>
-  <ul>
-  	<li>
-  		<a href="sedona_index.html">Седона</a>
-  	</li>
-  </ul>
+  <header class="main-header">
+    <div class="main-header">
+      <nav class="main-nav  container clearfix">
+        <ul class="main-nav__list">
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="">Обо мне</a>
+          </li>
+          <li class="main-nav__item  main-nav__item">
+            <a href="">Навыки</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#page-portfolio">Портфолио</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>Алина Степанова</h1>
+      <h2>верстка сайтов front-end разработка</h2>
+    </div>
+  </header>
+
+
+
+  <main>
+    <!-- <article class="about">
+      <b class="about__short-title">
+                                      Привет!</b>
+      <div class="about__content">
+        <h1 class="about__title">
+                              Меня зовут Алина Степанова и я начинающий 
+                              веб-разработчик.</h1>
+        <p class="about__text">
+                               Специализируюсь на HTML и CSS, а также выполняю не сложные 
+                               задачи с использованием JavaScript. Верстаю <strong>чисто</strong> 
+                               и <em>семантично</em>, <strong>валидно</strong> и 
+                               <em>кроссбраузерно</em>.</p>
+        <p class="about__text">
+                               На этой странице вы можете увидеть примеры моих работ и связаться 
+                               со мной.</p>
+      </div>
+      
+      <div class="about__photo">
+        <img src="img/photo.png" alt="Алина Степанова веб-разработчик">
+      </div>
+    </article> -->
+
+
+    <div class="features">
+      <div class="features container clearfix">
+        <div class="features__item">
+          <h4 class="features__text">Прогрессивное улучшение</h4>
+        </div>
+
+        <div class="features__item">
+          <h4 class="features__text">Адаптивность</h4>
+        </div>
+
+        <div class="features__item">
+          <h4 class="features__text">Mobile first</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+    <ul class="skills__list">
+      <li class="skills__item">HTML5</li>
+      <li class="skills__item">CSS3</li>
+      <li class="skills__item">Javascript(Jquery)</li>
+      <li class="skills__item">БЭМ</li>
+      <li class="skills__item">Sass</li>
+      <li class="skills__item">Git</li>
+      <li class="skills__item">SublimeText</li>
+      <li class="skills__item">Photoshop</li>
+    </ul>
+      <!-- <span class="skills__item">HTML5</span>
+      <span class="skills__item">CSS3</span>
+      <span class="skills__item">Javascript(Jquery)</span>
+      <span class="skills__item">БЭМ</span>
+      <span class="skills__item">Sass</span>
+      <span class="skills__item">Git</span>
+      <span class="skills__item">SublimeText</span>
+      <span class="skills__item">Photoshop</span> -->
+    </div>
+
+    <article class="portfolio" id="page-portfolio">
+      <h3 class="portfolio__title">Примеры</h3>
+      <section class="portfolio__item">
+        <h4>Седона</h4>
+        <a href="portfolio/sedona/index.html">
+          <img src="img/content/sedona.jpg" width="400" height="auto" alt="">
+        </a>
+      </section>
+      <section class="portfolio__item">
+        <h4>Nёrds</h4>
+        <a href="portfolio/nerds/index.html">
+          <img src="img/content/nerds-index.jpg" width="400" height="auto" alt="">
+        </a>
+      </section>
+      <section class="portfolio__item"></section>
+    </article>
+  </main>
+
+
+  <footer class="main-footer">
+    <div class="main-footer container clearfix">
+      <section class="main-footer__social">
+        <a href="">Mail
+          <img src="" alt="" title="mail">
+        </a>
+
+        <a href="">Skype
+          <img src="" alt="" title="skype">
+        </a>
+
+        <a href="">Github
+          <img src="" alt="" title="github">
+        </a>
+      </section>
+
+      <section class="main-footer__copyright"></section>
+    </div>
+  </footer>
 </body>
 
 </html>

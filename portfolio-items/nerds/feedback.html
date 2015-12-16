@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Дизайн-студия Нердс | Форма обратной связи</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body> 
+  <!-- begin header -->
+  <header class="main-header">
+    <div class="container clearfix">
+      <div class="main-header__logo">
+        <a href="index.html">
+          <img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Нердс">
+        </a>
+      </div>
+
+      <div class="main-header__basket">
+        <a class="main-header__link main-header__link--disabled" href="#">Корзина</a>
+      </div>
+
+      <nav class="main-header__nav">
+        <ul class="main-header__ul">
+          <li class="main-header__lst">
+            <a class="main-header__link" href="index.html">Студия</a>
+          </li><!--
+           --><li class="main-header__lst ">
+            <a class="main-header__link main-header__link--disabled" href="#">Клиенты</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link" href="catalog.html">Магазин</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link main-header__link--disabled" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- begin form -->
+  <div class="contacts__feedback-form-single">
+      <form action="#" method="post">
+        <div class="feedback-form__half-width">
+          <label for="name">Ваше имя:</label>
+          <input class="feedback-form__text-field" type="text" name="name" value="" placeholder="представьтесь, пожалуйста" id="name">
+        </div>
+
+        <div class="feedback-form__half-width">  
+          <label for="email">Ваш e-mail:</label>
+          <input class="feedback-form__text-field" type="email" name="email" value="" placeholder="для отравки ответа" id="email">
+        </div>
+        
+        <div class="feedback-form__whole-width">
+          <label for="text">Текст письма:</label>
+          <textarea class="feedback-form__text-field" cols="30" rows="5" name="text" placeholder="в свободной форме" id="text"></textarea>
+          <button class="feedback-form-single__btn btn btn-red" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  <!-- end form -->
+
+  
+  <div class="container">
+    <!-- begin footer -->
+    <footer class="main-footer">
+      <div class="main-footer__social">
+        <a class="main-footer__social_btn icon-vk" href=""></a>
+        <a class="main-footer__social_btn icon-facebook" href=""></a>
+        <a class="main-footer__social_btn icon-instagramm" href=""></a>
+      </div>
+
+      <div class="main-footer__text">
+        <h2 class="main-footer__text_title">Давайте дружить, это выгодно!</h2>
+        <p class="main-footer__text_descr">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </div>
+
+</body>
+
+</html>

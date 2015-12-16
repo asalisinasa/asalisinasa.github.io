@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Дизайн-студия Нердс | Главная</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body> 
+  <!-- begin header -->
+  <header class="main-header">
+    <div class="container clearfix">
+      <div class="main-header__logo">
+        <a href="index.html">
+          <img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Нердс">
+        </a>
+      </div>
+
+      <div class="main-header__basket">
+        <a class="main-header__link main-header__link--disabled" href="#">Корзина</a>
+      </div>
+
+      <nav class="main-header__nav">
+        <ul class="main-header__ul">
+          <li class="main-header__lst">
+            <a class="main-header__link main-header__link--active" href="index.html">Студия</a>
+          </li><!--
+           --><li class="main-header__lst ">
+            <a class="main-header__link main-header__link--disabled" href="#">Клиенты</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link" href="catalog.html">Магазин</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link main-header__link--disabled" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- begin content -->
+  <main class="main-cnt">
+    <section class="slider-block">
+      <div class="slider__container">
+        <input class="slider__input" type="radio" name="point" id="slide__btn-1" checked>
+        <input class="slider__input" type="radio" name="point" id="slide__btn-2">
+        <input class="slider__input" type="radio" name="point" id="slide__btn-3">
+
+        <div class="slider__controls">
+          <label class="slider__controls_label" for="slide__btn-1"></label>
+          <label class="slider__controls_label" for="slide__btn-2"></label>
+          <label class="slider__controls_label" for="slide__btn-3"></label>
+        </div>
+
+        <div class="slides">
+          <div class="slide slide1">
+            <div class="slide__text">
+              <h2 class="slide__title">Долго, дорого, <br/> скрупулезно.</h2>
+              <p class="slide__descr">Математически выверенный дизайн <br/> для вашего сайта или мобильного приложения.</p>
+              <a class="slide__btn btn btn-red" href="#">УЗНАТЬ БОЛЬШЕ</a>
+            </div>
+          </div>
+
+            <div class="slide slide2">
+              <div class="slide__text">
+                <h2 class="slide__title">Любите ли вы математику, как любим ее мы?</h2>
+                <p class="slide__descr">Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать</p>
+                <a class="slide__btn btn btn-red" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              </div>
+            </div>
+
+            <div class="slide slide3">
+              <div class="slide__text">
+                <h2 class="slide__title">Только наркотики, <br/> только хардкор!</h2>
+                <p class="slide__descr">Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
+                <a class="slide__btn btn btn-red" href="#">УЗНАТЬ БОЛЬШЕ</a>
+              </div>
+            </div>
+         </div>  
+      </div>
+    </section>
+        
+    <div class="container">
+      <div class="services-block clearfix">
+        <div class="service">
+          <img class="service__img" src="img/content/web_sites.png" width="240" height="124" alt="Веб-сайты">
+          <h3 class="service__title">Веб-сайты</h3>
+          <p class="service__descr">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="service__btn btn btn-red" href="#">Заказать</a>
+        </div>
+
+        <div class="service">
+          <img class="service_t_img" src="img/content/apps.png"  width="240" height="124" alt="Мобильные приложения">
+          <h3 class="service__title">Приложения</h3>
+          <p class="service__descr">Покорите топ-10 приложений <br/> в AppStrore и Google Play</p>
+          <a class="service__btn btn btn-green" href="#">Заказать</a>
+        </div>
+
+        <div class="service">
+          <img class="service__img" src="img/content/presentation.png"  width="240" height="124" alt="Презентации">
+          <h3 class="service__title">Презентации</h3>
+          <p class="service__descr">Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a class="service__btn btn btn-yellow" href="#">Заказать</a>
+        </div>
+      </div>
+
+      <div class="advantages-block clearfix">
+        <div class="advantages__left-col">
+          <div class="advantages__about-us">
+            <h2 class="advantages__about-us_title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+            <p class="advantages__about-us_descr">Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
+          </div>
+
+          <div class="advantages__our-products">
+            <h4 class="advantages__descr-lst_title">Выполняем заказы на разработку:</h4>
+            <ul class="advantages__descr-lst">
+              <li class="advantages__descr-lst_li" >Веб-сайтов любой сложности</li>
+              <li class="advantages__descr-lst_li">Мобильных приложений для iOS и Android</li>
+              <li class="advantages__descr-lst_li">Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="advantages__right-col">
+          <div class="advantages__logo">
+          <img src="img/logo_big.png" width="187" height="75" alt="Нёрдс">
+            <span class="advantages___logo_caption">Since 2004</span>
+          </div>
+
+          <div class="advantages__our-work">
+            <h4 class="advantages__descr-lst_title">КАК Мы работаем:</h4>
+            <ul class="advantages__descr-lst">
+                <li class="advantages__descr-lst_li">С самоотдачей 146%</li>
+                <li class="advantages__descr-lst_li">Соблюдая сроки на 100%</li>
+                <li class="advantages__descr-lst_li">По предоплате 50%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="friends-block clearfix">
+        <div class="friend">
+          <a class="friend__glukhanko friend__link" href=""></a>
+        </div>
+
+        <div class="friend">
+          <a class="friend__academy friend__link" href=""></a>
+        </div>
+
+        <div class="friend">
+          <a class="friend__barbershop friend__link" href=""></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- end content -->
+  
+  <!-- begin contacts -->
+  <div class="contacts-block">
+    <div class="contacts__map" id="map-canvas"></div>
+    <div class="contacts__adress-block">
+      <h4 class="adress-block__title">NЁRDS DESIGN STUDIO</h4>
+      <p class="adress-block__adress">191186, Санкт-Петербург,<br>
+      ул. Б. Конюшенная, д. 19/8</p>
+      <p class="adress-block__phone">тел. +7 (812) 275-75-75</p>
+      <a class="adress-block__btn btn btn-red" href="feedback.html">НАПИШИТЕ НАМ</a>
+    </div>
+
+     <div class="contacts__feedback-form">
+      <button class="feedback-form__close_btn btn btn-red"></button>
+      <form action="#" method="post">
+        <div class="feedback-form__half-width">
+          <label for="name">Ваше имя:</label>
+          <input class="feedback-form__text-field" type="text" name="name" value="" placeholder="представьтесь, пожалуйста" id="name">
+        </div>
+
+        <div class="feedback-form__half-width">  
+          <label for="email">Ваш e-mail:</label>
+          <input class="feedback-form__text-field" type="email" name="email" value="" placeholder="для отравки ответа" id="email">
+        </div>
+        
+        <div class="feedback-form__whole-width">
+          <label for="text">Текст письма:</label>
+          <textarea class="feedback-form__text-field" cols="30" rows="5" name="text" placeholder="в свободной форме" id="text"></textarea>
+        </div>
+        <button class="feedback-form__btn feedback-form__btn--submit btn btn-red" type="submit">Отправить</button>
+        <a href="#" class="feedback-form__btn feedback-form__btn--cancel btn btn-gray">Отмена</a>
+      </form>
+    </div>
+  </div>
+  <!-- end contacts -->
+
+  
+  <div class="container">
+    <!-- begin footer -->
+    <footer class="main-footer">
+      <div class="main-footer__social">
+        <a class="main-footer__social_btn icon-vk" href=""></a>
+        <a class="main-footer__social_btn icon-facebook" href=""></a>
+        <a class="main-footer__social_btn icon-instagramm" href=""></a>
+      </div>
+
+      <div class="main-footer__text">
+        <h2 class="main-footer__text_title">Давайте дружить, это выгодно!</h2>
+        <p class="main-footer__text_descr">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

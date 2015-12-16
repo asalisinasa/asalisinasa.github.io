@@ -1,0 +1,180 @@
+/* font-family: "GothamPro"; */
+@font-face {
+  font-family: "GothamPro";
+  src: url("../font/GothamPro/GothamPro.eot");
+  src: url("../font/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../font/GothamPro/GothamPro.woff") format("woff"), url("../font/GothamPro/GothamPro.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "GothamProBold"; */
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../font/GothamProBold/GothamProBold.eot");
+  src: url("../font/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../font/GothamProBold/GothamProBold.woff") format("woff"), url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "GothamProMedium"; */
+@font-face {
+  font-family: "GothamProMedium";
+  src: url("../font/GothamProMedium/GothamProMedium.eot");
+  src: url("../font/GothamProMedium/GothamProMedium.eot?#iefix") format("embedded-opentype"), url("../font/GothamProMedium/GothamProMedium.woff") format("woff"), url("../font/GothamProMedium/GothamProMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "GothamProLight"; */
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../font/GothamProLight/GothamProLight.eot");
+  src: url("../font/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../font/GothamProLight/GothamProLight.woff") format("woff"), url("../font/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: url("../img/background/bg-intro.jpg") no-repeat;
+  font-family: "GothamPro", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 768px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.main-nav {
+  margin-bottom: 170px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.main-nav__list {
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  vertical-align: baseline;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 15px;
+  margin-right: 40px;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-nav__item a:hover {
+  color: #91A8D0;
+}
+
+.main-nav__item:last-child {
+  background-color: #ffffff;
+  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
+}
+
+.main-nav__item:last-child a {
+  color: #9896A4;
+}
+
+.features {
+  min-height: 300px;
+  background-color: #ffffff;
+  color: #9896A4;
+}
+
+.features__item {
+  float: left;
+  width: 33.33333%;
+  margin-top: 220px;
+}
+
+.features__item:nth-child(2):after {
+  background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
+}
+
+.features__text {
+  position: relative;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.features__text:before {
+  content: "";
+  position: absolute;
+  top: -170px;
+  width: 140px;
+  height: 140px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.features__text:nth-child(1):before {
+  background: #F7786B url("../img/icon/initial_icon/icon-progressive.png") no-repeat 20px 30px;
+}
+
+.features__text:nth-child(2):before {
+  background: #F7786B url("../img/icon/initial_icon/icon-adaptive.png") no-repeat 20px 30px;
+}
+
+.features__text:nth-child(2):after {
+  background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
+}
+
+.features__text:nth-child(3):before {
+  background: #F7786B url("../img/icon/initial_icon/icon-mobile.png") no-repeat 20px 30px;
+}
+
+.skills {
+  color: #000000;
+  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.skills__list {
+  list-style-type: none;
+}
+
+.skills__item {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 20px;
+}

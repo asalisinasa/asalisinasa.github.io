@@ -136,40 +136,14 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0 0;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
 }
 
 h2 {
-  margin: 0 0;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+ margin: 0 0;
 }
 
 h3 {
-  margin: 0 0;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-h4 {
-  margin: 0 0;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-}
-p {
-  margin: 0 0;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
+ margin: 0 0;
 }
 /**
  * Address styling not present in IE 8/9.

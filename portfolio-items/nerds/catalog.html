@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>Дизайн-студия Нердс | Каталог товаров</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- begin header -->
+  <header class="main-header">
+    <div class="container clearfix">
+      <div class="main-header__logo">
+        <a href="index.html">
+          <img src="img/logo.png" width="139" height="56" alt="Дизайн-студия Нердс">
+        </a>
+      </div>
+
+      <div class="main-header__basket">
+        <a class="main-header__link main-header__link--disabled" href="#">Корзина</a>
+      </div>
+
+      <nav class="main-header__nav">
+        <ul class="main-header__ul">
+          <li class="main-header__lst">
+            <a class="main-header__link" href="index.html">Студия</a>
+          </li><!--
+           --><li class="main-header__lst ">
+            <a class="main-header__link main-header__link--disabled" href="#">Клиенты</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link main-header__link--active" href="catalog.html">Магазин</a>
+          </li><!--
+          --><li class="main-header__lst">
+            <a class="main-header__link main-header__link--disabled" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end header -->
+    
+  <!-- begin content -->
+  <main class="main-cnt clearfix">
+    <section class="intro">
+      <div class="container">
+        <h1 class="intro__title">Добро пожаловать в магазин <br/> готовых макетов</h1>
+      </div>
+    </section>
+    
+    <!-- begin side-bar -->
+    <div class="container">
+      <aside class="side-bar">
+        <div class="side-bar__serch-options">
+          <form method="get" action="form.php">
+            <div class="side-bar__filter">
+              <h3 class="side-bar__title">Стоимость:</h3>
+              <div class="side-bar__range-controls">
+                <div class="side-bar__scale">
+                  <div class="side-bar__bar">
+                    <div class="side-bar__toggle side-bar__toggle-min"></div>
+                    <div class="side-bar__toggle side-bar__toggle-max"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="side-bar__price-controls">
+                <label for="min-price">
+                                       ОТ
+                  <input class="side-bar__min-price" name="min-price" type="text" value="0" id="min-price">
+                </label>
+                <label for="max-price">
+                                       ДО
+                  <input class="max-price" name="max-price" type="text" value="15000" id="max-price">
+                </label>
+              </div>
+            </div>
+
+            <div class="side-bar__filter">
+              <h3 class="side-bar__title">Сетка:</h3>
+              <div class="side-bar__filter-item">
+                <input type="radio" name="option_grid" id="filter-item--responsive" checked>
+                <label for="filter-item--responsive">Адаптивная</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="radio" name="option_grid" id="filter-item--fixed">
+                <label for="filter-item--fixed">Фиксированная</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="radio" name="option_grid" id="filter-item--fluid">
+                <label for="filter-item--fluid">Резиновая</label>
+              </div>
+            </div>
+
+            <div class="side-bar__filter">
+              <h3 class="side-bar__title">Особенности:</h3>
+              <div class="side-bar__filter-item">
+                <input type="checkbox" name="option_feature" id="filter-item--slider" checked>
+                <label for="filter-item--slider">Слайдер</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="checkbox" name="option_feature" id="filter-item--preferences">
+                <label for="filter-item--preferences">Блок преимуществ</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="checkbox" name="option_feature" id="filter-item--news" checked>
+                <label for="filter-item--news">Новости</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="checkbox" name="option_feature" id="filter-item--gallery">
+                <label for="filter-item--gallery">Галерея</label>
+              </div>
+              <div class="side-bar__filter-item">
+                <input type="checkbox" name="option_feature" id="filter-item--basket">
+                <label for="filter-item--basket">Корзина</label>
+              </div>
+            </div>
+            
+            <button class="btn btn-gray side-bar__btn" type="submit">Показать</button>
+          </form>
+        </div>
+      </aside>
+      <!-- end side-bar -->
+      
+      <!-- begin catalog-content -->
+      <div class="catalog-cnt"> 
+
+        <div class="toolbar">
+          <span class="toolbar__title">Сортировать:</span>
+
+          <ul class="toolbar__ul">
+            <li class="toolbar__item">
+              <a class="toolbar__item_text " href="#">по цене</a>
+            </li>
+            <li class="toolbar__item">
+              <a class="toolbar__item_text toolbar__item_link--active" href="#">по типу</a>
+            </li>
+            <li class="toolbar__item">
+              <a class="toolbar__item_text" href="#">по функционалу</a>
+            </li>
+            <li class="toolbar__item">
+              <a class="toolbar__item_icon toolbar__item_icon--active icon-up-dir" href="#" title="по возрастанию"></a>
+              <a class="toolbar__item_icon icon-down-dir toolbar__right-col_icon--active" href="#" title="по убыванию"></a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- begin catalog items -->
+        <div class="catalog-items">
+
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/aviator.jpg" width="240" height="240" alt="Одностраничный макет с авторским дизайном">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">AVIATOR</a>
+              </h4>
+              <p class="catalog-item__descr">Одностраничный макет с авторским дизайном</p>
+              <a class="catalog-item__btn btn btn-red" href="#">8000 р.</a>
+            </div>
+          </article>
+
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/sunset.jpg" width="240" height="240" alt="Интернет-магазин с личным кабинетом">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">Sunset</a>
+              </h4>
+              <p class="catalog-item__descr">Интернет-магазин с личным кабинетом</p>
+              <a class="catalog-item__btn btn btn-red" href="#">10000 р.</a>
+            </div>
+          </article>
+
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/forte.jpg" width="240" height="240" alt="Отличный макет для личного блога">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">FORTE</a>
+              </h4>
+              <p class="catalog-item__descr">Отличный макет для личного блога</p>
+              <a class="catalog-item__btn btn btn-red" href="#">5000 р.</a>
+            </div>
+          </article>
+
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/modern_organic_thai.jpg" width="240" height="240" alt="Сайт для ресторана быстрого питания">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">Modern Organic THAI</a>
+              </h4>
+              <p class="catalog-item__descr">Сайт для ресторана быстрого питания</p>
+              <a class="catalog-item__btn btn btn-red" href="#">12000 р.</a>
+            </div>
+          </article>
+
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/avenue.jpg" width="240" height="240" alt="Макет для блога о путешествиях">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">AVENUE</a>
+              </h4>
+              <p class="catalog-item__descr">Макет для блога о путешествиях</p>
+              <a class="catalog-item__btn btn btn-red" href="#">8000 р.</a>
+            </div>
+          </article>
+  
+          <article class="catalog-item">
+            <div class="catalog-item__img">
+              <img src="img/content/dovetail.jpg" width="240" height="240" alt="Интернет-магазин с галереей товаров">
+            </div>
+            <div class="catalog-item__info">
+              <h4 class="catalog-item__title">
+                <a class="catalog-item__title_link" href="#">DOVETAIL</a>
+              </h4>
+              <p class="catalog-item__descr">Интернет-магазин с галереей товаров</p>
+              <a class="catalog-item__btn btn btn-red" href="#">14000 р.</a>
+            </div>
+          </article>
+          <!-- end catalog items -->
+          
+          <div class="paginator">
+            <ul class="paginator__ul" >
+              <li class="paginator__li">
+                <a class="paginator__btn paginator__btn--active btn btn-gray" href="#">1</a>
+              </li>
+              <li class="paginator__li">
+                <a class="paginator__btn btn btn-gray" href="#">2</a>
+                </li>
+              <li class="paginator__li">
+                <a class="paginator__btn btn btn-gray" href="#">3</a>
+              </li>
+              <li class="paginator__li">
+                <a class="paginator__btn paginator__btn--next btn btn-gray page-btn_next" href="#">Следующая</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end catalog-content -->
+    </div>
+  </main>
+  <!-- end content -->
+
+  <!-- begin contacts -->
+  <div class="contacts-block">
+    <div class="contacts__map" id="map-canvas"></div>
+    <div class="contacts__adress-block">
+      <h4 class="adress-block__title">NЁRDS DESIGN STUDIO</h4>
+      <p class="adress-block__adress">191186, Санкт-Петербург,<br>
+      ул. Б. Конюшенная, д. 19/8</p>
+      <p class="adress-block__phone">тел. +7 (812) 275-75-75</p>
+      <a class="adress-block__btn btn btn-red" href="feedback.html">НАПИШИТЕ НАМ</a>
+    </div>
+
+     <div class="contacts__feedback-form">
+      <button class="feedback-form__close_btn btn btn-red"></button>
+      <form action="#" method="post">
+        <div class="feedback-form__half-width">
+          <label for="name">Ваше имя:</label>
+          <input class="feedback-form__text-field" type="text" name="name" value="" placeholder="представьтесь, пожалуйста" id="name">
+        </div>
+
+        <div class="feedback-form__half-width">  
+          <label for="email">Ваш e-mail:</label>
+          <input class="feedback-form__text-field" type="email" name="email" value="" placeholder="для отравки ответа" id="email">
+        </div>
+        
+        <div class="feedback-form__whole-width">
+          <label for="text">Текст письма:</label>
+          <textarea class="feedback-form__text-field" cols="30" rows="5" name="text" placeholder="в свободной форме" id="text"></textarea>
+        </div>
+        <button class="feedback-form__btn feedback-form__btn--submit btn btn-red" type="submit">Отправить</button>
+        <a href="#" class="feedback-form__btn feedback-form__btn--cancel btn btn-gray">Отмена</a>
+      </form>
+    </div>
+  </div>
+  <!-- end contacts -->
+  
+  <div class="container">
+    <!-- begin footer -->
+    <footer class="main-footer">
+      <div class="main-footer__social">
+        <a class="main-footer__social_btn icon-vk" href=""></a>
+        <a class="main-footer__social_btn icon-facebook" href=""></a>
+        <a class="main-footer__social_btn icon-instagramm" href=""></a>
+      </div>
+
+      <div class="main-footer__text">
+        <h2 class="main-footer__text_title">Давайте дружить, это выгодно!</h2>
+        <p class="main-footer__text_descr">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
