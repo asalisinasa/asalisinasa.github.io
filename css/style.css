@@ -38,7 +38,6 @@ body {
   width: 100%;
   height: 100%;
   color: #ffffff;
-  background: url("../img/background/bg-intro.jpg") no-repeat;
   font-family: "GothamPro", Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.2em;
@@ -57,6 +56,12 @@ h2 {
   line-height: 1.2;
 }
 
+h3 {
+  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
 .container {
   max-width: 1200px;
   min-width: 768px;
@@ -70,11 +75,16 @@ h2 {
 }
 
 .main-header {
-  margin-bottom: 300px;
+  margin-bottom: 60px;
   text-align: center;
   text-transform: uppercase;
   font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
   font-size: 18px;
+}
+
+.main-header--inn {
+  min-height: 600px;
+  background: url("../img/background/bg-intro.jpg") no-repeat;
 }
 
 .main-nav {
@@ -85,6 +95,15 @@ h2 {
 .main-nav__list {
   margin: 0;
   list-style: none;
+}
+
+.main-nav__item:last-child {
+  background-color: #ffffff;
+  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
+}
+
+.main-nav__item:last-child a {
+  color: #9896A4;
 }
 
 .main-nav__item {
@@ -102,16 +121,7 @@ h2 {
 }
 
 .main-nav__item a:hover {
-  color: #91A8D0;
-}
-
-.main-nav__item:last-child {
-  background-color: #ffffff;
-  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
-}
-
-.main-nav__item:last-child a {
-  color: #9896A4;
+  color: #CBD5E6;
 }
 
 .features {
@@ -120,49 +130,61 @@ h2 {
   color: #9896A4;
 }
 
+.features__title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .features__item {
   float: left;
   width: 33.33333%;
-  margin-top: 220px;
 }
 
-.features__item:nth-child(2):after {
-  background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
+.features .features__icon {
+  position: relative;
+  display: block;
+  vertical-align: baseline;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #F7786B;
+}
+
+.features .features__icon:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 100px;
+  background: url("../img/icon/spritesheet.png") no-repeat;
+}
+
+.features .features__icon--progressive:after {
+  background-position: -2px -193px;
+}
+
+.features .features__icon--adaptive:after {
+  margin-left: -50px;
+  background-position: 0px -9px;
+}
+
+.features .features__icon--mobile:after {
+  background-position: 25px -103px;
 }
 
 .features__text {
-  position: relative;
   padding: 0 80px;
   text-align: center;
 }
 
-.features__text:before {
-  content: "";
-  position: absolute;
-  top: -170px;
-  width: 140px;
-  height: 140px;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-}
-
-.features__text:nth-child(1):before {
-  background: #F7786B url("../img/icon/initial_icon/icon-progressive.png") no-repeat 20px 30px;
-}
-
-.features__text:nth-child(2):before {
-  background: #F7786B url("../img/icon/initial_icon/icon-adaptive.png") no-repeat 20px 30px;
-}
-
-.features__text:nth-child(2):after {
-  background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
-}
-
-.features__text:nth-child(3):before {
-  background: #F7786B url("../img/icon/initial_icon/icon-mobile.png") no-repeat 20px 30px;
-}
-
 .skills {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 100px;
   color: #000000;
   font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
   font-size: 40px;
@@ -177,4 +199,43 @@ h2 {
   display: inline-block;
   vertical-align: baseline;
   margin-right: 20px;
+}
+
+.skills__bg {
+  width: 100%;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+}
+
+.skills__scroll {
+  background-position: 10px 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  transition: all 3s ease-in 0s;
+  -webkit-transition: all 3s ease-in 0s;
+  -moz-transition: all 3s ease-in 0s;
+  -ms-transition: all 3s ease-in 0s;
+  -o-transition: all 3s ease-in 0s;
+}
+
+.skills__bg:hover .skills__scroll {
+  background-position: -400px 0 !important;
+}
+
+.portfolio {
+  color: #9896A4;
+}
+
+.portfolio__title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.portfolio__item {
+  display: inline-block;
+  vertical-align: baseline;
 }

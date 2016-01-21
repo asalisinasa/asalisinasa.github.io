@@ -54,7 +54,8 @@ $gotham-lig: "GothamProLight", Arial, Helvetica, sans-serif;
 
 // colors
 $rose: #F7CAC9;
-$serenity: #91A8D0;
+// $serenity: #91A8D0;
+$serenity: #CBD5E6;
 $peach: #F7786B;
 $gray: #9896A4;
 $white: #ffffff;
@@ -74,7 +75,7 @@ body {
    height: 100%;
    
    color: $white;
-   background: url("../img/background/bg-intro.jpg") no-repeat;
+   
    
    font-family: $gotham-reg; 
    font-size: 18px;
@@ -89,6 +90,11 @@ h1 {
 h2 {
     font-family: $gotham-med; 
     font-size: 24px;
+    line-height: 1.2;
+}
+h3 {
+    font-family: $gotham-med; 
+    font-size: 32px;
     line-height: 1.2;
 }
 
@@ -108,15 +114,19 @@ h2 {
 }
 
 .main-header {
-   margin-bottom: 300px;
+   margin-bottom: 60px;
    
    text-align: center; 
    text-transform: uppercase;
    
    font-family: $gotham-med;
    font-size: 18px; 
-   
 } 
+.main-header--inn {
+    min-height: 600px;
+    
+    background: url("../img/background/bg-intro.jpg") no-repeat;
+}
 .main-nav {
     
     margin-bottom: 170px;
@@ -125,6 +135,14 @@ h2 {
     &__list {
         margin: 0;
         list-style: none;
+    } 
+    &__item:last-child {
+        background-color: $white;
+        
+        font-family: $gotham-bol;
+        a {
+           color: $gray; 
+        } 
     } 
     &__item {
         display: inline-block;
@@ -142,62 +160,74 @@ h2 {
            color: $serenity; 
         } 
     } 
-    &__item:last-child {
-        background-color: $white;
-        
-        font-family: $gotham-bol;
-        a {
-           color: $gray; 
-        } 
-    } 
+    
 } 
 .features {
     min-height: 300px;
     background-color: $white;
     color: $gray;
     
+    &__title {
+        margin-bottom: 50px;
+        
+        text-align: center;
+    }
     &__item {
         float: left;
         
         width: $col-3;
-        margin-top: 220px;
     } 
-    &__item:nth-child(2):after {
-     background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
-    }
-    &__text {
+    .features__icon {
         position: relative;
         
+        display: block;
+        vertical-align: baseline;
+        
+        width: 140px;
+        height: 140px;
+        margin: 0 auto; 
+        margin-bottom: 30px; 
+        -webkit-border-radius: 100%;
+                border-radius: 100%;
+        
+        background-color: $peach;
+    }
+    .features__icon:after {
+        content: "";
+        
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        
+        width: 200px;
+        height: 100px;
+        
+        background: url("../img/icon/spritesheet.png") no-repeat;
+    } 
+    .features__icon--progressive:after {
+     background-position: -2px -193px;
+    }
+    .features__icon--adaptive:after {
+     margin-left: -50px;
+     
+     background-position: 0px -9px;
+    }
+    .features__icon--mobile:after {
+     background-position: 25px -103px;;
+    }
+    &__text {
         padding: 0 80px;
         
         text-align: center;
     } 
-    &__text:before {
-        content: "";
-        position: absolute;
-        top: -170px;
-            
-        width: 140px;
-        height: 140px;
-        -webkit-border-radius: 100%;
-                border-radius: 100%;
-    }
-    &__text:nth-child(1):before {
-     background: $peach url("../img/icon/initial_icon/icon-progressive.png") no-repeat 20px 30px;
-    }
-    &__text:nth-child(2):before {
-     background: $peach url("../img/icon/initial_icon/icon-adaptive.png") no-repeat 20px 30px;
-    }
-    &__text:nth-child(2):after {
-     background: url("../img/icon/initial_icon/icon-sparks.png") no-repeat 20px 30px;
-    } 
-    &__text:nth-child(3):before {
-     background: $peach url("../img/icon/initial_icon/icon-mobile.png") no-repeat 20px 30px;
-    }
 } 
 
 
 .skills {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    
     color: $black;
     
     font-family: $gotham-med;
@@ -212,4 +242,46 @@ h2 {
     
     margin-right: 20px;
     }
+    &__bg {
+        width: 100%;
+        height: 80px;
+        display:inline-block;
+        position: relative;
+    }
+    &__scroll {
+        background-position: 10px 0;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        left: 0;
+        transition: all 3s ease-in 0s;
+        -webkit-transition: all 3s ease-in 0s;
+        -moz-transition: all 3s ease-in 0s;
+        -ms-transition: all 3s ease-in 0s;
+        -o-transition: all 3s ease-in 0s;
+    }
 } 
+.skills__bg:hover .skills__scroll{
+            background-position: -400px 0!important;
+            }
+
+
+
+.portfolio {
+    color: $gray;
+    
+    &__title {
+        margin-bottom: 50px;
+        
+        text-align: center;
+    }
+    &__item {
+        display: inline-block;
+        vertical-align: baseline;
+        
+    }
+    &__img {
+        
+    }
+}

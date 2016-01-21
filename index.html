@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="main-header">
+  <header class="main-header container">
+    <div class="main-header--inn">
       <nav class="main-nav  container clearfix">
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item--active">
@@ -36,7 +36,7 @@
 
 
   <main>
-    <!-- <article class="about">
+   <!--  <article class="about">
       <b class="about__short-title">
                                       Привет!</b>
       <div class="about__content">
@@ -53,64 +53,66 @@
                                со мной.</p>
       </div>
       
-      <div class="about__photo">
+      <!-- <div class="about__photo">
         <img src="img/photo.png" alt="Алина Степанова веб-разработчик">
-      </div>
+      </div> 
     </article> -->
 
 
     <div class="features">
+      <h3 class="features__title">Инструменты, которыми владею</h3>
       <div class="features container clearfix">
         <div class="features__item">
+          <i class="features__icon features__icon--progressive"></i>
           <h4 class="features__text">Прогрессивное улучшение</h4>
         </div>
 
         <div class="features__item">
+          <i class="features__icon features__icon--adaptive"></i>
           <h4 class="features__text">Адаптивность</h4>
         </div>
 
         <div class="features__item">
+          <i class="features__icon features__icon--mobile"></i>
           <h4 class="features__text">Mobile first</h4>
         </div>
       </div>
     </div>
 
-    <div class="skills">
-    <ul class="skills__list">
-      <li class="skills__item">HTML5</li>
-      <li class="skills__item">CSS3</li>
-      <li class="skills__item">Javascript(Jquery)</li>
-      <li class="skills__item">БЭМ</li>
-      <li class="skills__item">Sass</li>
-      <li class="skills__item">Git</li>
-      <li class="skills__item">SublimeText</li>
-      <li class="skills__item">Photoshop</li>
-    </ul>
-      <!-- <span class="skills__item">HTML5</span>
-      <span class="skills__item">CSS3</span>
-      <span class="skills__item">Javascript(Jquery)</span>
-      <span class="skills__item">БЭМ</span>
-      <span class="skills__item">Sass</span>
-      <span class="skills__item">Git</span>
-      <span class="skills__item">SublimeText</span>
-      <span class="skills__item">Photoshop</span> -->
-    </div>
+    <div id="skills" class="skills">
+      <span class="skills__bg">
+        <span class="skills__scroll" style="background-image: url('./img/content/skills.jpg');"></span>
+      </span>
 
-    <article class="portfolio" id="page-portfolio">
-      <h3 class="portfolio__title">Примеры</h3>
+    <!-- <ul class="skills__list">
+        <li class="skills__item">HTML5</li>
+        <li class="skills__item">CSS3</li>
+        <li class="skills__item">Javascript(Jquery)</li>
+        <li class="skills__item">БЭМ</li>
+        <li class="skills__item">Sass</li>
+        <li class="skills__item">Git</li>
+        <li class="skills__item">SublimeText</li>
+        <li class="skills__item">Photoshop</li>
+      </ul> -->
+      
+    </div> 
+
+    <article class="portfolio container" id="page-portfolio">
+      <h3 class="portfolio__title">Портфолио</h3>
       <section class="portfolio__item">
         <h4>Седона</h4>
         <a href="portfolio/sedona/index.html">
-          <img src="img/content/sedona.jpg" width="400" height="auto" alt="">
+          <img class="portfolio__img" src="img/content/sedona.jpg" width="400" height="auto" alt="">
         </a>
       </section>
       <section class="portfolio__item">
         <h4>Nёrds</h4>
         <a href="portfolio/nerds/index.html">
-          <img src="img/content/nerds-index.jpg" width="400" height="auto" alt="">
+          <img class="portfolio__img" src="img/content/nerds-index.jpg" width="400" height="auto" alt="">
         </a>
       </section>
-      <section class="portfolio__item"></section>
+      <section class="portfolio__item">
+      </section>
     </article>
   </main>
 
