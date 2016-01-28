@@ -1,0 +1,63 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+    
+  width: 100%;
+   
+ 
+  text-transform: uppercase;
+
+  font-family: $gotham-med;
+  font-size: 18px; 
+  
+  background-image: linear-gradient(to right, #F1878B, #BCC3D8, #EE888D, #B9C7DE, #EF888D);
+  border-bottom: 1px solid $white;
+} 
+
+.main-nav {
+   @extend %container;
+    
+    &__list {
+    text-align: center;
+        
+    list-style: none;
+    } 
+     
+    &__item {
+        display: inline-block;
+        vertical-align: baseline;
+        
+        min-width: 120px;
+        height: 60px;
+        
+        padding: 0 15px;
+        margin-right: 20px;
+      
+       
+        a {
+          display: block;
+          
+          text-decoration: none;
+          
+          color: $white; 
+          
+          line-height: 60px;
+        } 
+        a:hover {
+           color: $serenity; 
+        } 
+    } 
+    &__item:last-child {
+      margin-right: 0;
+    }
+    &__item--active {
+      background-color: $white;
+          
+      font-family: $gotham-bol;
+          a {
+             color: $gray; 
+          } 
+    }   
+} 
