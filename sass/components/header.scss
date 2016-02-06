@@ -17,12 +17,11 @@
 } 
 
 .main-nav {
-   @extend %container;
+   @include container;
     
     &__list {
-    text-align: center;
-        
-    list-style: none;
+      @include ul-reset;
+      text-align: center;
     } 
      
     &__item {
@@ -52,6 +51,9 @@
     &__item:last-child {
       margin-right: 0;
     }
+
+    // тут наверное понадобится js
+    
     &__item--active {
       background-color: $white;
           

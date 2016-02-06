@@ -1,0 +1,37 @@
+.main-footer {
+    margin-bottom: 0;
+      
+    background: $gray;
+    color: $gray-dark;
+    
+    &__content {
+    }
+
+    &__social {
+        background-color: rgba(255,255,255, .7);
+        text-align: center;
+    }
+    &__icon {
+        
+    }
+    &__icon-mail:before {
+        content: "";
+        
+        width: 64px;
+        height: 64px;
+        
+        background: url("../img/icon/initial_icon/icon-github.png") no-repeat;
+    }
+}
+
+.contacts {
+
+    &__feedback-form {
+        width: 460px;
+        padding: 50px 80px;
+        margin: 70px auto;
+        background: #FFF;
+        -webkit-box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+        box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+    }
+}

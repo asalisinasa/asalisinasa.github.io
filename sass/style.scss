@@ -1,240 +1,23 @@
-/////////////////// font ///////////////////////
-/////////////////////////////////////////////////
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "scaffolding";
+@import "fonts";
+@import "type";
 
-
-/* font-family: "GothamPro"; */
-@font-face {
-    font-family: "GothamPro";
-    src: url("../font/GothamPro/GothamPro.eot");
-    src: url("../font/GothamPro/GothamPro.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamPro/GothamPro.woff") format("woff"),
-    url("../font/GothamPro/GothamPro.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "GothamProBold"; */
-@font-face {
-    font-family: "GothamProBold";
-    src: url("../font/GothamProBold/GothamProBold.eot");
-    src: url("../font/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProBold/GothamProBold.woff") format("woff"),
-    url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "GothamProMedium"; */
-@font-face {
-    font-family: "GothamProMedium";
-    src: url("../font/GothamProMedium/GothamProMedium.eot");
-    src: url("../font/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProMedium/GothamProMedium.woff") format("woff"),
-    url("../font/GothamProMedium/GothamProMedium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "GothamProLight"; */
-@font-face {
-    font-family: "GothamProLight";
-    src: url("../font/GothamProLight/GothamProLight.eot");
-    src: url("../font/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProLight/GothamProLight.woff") format("woff"),
-    url("../font/GothamProLight/GothamProLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-/////////////////// VARIABLES ////////////////////
-/////////////////////////////////////////////////
-
-//fonts
-$gotham-reg: "GothamPro", Arial, Helvetica, sans-serif;
-$gotham-bol: "GothamProBold", Arial, Helvetica, sans-serif;
-$gotham-med: "GothamProMedium", Arial, Helvetica, sans-serif;
-$gotham-lig: "GothamProLight", Arial, Helvetica, sans-serif;
-
-// colors
-$rose: #F7CAC9;
-$serenity-dark: #91A8D0;
-$serenity: #CBD5E6;
-$peach: #F7786B;
-$gray: #9896A4;
-$white: #ffffff;
-$black: #000000;
-
-//grid
-$col-3: 100%/3;
-
-
-
-// normalize
-
-ul {
-  -webkit-margin-before: 0;
-   -webkit-margin-after: 0;
-   -webkit-margin-start: 0px;
-   -webkit-margin-end: 0px;
-   -webkit-padding-start: 0;
-}
-
-
-
-body {
-   width: 100%;
-   height: 100%;
-   
-   color: $white;
-   
-   
-   font-family: $gotham-reg; 
-   font-size: 18px;
-   line-height: 1.2em;
-   font-weight: normal;
-} 
-
-h1 {
-    font-family: $gotham-bol; 
-    font-size: 50px;
-    line-height: 1.2;
-} 
-h2 {
-    font-family: $gotham-med; 
-    font-size: 24px;
-    line-height: 1.2;
-}
-h3 {
-    font-family: $gotham-med; 
-    font-size: 32px;
-    line-height: 1.2;
-}
+@import "components/header";
+@import "components/intro";
+@import "components/about";
+@import "components/features";
+@import "components/portfolio";
+@import "components/footer";
 
 
 
 
-%container {
-    max-width: 1200px;
-    min-width: 768px;
-    margin: 0 auto;
-} 
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-.article {
-    @extend %container;
-    
-    &__wrap {
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    max-height: 1800px;
-    
-    margin-top: 60px;
-    }
-    &__title {
-    position: relative;
-    margin-bottom: 50px;
-        
-    text-align: center;
-    }
-    &__title:after {
-      content: "";
-      position: absolute;
-      top: 45px;
-      left: 330px;
-      
-      background-image: linear-gradient(to right, $peach, $rose, $serenity, $serenity-dark);
-      height: 3px;
-      width: 545px;
-    }
-}
-.main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-    
-  width: 100%;
-   
- 
-  text-transform: uppercase;
 
-  font-family: $gotham-med;
-  font-size: 18px; 
-  
-  background-image: linear-gradient(to right, #F1878B, #BCC3D8, #EE888D, #B9C7DE, #EF888D);
-  border-bottom: 1px solid $white;
-} 
 
-.main-nav {
-   @extend %container;
-    
-    &__list {
-    text-align: center;
-        
-    list-style: none;
-    } 
-     
-    &__item {
-        display: inline-block;
-        vertical-align: baseline;
-        
-        min-width: 120px;
-        height: 60px;
-        
-        padding: 0 15px;
-        margin-right: 20px;
-      
-       
-        a {
-          display: block;
-          
-          text-decoration: none;
-          
-          color: $white; 
-          
-          line-height: 60px;
-        } 
-        a:hover {
-           color: $serenity; 
-        } 
-    } 
-    &__item:last-child {
-      margin-right: 0;
-    }
-
-    // тут наверное понадобится js
-    
-    &__item--active {
-      background-color: $white;
-          
-      font-family: $gotham-bol;
-          a {
-             color: $gray; 
-          } 
-    }   
-} 
-.intro {
-  height: 40vw;
-  padding: 10vw;
-  text-align: center; 
-  text-transform: uppercase;
-
-   
-   font-family: $gotham-med;
-  &__wrap {
-      background-image: linear-gradient(-150deg, #fea79e, #fd9c96 30%, #ff918f 30%, #ff9390 50%, #f9787d 50%, #f9787d 75%, #f17478 75%, #f07577);
-
-  }
-  &__title {
-    
-  }
-  &__descript {
-    font-size: 26px;
-    }
-}
 .about {
     width: 1200px;
     
@@ -285,154 +68,62 @@ h3 {
     &__content {
     }
 }
-.features {
-    height: 40vw;
-    padding: 10vw;
-    
-    background-color: $white;
-    color: $gray;
-    
-    @extend %container;
-    @extend %clearfix;
-    
-    &__item--inner {
-        // @extend %clearfix;
-        
-        // float: left;
-        
-        // width: $col-3;
-
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-        
-        margin-bottom: 60px;  
-    } 
-    &__item {
-      flex: 1 1 150px;
-      margin: 0 20px;
-    }
-    .features__icon {
-        position: relative;
-        
-        display: block;
-        vertical-align: baseline;
-        
-        width: 140px;
-        height: 140px;
-        margin: 0 auto; 
-        margin-bottom: 30px; 
-        -webkit-border-radius: 100%;
-                border-radius: 100%;
-        
-        background-color: $peach;
-    }
-    .features__icon:after {
-        content: "";
-        
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        
-        width: 200px;
-        height: 100px;
-        
-        background: url("../img/icon/spritesheet.png") no-repeat;
-    } 
-    .features__icon--progressive:after {
-     background-position: -2px -193px;
-    }
-    .features__icon--adaptive:after {
-     margin-left: -50px;
-     
-     background-position: 0px -9px;
-    }
-    .features__icon--mobile:after {
-     background-position: 25px -103px;;
-    }
-    &__text {
-      text-align: center;
-    } 
-} 
-
-
-.skills {
-    width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    
-    color: $black;
-    
-    font-family: $gotham-med;
-    font-size: 40px;
-    line-height: 1.2;
-
-    &__bg {
-        width: 100%;
-        height: 80px;
-        display:inline-block;
-        position: relative;
-    }
-    &__scroll {
-        position: absolute;
-        left: 0;
-        
-        background-position: 10px 0;
-        background-repeat: no-repeat;
-        
-        width: 100%;
-        height: 80px;
-        
-        transition: all 3s ease-in 0s;
-        -webkit-transition: all 3s ease-in 0s;
-        -moz-transition: all 3s ease-in 0s;
-        -ms-transition: all 3s ease-in 0s;
-        -o-transition: all 3s ease-in 0s;
-    }
-} 
-.skills__bg:hover .skills__scroll{
-            background-position: -400px 0!important;
-            }
 
 
 
-.portfolio {
-    color: $gray;
+// .portfolio {
+//     color: $gray;
     
 
-    &__item {
-        display: inline-block;
-        vertical-align: baseline;
+//     &__item {
+//         display: inline-block;
+//         vertical-align: baseline;
         
-        width: $col-3;
-        margin-right: -4px;
+//         position: relative;
+//         width: 300px;
+//         height: 300px;
+//         background-color: $rose;
+//         overflow: hidden;
         
-    }
-    &__img {
-        
-    }
-}
-
-
-.main-footer {
+//         // margin-right: -4px;
+//     }
     
-    
-    &__wrap {
-      margin-bottom: 0;
-      
-      background: #91A8D0;
-    }
-    &__icon {
+//     &____details {
+//         width: 310px;
+//         height: 310px;
+//         padding-top: 60px;
+//         color: #fff;
+//         background-color: rgba(75, 90, 120, .9);
         
-    }
-    &__icon-mail:before {
-        content: "";
-        
-        width: 64px;
-        height: 64px;
-        
-        background: url("../img/icon/initial_icon/icon-github.png") no-repeat;
-    }
-}
+//         header {
+//             display: block;
+//             padding-bottom: 10px;
+//             font-size: 26px;
+//             text-transform: uppercase;
+//             border-bottom: 1px solid #ccc;
+//         }
+
+//         p {
+//             width: 70%;
+//             margin: 10px auto;
+//             line-height: 1.4;
+//         }
+//     }
+
+//     &__btn {
+//         position: relative;
+//         z-index: 2;
+//         display: inline-block;
+//         padding: 5px 15px;
+//         margin-top: 15px;
+//         text-decoration: none;
+//         color: #fff;
+//         background-color: #2f3644;
+//         border-radius: 20px;
+//     }
+
+//     &__btn:hover {
+//         background-color: #fff;
+//         color: #2f3644;
+//     }
+// }

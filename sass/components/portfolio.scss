@@ -1,0 +1,122 @@
+.portfolio {
+	background-color: $serenity;
+    color: $gray-dark;
+    
+    &__content {
+    	    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    	margin-bottom: 100px;
+    }
+	
+	&__title {
+		flex: 1 1 100%;
+	}	
+    &__item {
+        display: inline-block;
+        vertical-align: baseline;
+        
+        position: relative;
+        
+        width: 25%;
+    	min-height: 350px;
+    	flex: 0 1 260px;
+    	
+    	border: 8px solid white;
+
+        overflow: hidden;
+        
+        background-color: $gray;
+        border-radius: 30px;
+    }
+
+	// &__item:not(:last-child) {
+	// 	margin-right: 10px;
+	// }
+
+    
+
+    
+    &__details {
+        width: 100%;
+    	min-height: 350px;
+        
+        text-align: center;
+        
+        color: $gray-dark;
+        background-color: $serenity;
+        opacity: 0;
+        
+        transition: 0.2s easy-out;
+        
+        header {
+            display: block;
+            
+            padding-top: 40px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $gray-dark;
+            
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 70%;
+            margin: 15px auto;
+            
+            line-height: 1.4;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 2;
+        
+        display: inline-block;
+        vertical-align: top;
+        
+        padding: 10px 20px;
+        margin-bottom: 25px;
+        margin-top: 15px;
+        
+        text-decoration: none;
+        
+        color: #fff;
+        background-color: $gray;
+        border-radius: 20px;
+    }
+
+    &__btn:hover {
+        background-color: #fff;
+        color: $gray-dark;
+    }
+	
+	&__sedona {
+    	background: url("../../img/content/sedona.jpg") no-repeat 50% 0%;
+    	-webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+
+    &__nerds {
+    	background: url("../../img/content/nerds.jpg") no-repeat 10% 0%;
+    	-webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+
+    &__glassy {
+    	background: url("../../img/content/gllacy.jpg") no-repeat 10% 0%;
+    	-webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+    }
+    
+    &__item:hover &__details {
+    	    opacity: 1;
+    
+    }
+}

@@ -5,19 +5,26 @@
   <meta charset="utf-8">
   <title>Алина Степанова</title>
   <!-- fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="main-header">
+
       <nav class="main-nav">
+
         <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active">
-            <a href="#header">Обо мне</a>
-          </li>
           <li class="main-nav__item  main-nav__item">
+            <a href="#about">Oбо мне</a>
+          </li>
+          <li class="main-nav__item">
             <a href="#features">Навыки</a>
+          </li>
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="#intro">Logo</a>
           </li>
           <li class="main-nav__item">
             <a href="#portfolio">Портфолио</a>
@@ -26,17 +33,23 @@
             <a href="#contacts">Контакты</a>
           </li>
         </ul>
+
       </nav>
+
   </header>
 
 
   <main>
-    <div class="article__wrap  intro__wrap">
-      <article class="article intro" id="header">
+
+    <section class="section intro" id="intro">
+
+      <article class="section__content  intro__content">
         <h1 class="intro__title">Алина Степанова</h1>
         <h2 class="intro__descript">верстка сайтов front-end разработка</h2>
       </article>
-    </div>
+
+    </section>
+
 
     <div class="article__wrap about__wrap" id="about">
       <article class="article  about">
@@ -64,14 +77,21 @@
         </div>
       </article>
     </div>
+    
 
-    <div class="article__wrap  features__wrap">
-      <article class="article features" id="features">
-        <h3 class="article__title">Инструменты, которыми владею</h3>
-        <div class="features__item--inner">
+    <section class="section features" id="features">
+
+      <article class="section__content  features__content">
+
+        <h3 class="section__title">
+          <span>Инструменты, которыми владею</span>
+        </h3>
+
+        <div class="features__item-wrap">
+
           <div class="features__item">
             <i class="features__icon features__icon--progressive"></i>
-            <h4 class="features__text">Прогрессивное улучшение</h4>
+            <h4 class="features__text">Прогрессивное <br> улучшение</h4>
           </div>
 
           <div class="features__item">
@@ -83,69 +103,109 @@
             <i class="features__icon features__icon--mobile"></i>
             <h4 class="features__text">Mobile first</h4>
           </div>
+
         </div>
+        
 
         <div id="skills" class="skills">
-          <span class="skills__bg">
+          <img src="img/content/skills.JPG" alt="">
+          <!-- <span class="skills__bg">
             <span class="skills__scroll" style="background-image: url('./img/content/skills.jpg');"></span>
-          </span>
+          </span> -->
         </div> 
-      </article>
-    </div>
 
-    <div class="article__wrap  portfolio__wrap">
-      <article class="article portfolio" id="portfolio">
-      <h3 class="article__title">Портфолио</h3>
-      <section class="portfolio__item">
-        <a href="portfolio/sedona/index.html">
-          <img class="portfolio__img" src="img/content/sedona.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-      <section class="portfolio__item">
-        <a href="portfolio/nerds/index.html">
-          <img class="portfolio__img" src="img/content/nerds-index.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-      <section class="portfolio__item">
-        <a href="portfolio/sedona/index.html">
-          <img class="portfolio__img" src="img/content/sedona.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-      <section class="portfolio__item">
-        <a href="portfolio/nerds/index.html">
-          <img class="portfolio__img" src="img/content/nerds-index.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-      <section class="portfolio__item">
-        <a href="portfolio/sedona/index.html">
-          <img class="portfolio__img" src="img/content/sedona.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-      <section class="portfolio__item">
-        <a href="portfolio/nerds/index.html">
-          <img class="portfolio__img" src="img/content/nerds-index.jpg" width="100%" height="auto" alt="">
-        </a>
-      </section>
-    </article>
-    </div> 
+      </article>
+
+    </section>
+     
+
+    <section class="section portfolio" id="portfolio">
+
+      <article class="section__content  portfolio__content">
+
+        <h3 class="section__title">Портфолио</h3>
+
+        <div class="portfolio__item  portfolio__sedona">
+          <div class="portfolio__details">
+            <header>Sedona</header>
+            <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+            <a href="portfolio/sedona/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
+          </div>
+        </div>
+
+        <div class="portfolio__item  portfolio__nerds">
+          <div class="portfolio__details">
+            <header>Nerds</header>
+            <p>Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
+            <a href="portfolio/nerds/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
+          </div>
+        </div>
+
+        <div class="portfolio__item  portfolio__glassy">
+          <div class="portfolio__details">
+            <header>Gllacy</header>
+            <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+            <a href="#" class="portfolio__btn" target="_blank">Смотреть</a>
+          </div>
+        </div>
+
+<!--         <div class="portfolio__item  portfolio__sedona">
+          <div class="portfolio__details">
+            <header>Sedona</header>
+            <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+            <a href="portfolio/sedona/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
+          </div>
+        </div> -->
+        
+      </article>
+
+    </section>
+
   </main>
 
-  <div class="article__wrap  main-footer__wrap">
-    <footer class="main-footer article" id="contacts">
-      <div class="main-footer">
-        <section class="main-footer__social">
+
+    <footer class="section main-footer" id="contacts">
+      
+      <div class="main-footer__content  section__content">
+        
+        <h3 class="section__title">Контакты</h3>
+
+         <div class="contacts__feedback-form">
+          <form action="//formspree.io/asalisinasa@gmail.com" method="POST">
+            <div class="feedback-form__half-width">
+              <label for="name">Ваше имя:</label>
+              <input class="feedback-form__text-field" type="text" name="name" value="" placeholder="представьтесь, пожалуйста" id="name">
+            </div>
+
+            <div class="feedback-form__half-width">  
+              <label for="email">Ваш e-mail:</label>
+              <input class="feedback-form__text-field" type="email" name="_replyto" value="" placeholder="для отравки ответа" id="email">
+            </div>
+            
+            <div class="feedback-form__whole-width">
+              <label for="text">Текст письма:</label>
+              <textarea class="feedback-form__text-field" cols="30" rows="5" name="text" placeholder="в свободной форме" id="text"></textarea>
+            </div>
+            <button class="feedback-form__btn feedback-form__btn--submit btn btn-red" type="submit" value="Send">Отправить</button>
+          </form>
+        </div>
+
+        <div class="main-footer__social">
           <a class="main-footer__icon main-footer__icon-mail" href="">Mail</a>
-
           <a class="main-footer__icon main-footer__icon-skype" href="">Skype</a>
-
           <a class="main-footer__icon main-footer__icon-github" href="">Github</a>
-        </section>
+        </div>
 
-        <section class="main-footer__copyright"></section>
+        <div class="main-footer__copyright">
+          
+        </div>
+
       </div>
-    </footer>  
-  </div>
+
+    </footer> 
   
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

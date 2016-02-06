@@ -19,6 +19,7 @@
 *.rar
 *.tar
 *.zip
+_design
 
 # Logs and databases #
 ######################
@@ -44,3 +45,4 @@ node_modules/
 #package.json
 #Gruntfile.js
 #gulpfile.js
+

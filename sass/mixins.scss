@@ -1,0 +1,29 @@
+////////////////////// Most useful ////////////////////////
+
+@mixin container {
+  max-width: 1200px;
+  min-width: 768px;
+  margin: 0 auto;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+////////////////////// Resets ////////////////////////
+@mixin ul-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
