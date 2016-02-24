@@ -4,12 +4,37 @@
        -o-background-size: cover;
           background-size: cover;
     
-    font-family: $gotham-med;
-    
-    &__content {
-      text-align: center;
-      text-transform: uppercase;
+  font-family: $gotham-med;
+  
+  &__content {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__descript {
+    span:nth-child(1) {
+      position: relative;
+      
+      margin-right: 50px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 230px;
+        
+        display: block;
+        
+        width: 70px;
+        height: 70px;
+        
+        background-image: url("../../img/icon/initial_icon/icon-rocknroll.svg");
+        -webkit-background-size: 70px 70px;
+             -o-background-size: 70px 70px;
+                background-size: 70px 70px;
+      }
     }
+  }
 }
 // .intro {
     

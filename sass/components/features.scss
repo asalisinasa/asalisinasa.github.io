@@ -1,6 +1,7 @@
 .features {
+    display: block;
     background-color: $white;
-    color: $gray;
+    color: $black;
     
     @extend %container;
     @extend %clearfix;
@@ -18,11 +19,14 @@
         justify-content: center;
         align-items: baseline;
         
-        margin-bottom: 60px;  
+        margin-bottom: 70px;  
     } 
     &__item {
       flex: 1 1 150px;
       margin: 0 20px;
+      
+      color: $gray;
+      font-family: $ptmono;
     }
     .features__icon {
         position: relative;
@@ -69,7 +73,7 @@
 
 
 .skills {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 100px;
     
@@ -83,7 +87,7 @@
 
     &__bg {
         width: 100%;
-        height: 80px;
+        height: 100px;
         display:inline-block;
         position: relative;
     }
@@ -95,15 +99,15 @@
         background-repeat: no-repeat;
         
         width: 100%;
-        height: 80px;
+        height: 100px;
         
-        transition: all 3s ease-in 0s;
-        -webkit-transition: all 3s ease-in 0s;
-        -moz-transition: all 3s ease-in 0s;
-        -ms-transition: all 3s ease-in 0s;
-        -o-transition: all 3s ease-in 0s;
+        transition: all 20s linear 0s;
+        -webkit-transition: all 20s linear 0s;
+        -moz-transition: all 20s linear 0s;
+        -ms-transition: all 20s linear 0s;
+        -o-transition: all 20s linear 0s;
     }
 } 
 .skills__bg:hover .skills__scroll{
-            background-position: -400px 0!important;
+            background-position: -4600px 0!important;
             }

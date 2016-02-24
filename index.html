@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Алина Степанова</title>
-  <!-- fonts -->
+  <link href='https://fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -18,19 +18,19 @@
 
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item">
-            <a href="#about">Oбо мне</a>
+            <a href="#about" data-hover="Oбо мне">Oбо мне</a>
           </li>
           <li class="main-nav__item">
-            <a href="#features">Навыки</a>
+            <a href="#features" data-hover="Навыки">Навыки</a>
           </li>
-          <li class="main-nav__item  main-nav__item--active">
-            <a href="#intro">Logo</a>
+          <!-- <li class="main-nav__item  main-nav__item--active">
+            <a href="#intro" data-hover="Logo">Logo</a>
+          </li> -->
+          <li class="main-nav__item">
+            <a href="#portfolio" data-hover="Портфолио">Портфолио</a>
           </li>
           <li class="main-nav__item">
-            <a href="#portfolio">Портфолио</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#contacts">Контакты</a>
+            <a href="#contacts" data-hover="Контакты">Контакты</a>
           </li>
         </ul>
 
@@ -45,7 +45,10 @@
 
       <article class="section__content  intro__content">
         <h1 class="intro__title">Алина Степанова</h1>
-        <h2 class="intro__descript">верстка сайтов front-end разработка</h2>
+        <h2 class="intro__descript">
+          <span>верстка сайтов</span>
+          <span>front-end разработка</span>
+        </h2>
       </article>
 
     </section>
@@ -66,8 +69,7 @@
                                   Меня зовут Алина Степанова и я начинающий 
                                   веб-разработчик.</h1>
             <p class="about__text">
-                                   Специализируюсь на HTML и CSS, а также выполняю не сложные 
-                                   задачи с использованием JavaScript. Верстаю <strong>чисто</strong> 
+                                   Верстаю <strong>чисто</strong> 
                                    и <em>семантично</em>, <strong>валидно</strong> и 
                                    <em>кроссбраузерно</em>.</p>
             <p class="about__text">
@@ -104,17 +106,16 @@
             <h4 class="features__text">Mobile first</h4>
           </div>
 
-        </div>
-        
+        </div> 
 
-        <div id="skills" class="skills">
+      </article>
+
+      <div id="skills" class="skills">
           <img src="img/content/skills.JPG" alt="">
           <!-- <span class="skills__bg">
             <span class="skills__scroll" style="background-image: url('./img/content/skills.jpg');"></span>
           </span> -->
-        </div> 
-
-      </article>
+        </div>
 
     </section>
      
@@ -123,17 +124,10 @@
 
       <article class="section__content  portfolio__content">
 
-        <h3 class="section__title">Портфолио</h3>
-
-        <div class="portfolio__item  portfolio__sedona">
-          <div class="portfolio__details">
-            <header>Sedona</header>
-            <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
-            <a href="portfolio/sedona/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
-          </div>
-        </div>
+        <h3 class="portfolio__title  section__title">Портфолио</h3> 
 
         <div class="portfolio__item  portfolio__nerds">
+          <img src="img/content/mockup__nerds__535x276.png" width="535" height="276">
           <div class="portfolio__details">
             <header>Nerds</header>
             <p>Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
@@ -142,20 +136,22 @@
         </div>
 
         <div class="portfolio__item  portfolio__glassy">
+          <img src="img/content/mockup_gllacy__537x468.png" width="537" height="468">
           <div class="portfolio__details">
             <header>Gllacy</header>
-            <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+            <p>Онлайн-магазин мороженого: резиновая верстка, SVG, HTML5, CSS3, Javascript</p>
             <a href="#" class="portfolio__btn" target="_blank">Смотреть</a>
           </div>
         </div>
 
-<!--         <div class="portfolio__item  portfolio__sedona">
+        <div class="portfolio__item  portfolio__sedona">
+          <img src="img/content/mockup__sedona__534x400.png" width="534" height="400">
           <div class="portfolio__details">
             <header>Sedona</header>
             <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
             <a href="portfolio/sedona/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
           </div>
-        </div> -->
+        </div>
         
       </article>
 
@@ -164,45 +160,52 @@
   </main>
 
 
-    <footer class="section main-footer" id="contacts">
+    <div class="section contacts" id="contacts">
       
-      <div class="main-footer__content  section__content">
+      <div class="contacts__content  section__content">
         
-        <h3 class="section__title">Контакты</h3>
+<!--         <h3 class="section__title">Контакты</h3> -->
 
          <div class="contacts__feedback-form">
           <form action="//formspree.io/asalisinasa@gmail.com" method="POST">
-            <div class="feedback-form__half-width">
-              <label for="name">Ваше имя:</label>
-              <input class="feedback-form__text-field" type="text" name="name" value="" placeholder="представьтесь, пожалуйста" id="name">
-            </div>
+            <p class="feedback-form__title">Форма обратной связи</p>
+            <input class="feedback-form__text-field  feedback-form__half-width" type="text" name="name" value="" placeholder="ваше имя" id="name">
 
-            <div class="feedback-form__half-width">  
-              <label for="email">Ваш e-mail:</label>
-              <input class="feedback-form__text-field" type="email" name="_replyto" value="" placeholder="для отравки ответа" id="email">
-            </div>
-            
-            <div class="feedback-form__whole-width">
-              <label for="text">Текст письма:</label>
-              <textarea class="feedback-form__text-field" cols="30" rows="5" name="text" placeholder="в свободной форме" id="text"></textarea>
-            </div>
+
+            <input class="feedback-form__text-field  feedback-form__half-width" type="email" name="email" value="" placeholder="e-mail" id="email">
+          
+            <textarea class="feedback-form__text-field  feedback-form__whole-width" cols="50" rows="10" name="text" placeholder="текст письма" id="text"></textarea>
+
             <button class="feedback-form__btn feedback-form__btn--submit btn btn-red" type="submit" value="Send">Отправить</button>
           </form>
         </div>
 
-        <div class="main-footer__social">
-          <a class="main-footer__icon main-footer__icon-mail" href="">Mail</a>
-          <a class="main-footer__icon main-footer__icon-skype" href="">Skype</a>
-          <a class="main-footer__icon main-footer__icon-github" href="">Github</a>
-        </div>
-
-        <div class="main-footer__copyright">
-          
-        </div>
-
       </div>
 
-    </footer> 
+    </div> 
+
+
+
+    <footer class="main-footer">
+      <h5 class="main-footer__title">One more thing...</h5>
+      <div class="main-footer__links">
+        <ul>
+          <li class="main-footer__item">
+            <a class="main-footer__link" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
+          </li>
+          <li class="main-footer__item">
+            <a class="main-footer__link" href="http://github.com/asalisinasa" target="_blank">github</a>
+          </li>
+          <li class="main-footer__item">
+            <a class="main-footer__link target="_blank"" href="skype:asalisinasa">skype</a>
+          </li>
+          <li class="main-footer__item">
+            <a class="main-footer__link target="_blank"" href="http://vk.com/id32377879">vkontakte</a>
+          </li>
+        </ul>
+      </div>
+          
+    </footer>
   
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="js/scripts.js"></script>

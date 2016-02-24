@@ -27,3 +27,18 @@
   text-decoration: none;
 }
 
+@mixin indent-reset {
+  margin: 0;
+  padding: 0;
+}
+
+//////////////////// Typography //////////////////////
+
+@mixin font($fs-d4, $fs-d4, $fs-d4) {
+  font: {
+    family: $fs-d4;
+    size: $fs-d4; 
+    weight: normal;
+  }
+  line-height: $fs-d4;
+}

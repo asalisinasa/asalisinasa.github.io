@@ -40,13 +40,26 @@
           
           text-decoration: none;
           
-          color: $white; 
+          color: $serenity; 
           
           line-height: 60px;
         } 
-        a:hover {
-           color: $serenity; 
-        } 
+
+        a::before {
+          content: attr(data-hover);
+          position: absolute;
+          color: $white;
+          transition: transform 0.3s, opacity 0.3s;
+        }
+
+        a:hover::before {
+          transform: scale(0.2);
+          opacity: 0;
+        }
+
+        // a:hover {
+        //    color: $serenity; 
+        // } 
     } 
     &__item:last-child {
       margin-right: 0;
@@ -59,7 +72,11 @@
           
       font-family: $gotham-bol;
           a {
-             color: $gray; 
+             color: $serenity; 
+             
+             &::before {
+               color: $gray;
+             }
           } 
     }   
 } 
