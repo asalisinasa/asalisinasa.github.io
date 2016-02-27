@@ -407,38 +407,47 @@ th {
   padding: 0;
 }
 
-/* font-family: "GothamPro"; */
+/* font-family: "PFDinDisplayPro-Regular"; */
 @font-face {
-  font-family: "GothamPro";
-  src: url("../font/GothamPro/GothamPro.eot");
-  src: url("../font/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../font/GothamPro/GothamPro.woff") format("woff"), url("../font/GothamPro/GothamPro.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Regular";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProBold"; */
+/* font-family: "PFDinDisplayPro-Medium"; */
 @font-face {
-  font-family: "GothamProBold";
-  src: url("../font/GothamProBold/GothamProBold.eot");
-  src: url("../font/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../font/GothamProBold/GothamProBold.woff") format("woff"), url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Medium";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProMedium"; */
+/* font-family: "PFDinDisplayPro-Bold"; */
 @font-face {
-  font-family: "GothamProMedium";
-  src: url("../font/GothamProMedium/GothamProMedium.eot");
-  src: url("../font/GothamProMedium/GothamProMedium.eot?#iefix") format("embedded-opentype"), url("../font/GothamProMedium/GothamProMedium.woff") format("woff"), url("../font/GothamProMedium/GothamProMedium.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Bold";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProLight"; */
+/* font-family: "Inconsolata-LGC"; */
 @font-face {
-  font-family: "GothamProLight";
-  src: url("../font/GothamProLight/GothamProLight.eot");
-  src: url("../font/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../font/GothamProLight/GothamProLight.woff") format("woff"), url("../font/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-family: "Inconsolata-LGC";
+  src: url("../font/Inconsolata-LGC/inconsolatalgc.eot");
+  src: url("../font/Inconsolata-LGC/inconsolatalgc.eot?#iefix") format("embedded-opentype"), url("../font/Inconsolata-LGC/inconsolatalgc.woff") format("woff"), url("../font/Inconsolata-LGC/inconsolatalgc.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "Inconsolata-LGC-Bold"; */
+@font-face {
+  font-family: "Inconsolata-LGC-Bold";
+  src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot");
+  src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot?#iefix") format("embedded-opentype"), url("../font/Inconsolata-LGC/inconsolatalgcbold.woff") format("woff"), url("../font/Inconsolata-LGC/inconsolatalgcbold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -450,10 +459,8 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  color: #ffffff;
-  font-family: "GothamPro", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1.2em;
+  font-size: 20px;
+  line-height: 30px;
   font-weight: normal;
 }
 
@@ -481,8 +488,7 @@ body {
 }
 
 .section__content {
-  max-width: 1200px;
-  min-width: 768px;
+  width: 960px;
   margin: 0 auto;
 }
 
@@ -494,8 +500,6 @@ body {
   padding-top: 110px;
   margin-bottom: 80px;
   text-align: center;
-  color: #313131;
-  font-family: "GothamProLight", Arial, Helvetica, sans-serif;
 }
 
 section > article {
@@ -504,77 +508,174 @@ section > article {
   margin: 0 auto;
 }
 
-/* font-family: "GothamPro"; */
+/* font-family: "PFDinDisplayPro-Regular"; */
 @font-face {
-  font-family: "GothamPro";
-  src: url("../font/GothamPro/GothamPro.eot");
-  src: url("../font/GothamPro/GothamPro.eot?#iefix") format("embedded-opentype"), url("../font/GothamPro/GothamPro.woff") format("woff"), url("../font/GothamPro/GothamPro.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Regular";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProBold"; */
+/* font-family: "PFDinDisplayPro-Medium"; */
 @font-face {
-  font-family: "GothamProBold";
-  src: url("../font/GothamProBold/GothamProBold.eot");
-  src: url("../font/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../font/GothamProBold/GothamProBold.woff") format("woff"), url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Medium";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProMedium"; */
+/* font-family: "PFDinDisplayPro-Bold"; */
 @font-face {
-  font-family: "GothamProMedium";
-  src: url("../font/GothamProMedium/GothamProMedium.eot");
-  src: url("../font/GothamProMedium/GothamProMedium.eot?#iefix") format("embedded-opentype"), url("../font/GothamProMedium/GothamProMedium.woff") format("woff"), url("../font/GothamProMedium/GothamProMedium.ttf") format("truetype");
+  font-family: "PFDinDisplayPro-Bold";
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot");
+  src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot?#iefix") format("embedded-opentype"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.woff") format("woff"), url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
-/* font-family: "GothamProLight"; */
+/* font-family: "Inconsolata-LGC"; */
 @font-face {
-  font-family: "GothamProLight";
-  src: url("../font/GothamProLight/GothamProLight.eot");
-  src: url("../font/GothamProLight/GothamProLight.eot?#iefix") format("embedded-opentype"), url("../font/GothamProLight/GothamProLight.woff") format("woff"), url("../font/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-family: "Inconsolata-LGC";
+  src: url("../font/Inconsolata-LGC/inconsolatalgc.eot");
+  src: url("../font/Inconsolata-LGC/inconsolatalgc.eot?#iefix") format("embedded-opentype"), url("../font/Inconsolata-LGC/inconsolatalgc.woff") format("woff"), url("../font/Inconsolata-LGC/inconsolatalgc.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "Inconsolata-LGC-Bold"; */
+@font-face {
+  font-family: "Inconsolata-LGC-Bold";
+  src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot");
+  src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot?#iefix") format("embedded-opentype"), url("../font/Inconsolata-LGC/inconsolatalgcbold.woff") format("woff"), url("../font/Inconsolata-LGC/inconsolatalgcbold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 h1 {
-  font-size: 50px;
-  line-height: 1.2;
+  font-size: 48px;
+  line-height: 60px;
 }
 
 h2 {
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-h3 {
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 60px;
 }
 
-.main-header {
-  position: fixed;
-  top: 0;
+.page-header {
+  background-color: #cdcdcd;
+  color: white;
+  font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.intro {
+  width: 960px;
+  margin: 0 auto;
+  font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+}
+
+.intro__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+.intro__text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #0076fe;
+  font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.intro__text:nth-of-type(1) {
+  position: relative;
+  margin-bottom: 85px;
+}
+
+.intro__text:nth-of-type(1)::after {
+  content: "&";
+  position: absolute;
+  top: 78px;
+  left: 48%;
+  color: white;
+  font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.intro__descr {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.intro__descr--right {
+  margin-bottom: 70px;
+  text-align: right;
+}
+
+.intro__descr--highlight {
+  color: #0076fe;
+}
+
+.intro__contact {
+  color: white;
+  padding-bottom: 120px;
+  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.intro__email {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 620px;
+  color: white;
+  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.intro__locate,
+.intro__email {
+  position: relative;
+  display: inline-block;
+}
+
+.intro__locate::before,
+.intro__email::before {
+  content: "";
+  position: absolute;
+  top: -43px;
   left: 0;
-  z-index: 100;
-  width: 100%;
-  text-transform: uppercase;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  background-image: -webkit-linear-gradient(left, #F1878B, #BCC3D8, #EE888D, #B9C7DE, #EF888D);
-  background-image: linear-gradient(to right, #F1878B, #BCC3D8, #EE888D, #B9C7DE, #EF888D);
-  border-bottom: 1px solid #ffffff;
+  width: 48px;
+  height: 4px;
+  background-color: #0076fe;
+}
+
+.intro__email::before {
+  left: 200px;
 }
 
 .main-nav {
-  max-width: 1200px;
-  min-width: 768px;
-  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #cdcdcd;
+  color: white;
+  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-size: 16px;
 }
 
 .main-nav__list {
@@ -597,23 +698,8 @@ h3 {
 .main-nav__item a {
   display: block;
   text-decoration: none;
-  color: #CBD5E6;
+  color: white;
   line-height: 60px;
-}
-
-.main-nav__item a::before {
-  content: attr(data-hover);
-  position: absolute;
-  color: #ffffff;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-          transition: transform 0.3s, opacity 0.3s;
-}
-
-.main-nav__item a:hover::before {
-  -webkit-transform: scale(0.2);
-      -ms-transform: scale(0.2);
-          transform: scale(0.2);
-  opacity: 0;
 }
 
 .main-nav__item:last-child {
@@ -621,51 +707,15 @@ h3 {
 }
 
 .main-nav__item--active {
-  background-color: #ffffff;
-  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
-}
-
-.main-nav__item--active a {
-  color: #CBD5E6;
+  background-color: white;
 }
 
 .main-nav__item--active a::before {
-  color: #9896A4;
-}
-
-.intro {
-  background-image: -webkit-linear-gradient(240deg, #fea79e, #fd9c96 30%, #ff918f 30%, #ff9390 50%, #f9787d 50%, #f9787d 75%, #f17478 75%, #f07577);
-  background-image: linear-gradient(-150deg, #fea79e, #fd9c96 30%, #ff918f 30%, #ff9390 50%, #f9787d 50%, #f9787d 75%, #f17478 75%, #f07577);
-  background-size: cover;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-}
-
-.intro__content {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.intro__descript span:nth-child(1) {
-  position: relative;
-  margin-right: 50px;
-}
-
-.intro__descript span:nth-child(1)::after {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 230px;
-  display: block;
-  width: 70px;
-  height: 70px;
-  background-image: url("../../img/icon/initial_icon/icon-rocknroll.svg");
-  background-size: 70px 70px;
+  color: #cdcdcd;
 }
 
 .features {
   display: block;
-  background-color: #ffffff;
-  color: #000000;
 }
 
 .features__item-wrap {
@@ -698,8 +748,7 @@ h3 {
       -ms-flex: 1 1 150px;
           flex: 1 1 150px;
   margin: 0 20px;
-  color: #9896A4;
-  font-family: "PT Mono", Courier, monospace;
+  color: #cdcdcd;
 }
 
 .features .features__icon {
@@ -711,7 +760,6 @@ h3 {
   margin: 0 auto;
   margin-bottom: 30px;
   border-radius: 100%;
-  background-color: #F9787D;
 }
 
 .features .features__icon:after {
@@ -746,8 +794,6 @@ h3 {
   margin: 0 auto;
   margin-bottom: 100px;
   overflow: hidden;
-  color: #000000;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -778,7 +824,6 @@ h3 {
 }
 
 .portfolio {
-  background-color: #CBD5E6;
   color: white;
 }
 
@@ -837,7 +882,6 @@ h3 {
   width: 50%;
   min-height: 350px;
   text-align: center;
-  color: #313131;
 }
 
 .portfolio__details header {
@@ -867,22 +911,17 @@ h3 {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  background-color: #9896A4;
+  background-color: #cdcdcd;
   border-radius: 25px;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-  font-size: 14px;
   line-height: 40px;
 }
 
 .portfolio__btn:hover {
-  background-color: #fff;
-  color: #313131;
+  background-color: white;
 }
 
 .contacts {
   margin-bottom: 60px;
-  background: #ffffff;
-  color: #000000;
 }
 
 .contacts__feedback-form {
@@ -893,16 +932,11 @@ h3 {
   box-sizing: border-box;
   margin: 70px auto;
   border-radius: 20px;
-  background-color: #F9787D;
 }
 
 .feedback-form__title {
   margin-bottom: 30px;
   text-transform: uppercase;
-  color: #313131;
-  font-family: "GothamProBold", Arial, Helvetica, sans-serif;
-  font-size: 34px;
-  line-height: 1.2;
 }
 
 .feedback-form__half-width {
@@ -929,97 +963,51 @@ h3 {
   outline: 0;
   border-radius: 3px;
   text-transform: uppercase;
-  color: #9896A4;
-  font-family: "PT Mono", Courier, monospace;
+  color: #cdcdcd;
   font-size: 12px;
 }
 
-.main-footer {
+.page-footer {
   width: 100%;
   height: 110px;
   padding: 40px 20px;
-  background-color: #F9787D;
   text-align: center;
-  font-family: "PT Mono", Courier, monospace;
-  font-size: 15px;
-  line-height: 21px;
+  background-color: #0076fe;
+  color: white;
+  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-size: 16px;
 }
 
-.main-footer__title {
+.page-footer__title {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
 }
 
-.main-footer__item {
+.page-footer__item {
   position: relative;
   display: inline-block;
 }
 
-.main-footer__item:not(:first-child)::after {
+.page-footer__item:not(:first-child)::after {
   content: "/";
   position: absolute;
   top: 0;
   left: -20px;
 }
 
-.main-footer__item ul {
+.page-footer__item ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
 
-.main-footer__link {
+.page-footer__link {
   margin-right: 30px;
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.about {
-  width: 1200px;
-  margin-top: -115px;
-  margin-bottom: 115px;
-  background-color: #E1E8F3;
-  background-image: -webkit-linear-gradient(85deg, #fff 70%, transparent 70%);
-  background-image: linear-gradient(5deg, #fff 70%, transparent 70%);
-  background-position: 0 150%;
-  background-size: 100% 300px;
-  background-repeat: no-repeat;
-  border-top: 3px solid white;
-  color: #9896A4;
-  -webkit-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  transform: skewY(-5deg);
-}
-
-.about__inner {
-  padding: 100px;
-  -webkit-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  transform: skewY(5deg);
-}
-
-.about__wrap {
-  display: none;
-}
-
-.about__photo {
-  margin-left: 45%;
-}
-
-.about__greating {
-  text-align: right;
-  font-family: "GothamProMedium", Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  line-height: 1.2;
-  -webkit-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  transform: skewY(-5deg);
 }
 
 /*# sourceMappingURL=style.css.map */

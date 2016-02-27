@@ -1,15 +1,10 @@
 h1 {
-    // font-family: $gotham-bol; 
-    font-size: 50px;
-    line-height: 1.2;
-} 
-h2 {
-    font-family: $gotham-med; 
-    font-size: 24px;
-    line-height: 1.2;
+    // font-family: $gotham-bol;
+    font-size: $fs-l;
+    line-height: $lh-l;
 }
-h3 {
-    font-family: $gotham-med; 
-    font-size: 32px;
-    line-height: 1.2;
+h2 {
+    // font-family: ;
+    font-size: $fs-m;
+    line-height: $lh-m;
 }

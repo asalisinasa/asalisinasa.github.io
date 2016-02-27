@@ -1,82 +1,173 @@
-.main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-    
-  width: 100%;
-   
- 
-  text-transform: uppercase;
+.page-header {
+  background-color: $gray;
+  color: white;
 
-  font-family: $gotham-med;
-  font-size: 18px; 
-  
-  background-image: linear-gradient(to right, #F1878B, #BCC3D8, #EE888D, #B9C7DE, #EF888D);
-  border-bottom: 1px solid $white;
-} 
+  font-family: $din-bol;
+  font-size: $fs-l;
+  line-height: $lh-l;
+}
+.intro {
+  @include container;
 
-.main-nav {
-   @include container;
-    
-    &__list {
-      @include ul-reset;
-      text-align: center;
-    } 
-     
-    &__item {
-        display: inline-block;
-        vertical-align: baseline;
-        
-        min-width: 120px;
-        height: 60px;
-        
-        padding: 0 15px;
-        margin-right: 20px;
-      
-       
-        a {
-          display: block;
-          
-          text-decoration: none;
-          
-          color: $serenity; 
-          
-          line-height: 60px;
-        } 
+  font-family: $din-bol;
 
-        a::before {
-          content: attr(data-hover);
-          position: absolute;
-          color: $white;
-          transition: transform 0.3s, opacity 0.3s;
-        }
+  &__title {
+    @include indent-reset;
 
-        a:hover::before {
-          transform: scale(0.2);
-          opacity: 0;
-        }
+    text-align: center;
 
-        // a:hover {
-        //    color: $serenity; 
-        // } 
-    } 
-    &__item:last-child {
-      margin-right: 0;
+    color: white;
+  }
+
+  &__text {
+    @include indent-reset;
+
+    text-align: center;
+
+    color: $blue;
+
+    font-family: $din-bol;
+    font-size: $fs-l;
+    line-height: $lh-l;
+
+    &:nth-of-type(1) {
+      position: relative;
+      margin-bottom: 85px;
+
+      &::after {
+        content: "&";
+        position: absolute;
+        top: 78px;
+        left: 48%;
+
+        color: white;
+
+        font-family: $din-bol;
+        font-size: $fs-l;
+        line-height: $lh-l;
+      }
+    }
+  }
+
+  &__descr {
+    @include indent-reset;
+
+    color: white;
+
+    font-family: $din-bol;
+    font-size: $fs-l;
+    line-height: $lh-l;
+
+    &--right {
+      margin-bottom: 70px;
+
+      text-align: right;
     }
 
-    // тут наверное понадобится js
-    
-    &__item--active {
-      background-color: $white;
-          
-      font-family: $gotham-bol;
-          a {
-             color: $serenity; 
-             
-             &::before {
-               color: $gray;
-             }
-          } 
-    }   
-} 
+    &--highlight {
+      color: $blue;
+    }
+  }
+
+  &__contact {
+    color: white;
+
+    padding-bottom: 120px;
+
+    font-family: $incon-bol;
+    font-size: $fs-s;
+    line-height: $lh-s;
+  }
+
+  &__email {
+    @include link-reset;
+
+    margin-left: 620px;
+
+    color: white;
+
+    font-family: $incon-bol;
+    font-size: $fs-s;
+    line-height: $lh-s;
+  }
+
+  &__locate,
+  &__email {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__locate::before,
+  &__email::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+
+    width: 48px;
+    height: 4px;
+
+    background-color: $blue;
+  }
+
+  &__email::before {
+    left: 200px;
+  }
+
+}
+
+.main-nav {
+  position: sticky;
+  width: 100%;
+  text-transform: uppercase;
+
+  background-color: $gray;
+  color: white;
+
+  font-family: $incon-bol;
+  font-size: $fs-xs;
+
+  &__list {
+    @include ul-reset;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: baseline;
+    min-width: 120px;
+    height: 60px;
+    padding: 0 15px;
+    margin-right: 20px;
+    a {
+      display: block;
+      text-decoration: none;
+
+      color: white;
+
+      line-height: 60px;
+    }
+    // a::before {
+    //   content: attr(data-hover);
+    //   position: absolute;
+    //   color: white;
+    //   transition: transform 0.3s, opacity 0.3s;
+    // }
+    // a:hover::before {
+    //   transform: scale(0.2);
+    //   opacity: 0;
+    // }
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item--active {
+    background-color: white;
+    a {
+
+      &::before {
+        color: $gray;
+      }
+    }
+  }
+}

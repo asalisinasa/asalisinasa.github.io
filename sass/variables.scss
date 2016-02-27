@@ -1,19 +1,18 @@
 //fonts
-$gotham-reg: "GothamPro", Arial, Helvetica, sans-serif;
-$gotham-bol: "GothamProBold", Arial, Helvetica, sans-serif;
-$gotham-med: "GothamProMedium", Arial, Helvetica, sans-serif;
-$gotham-lig: "GothamProLight", Arial, Helvetica, sans-serif;
-$ptmono: 'PT Mono', Courier, monospace;
+
+$din: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
+$din-med: "PFDinDisplayPro-Medium", Arial, Helvetica, sans-serif;
+$din-bol: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
+
+$incon: "Inconsolata-LGC", Courier, monospace;
+$incon-bol: "Inconsolata-LGC-Bold", Courier, monospace;
+
 
 // colors
-$rose: #F7CAC9;
-$serenity-dark: #91A8D0;
-$serenity: #CBD5E6;
-$peach: #F9787D;
-$gray: #9896A4;
-$gray-dark: #313131;
-$white: #ffffff;
-$black: #000000;
+$gray: #cdcdcd;
+$blue: #0076fe;
+$pink: #f49ac1;
+
 
 //grid
 $col-3: 100%/3;
@@ -24,85 +23,20 @@ $col-3: 100%/3;
 //////////////////////// Typography ////////////////////////
 ////////////////////////////////////////////////////////////
 
-
-////////////////////////// font-family
-$ff-d4: "GothamProLight", Arial, Helvetica, sans-serif;
-$ff-d3: "GothamPro", Arial, Helvetica, sans-serif;
-$ff-d2: "GothamPro", Arial, Helvetica, sans-serif;
-$ff-d1: "GothamPro", Arial, Helvetica, sans-serif;
-$ff-d1: 'PT Mono', Courier, monospace;
-$ff-hl: "GothamPro", Arial, Helvetica, sans-serif;
-$ff-tl: "GothamProMedium", Arial, Helvetica, sans-serif;
-$ff-subh: 'PT Mono', Courier, monospace;
-$ff-b1: "GothamProMedium", Arial, Helvetica, sans-serif;
-$ff-b2: "GothamPro", Arial, Helvetica, sans-serif;
-$ff-capt: 'PT Mono', Courier, monospace;
-$ff-btn: "GothamProMedium", Arial, Helvetica, sans-serif;
-
-
 ////////////////////////// font-size
 
-$fs-d4: 112px;
-$fs-d3: 56px;
-$fs-d2: 45px;
-$fs-d1: 34px;
-$fs-hl: 24px;
-$fs-tl: 20px;
-$fs-subh--dev: 16px;
-$fs-subh--desk: 15px;
-$fs-b1--dev: 14px;
-$fs-b1--desk: 13px;
-$fs-b2--dev: 14px;
-$fs-b2--desk: 13px;
-$fs-capt: 12px;
-$fs-btn: 14px;
+$fs-l: 48px;
+$fs-m: 32px;
+$fs-s: 20px;
+$fs-xs: 16px;
 
 
 ////////////////////////// line-height
-$lh-d4: 1.5;
-$lh-d3: 1.2;
-$lh-d2: 1.2;
-$lh-d1: 1.2;
-$lh-hl: 1.2;
-$lh-tl: 1.2;
-$lh-subh--dev: 22px;
-$lh-subh--desk: 21px;
-$lh-b1--dev: 20px;
-$lh-b2--desk: 19px;
-$lh-b1--dev: 20px;
-$lh-b2--desk: 19px;
-$lh-capt: 18px;
-$lh-btn: 20px;
+$lh-l: 60px;
+$lh-m: 60px;
+$lh-s: 30px;
 
 
-
-
-
-
-// ////////////////////// Colors ////////////////////////
-
-// // Text
-
-// $white: #fff;
-// $white--transparent: rgba(230, 230, 235, 0.4);
-
-// $orange: #ffbc9e;
-// $orange--transparent: rgba(249, 172, 159, 0.3);
-
-// $red: #ec593c;
-// $red--transparent: rgba(236, 89, 60, 0.3);
-
-// $dark-gray: #333;
-// $dark-gray--transparent: rgba(178, 178, 178, 0.3);
-
-// $brown: #323;
-
-
-// // Backgrounds
-
-// $green: #849d8f;
-// $blue: #8996a6;
-// $light-brown: #9d8b84;
 
 
 

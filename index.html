@@ -4,44 +4,53 @@
 <head>
   <meta charset="utf-8">
   <title>Алина Степанова</title>
-  <link href='https://fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="main-header">
 
-    <nav class="main-nav">
+  <header class="page-header">
 
-      <ul class="main-nav__list">
-        <li class="main-nav__item  main-nav__item">
-          <a href="#about" data-hover="Oбо мне">Oбо мне</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#features" data-hover="Навыки">Навыки</a>
-        </li>
-        <!-- <li class="main-nav__item  main-nav__item--active">
-            <a href="#intro" data-hover="Logo">Logo</a>
-          </li> -->
-        <li class="main-nav__item">
-          <a href="#portfolio" data-hover="Портфолио">Портфолио</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#contacts" data-hover="Контакты">Контакты</a>
-        </li>
-      </ul>
+    <section class="intro">
 
-    </nav>
+      <h1 class="intro__title">Алина Степанова</h1>
+      <h2 class="intro__text">Css/Html</h2>
+      <h2 class="intro__text">front-end разработка</h2>
+
+      <p class="intro__descr  intro__descr--left">Чистый, семантичный, понятный <span class="intro__descr--highlight">код</span>.</p>
+      <p class="intro__descr  intro__descr--right"><span class="intro__descr--highlight">Внимание</span> к пользователю и деталям.</p>
+
+      <div class="intro__contact">
+        <span class="intro__locate">Москва</span>
+        <a class="intro__email" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
+      </div>
+
+    </section>
 
   </header>
+
+  <nav class="main-nav">
+
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a href="#features" data-hover="Навыки">Навыки</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#portfolio" data-hover="Портфолио">Портфолио</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="#contacts" data-hover="Контакты">Контакты</a>
+      </li>
+    </ul>
+
+  </nav>
 
 
   <main>
 
-    <section class="section intro" id="intro">
+    <!-- <section class="section intro" id="intro">
 
       <article class="section__content  intro__content">
         <h1 class="intro__title">Алина Степанова</h1>
@@ -51,10 +60,10 @@
         </h2>
       </article>
 
-    </section>
+    </section> -->
 
 
-    <div class="article__wrap about__wrap" id="about">
+    <!-- <div class="article__wrap about__wrap" id="about">
       <article class="article  about">
         <div class="about__inner">
 
@@ -66,7 +75,7 @@
 
           <div class="about__content">
             <h1 class="about__title">
-                                  Меня зовут Алина Степанова и я начинающий 
+                                  Меня зовут Алина Степанова и я начинающий
                                   веб-разработчик.</h1>
             <p class="about__text">
               Верстаю <strong>чисто</strong> и <em>семантично</em>, <strong>валидно</strong> и
@@ -76,7 +85,7 @@
           </div>
         </div>
       </article>
-    </div>
+    </div> -->
 
 
     <section class="section features" id="features">
@@ -184,21 +193,21 @@
 
 
 
-  <footer class="main-footer">
-    <h5 class="main-footer__title">One more thing...</h5>
-    <div class="main-footer__links">
+  <footer class="page-footer">
+    <h5 class="page-footer__title">One more thing...</h5>
+    <div class="page-footer__links">
       <ul>
-        <li class="main-footer__item">
-          <a class="main-footer__link" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
+        <li class="page-footer__item">
+          <a class="page-footer__link" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
         </li>
-        <li class="main-footer__item">
-          <a class="main-footer__link" href="http://github.com/asalisinasa" target="_blank">github</a>
+        <li class="page-footer__item">
+          <a class="page-footer__link" href="http://github.com/asalisinasa" target="_blank">github</a>
         </li>
-        <li class="main-footer__item">
-          <a class="main-footer__link target=" _blank "" href="skype:asalisinasa">skype</a>
+        <li class="page-footer__item">
+          <a class="page-footer__link" target="_blank" href="skype:asalisinasa">skype</a>
         </li>
-        <li class="main-footer__item">
-          <a class="main-footer__link target=" _blank "" href="http://vk.com/id32377879">vkontakte</a>
+        <li class="page-footer__item">
+          <a class="page-footer__link" target="_blank" href="http://vk.com/id32377879">vkontakte</a>
         </li>
       </ul>
     </div>

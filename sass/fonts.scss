@@ -1,44 +1,53 @@
-/////////////////// font ///////////////////////
-/////////////////////////////////////////////////
+/* font-family: "PFDinDisplayPro-Regular"; */
+@font-face {
+    font-family: "PFDinDisplayPro-Regular";
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot");
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.woff") format("woff"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PFDinDisplayPro-Medium"; */
+@font-face {
+    font-family: "PFDinDisplayPro-Medium";
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot");
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.eot?#iefix")format("embedded-opentype"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.woff") format("woff"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Medium.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
 
+/* font-family: "PFDinDisplayPro-Bold"; */
+@font-face {
+    font-family: "PFDinDisplayPro-Bold";
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot");
+    src: url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.woff") format("woff"),
+    url("../font/PFDinDisplayPro/PFDinDisplayPro-Bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
 
-/* font-family: "GothamPro"; */
+/* font-family: "Inconsolata-LGC"; */
 @font-face {
-    font-family: "GothamPro";
-    src: url("../font/GothamPro/GothamPro.eot");
-    src: url("../font/GothamPro/GothamPro.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamPro/GothamPro.woff") format("woff"),
-    url("../font/GothamPro/GothamPro.ttf") format("truetype");
+    font-family: "Inconsolata-LGC";
+    src: url("../font/Inconsolata-LGC/inconsolatalgc.eot");
+    src: url("../font/Inconsolata-LGC/inconsolatalgc.eot?#iefix")format("embedded-opentype"),
+    url("../font/Inconsolata-LGC/inconsolatalgc.woff") format("woff"),
+    url("../font/Inconsolata-LGC/inconsolatalgc.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
-/* font-family: "GothamProBold"; */
+
+/* font-family: "Inconsolata-LGC-Bold"; */
 @font-face {
-    font-family: "GothamProBold";
-    src: url("../font/GothamProBold/GothamProBold.eot");
-    src: url("../font/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProBold/GothamProBold.woff") format("woff"),
-    url("../font/GothamProBold/GothamProBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "GothamProMedium"; */
-@font-face {
-    font-family: "GothamProMedium";
-    src: url("../font/GothamProMedium/GothamProMedium.eot");
-    src: url("../font/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProMedium/GothamProMedium.woff") format("woff"),
-    url("../font/GothamProMedium/GothamProMedium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-/* font-family: "GothamProLight"; */
-@font-face {
-    font-family: "GothamProLight";
-    src: url("../font/GothamProLight/GothamProLight.eot");
-    src: url("../font/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
-    url("../font/GothamProLight/GothamProLight.woff") format("woff"),
-    url("../font/GothamProLight/GothamProLight.ttf") format("truetype");
+    font-family: "Inconsolata-LGC-Bold";
+    src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot");
+    src: url("../font/Inconsolata-LGC/inconsolatalgcbold.eot?#iefix")format("embedded-opentype"),
+    url("../font/Inconsolata-LGC/inconsolatalgcbold.woff") format("woff"),
+    url("../font/Inconsolata-LGC/inconsolatalgcbold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }

@@ -1,64 +1,64 @@
 .portfolio {
-  background-color: $serenity;
+
   color: white;
-    
+
     &__content {
-      
-    
+
+
       margin-bottom: 100px;
     }
-  
+
   &__title {
     // flex: 1 1 100%;
     color: white;
-  } 
+  }
     &__item {
       position: relative;
-      
+
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-        
+
       min-height: 350px;
-      margin-bottom: 40px;  
+      margin-bottom: 40px;
       flex: 0 1 260px;
-      
+
       &:nth-child(1n) {
         -webkit-flex-direction: row-reverse;
             -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;  
+                flex-direction: row-reverse;
       }
 
       &:nth-child(2n) {
          -webkit-flex-direction: row;
              -ms-flex-direction: row;
-                 flex-direction: row; 
+                 flex-direction: row;
       }
     }
 
     &__img {
         width: 50%;
         height:   auto;
-        
+
         background: radial-gradient(white, transparent) 50% 50% no-repeat;
     }
 
-    
+
     &__details {
       width: 50%;
       min-height: 350px;
-      
-      text-align: center; 
-      
-      color: $gray-dark;
-      
+
+      text-align: center;
+
+
+
       header {
         display: block;
-        
+
         padding-top: 40px;
         padding-bottom: 10px;
-        // border-bottom: 1px solid $gray-dark;
-        
+
+
         font-size: 26px;
         font-weight: bold;
         text-transform: uppercase;
@@ -67,7 +67,7 @@
       p {
         width: 70%;
         margin: 15px auto;
-        
+
         line-height: 1.4;
       }
     }
@@ -75,55 +75,28 @@
     &__btn {
       position: relative;
       z-index: 2;
-      
+
       display: inline-block;
       vertical-align: top;
-      
-      height: 40px; 
+
+      height: 40px;
       padding: 0 30px;
       margin-bottom: 25px;
       margin-top: 15px;
-      
-      text-transform: uppercase;  
+
+      text-transform: uppercase;
       text-decoration: none;
-      
+
       color: #fff;
       background-color: $gray;
       border-radius: 25px;
-      
-      font-family:  $ff-btn;
-      font-size:  $fs-btn;
+
+
       line-height:  40px;
     }
 
     &__btn:hover {
-        background-color: #fff;
-        color: $gray-dark;
+        background-color: white;
+
     }
-  
-  // &__sedona {
-  //     background: url("../../img/content/sedona.jpg") no-repeat 50% 0%;
-  //     -webkit-background-size: cover;
-  //            -o-background-size: cover;
-  //               background-size: cover;
-  //   }
-
-  //   &__nerds {
-  //     background: url("../../img/content/nerds.jpg") no-repeat 10% 0%;
-  //     -webkit-background-size: cover;
-  //            -o-background-size: cover;
-  //               background-size: cover;
-  //   }
-
-  //   &__glassy {
-  //     background: url("../../img/content/gllacy.jpg") no-repeat 10% 0%;
-  //     -webkit-background-size: cover;
-  //            -o-background-size: cover;
-  //               background-size: cover;
-  //   }
-    
-  //   &__item:hover &__details {
-  //         opacity: 1;
-    
-  //   }
-}
+  }
