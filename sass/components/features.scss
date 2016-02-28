@@ -1,11 +1,24 @@
 .features {
+
+  @include clearfix;
+
     display: block;
 
+    color: $blue;
 
-    @extend %container;
-    @extend %clearfix;
+    font-family: $incon-bol;
+    font-size: $fs-m;
+    line-height: 1.2;
 
+    &__title {
+      color: $gray;
+
+      &:nth-of-type(2) {
+        padding-top: 80px;
+      }
+    }
     &__item-wrap {
+      @include container;
         // @extend %clearfix;
 
         // float: left;
@@ -18,53 +31,64 @@
         justify-content: center;
         align-items: baseline;
 
-        margin-bottom: 70px;
+        // margin-bottom: 70px;
     }
     &__item {
+      position: relative;
+
       flex: 1 1 150px;
       margin: 0 20px;
 
       color: $gray;
     }
-    .features__icon {
-        position: relative;
 
-        display: block;
-        vertical-align: baseline;
+    &__icon {
+      display: block;
 
-        width: 140px;
-        height: 140px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        -webkit-border-radius: 100%;
-                border-radius: 100%;
+      width: 132px;
+      height: 132px;
+      margin: 0 auto;
+      margin-bottom: 40px;
 
+      border: 6px solid $blue;
+
+      &--tilt {
+        transform: rotate(45deg);
+      }
     }
-    .features__icon:after {
-        content: "";
 
+    &__img {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 44px;
 
-        width: 200px;
-        height: 100px;
+        margin: 0 auto;
 
-        background: url("../img/icon/spritesheet.png") no-repeat;
-    }
-    .features__icon--progressive:after {
-     background-position: -2px -193px;
-    }
-    .features__icon--adaptive:after {
-     margin-left: -50px;
+        color: $blue;
 
-     background-position: 0px -9px;
+        &--progressive {
+          left: 90px;
+        }
+
+        &--adaptive {
+          top: 36px;
+          left: 18px;
+
+          transform: rotate(-45deg);
+        }
+
+        &--sparks {
+          left: 15px;
+        }
+
+        &--mobile {
+          left: 120px;
+        }
     }
-    .features__icon--mobile:after {
-     background-position: 25px -103px;;
-    }
+
     &__text {
       text-align: center;
+
+      color: $blue;
     }
 }
 

@@ -1,10 +1,12 @@
 .page-header {
+  margin-bottom: 0;
+
   background-color: $gray;
   color: white;
 
   font-family: $din-bol;
-  font-size: $fs-l;
-  line-height: $lh-l;
+  font-size: $fs-xl;
+  line-height: $lh-xl;
 }
 .intro {
   @include container;
@@ -13,10 +15,15 @@
 
   &__title {
     @include indent-reset;
+    margin-bottom: 12px;
 
     text-align: center;
 
     color: white;
+
+    font-family: $din-bol;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
   }
 
   &__text {
@@ -27,24 +34,24 @@
     color: $blue;
 
     font-family: $din-bol;
-    font-size: $fs-l;
-    line-height: $lh-l;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
 
     &:nth-of-type(1) {
       position: relative;
-      margin-bottom: 85px;
+      margin-bottom: 75px;
 
       &::after {
         content: "&";
         position: absolute;
-        top: 78px;
+        top: 62px;
         left: 48%;
 
         color: white;
 
         font-family: $din-bol;
-        font-size: $fs-l;
-        line-height: $lh-l;
+        font-size: $fs-xl;
+        line-height: $lh-xl;
       }
     }
   }
@@ -52,14 +59,16 @@
   &__descr {
     @include indent-reset;
 
+    margin-top: 12px;
+
     color: white;
 
     font-family: $din-bol;
-    font-size: $fs-l;
-    line-height: $lh-l;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
 
     &--right {
-      margin-bottom: 70px;
+      margin-bottom: 63px;
 
       text-align: right;
     }
@@ -72,6 +81,8 @@
   &__contact {
     color: white;
 
+    padding-left: 145px;
+    // padding-right: 100px;
     padding-bottom: 120px;
 
     font-family: $incon-bol;
@@ -82,7 +93,7 @@
   &__email {
     @include link-reset;
 
-    margin-left: 620px;
+    margin-left: 330px;
 
     color: white;
 
@@ -101,7 +112,7 @@
   &__email::before {
     content: "";
     position: absolute;
-    top: -43px;
+    top: -26px;
     left: 0;
 
     width: 48px;
