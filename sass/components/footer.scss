@@ -3,8 +3,8 @@
   height: 110px;
   padding: 40px 20px;
   text-align: center;
-  background-color: $blue;
-  color: white;
+  background-color: white;
+  color: $blue;
   font-family: $incon-bol;
   font-size: $fs-xs;
   &__title {
@@ -27,6 +27,6 @@
   &__link {
     margin-right: 30px;
     @include link-reset;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 118, 254, 0.5);
   }
 }

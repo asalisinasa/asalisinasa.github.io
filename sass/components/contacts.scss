@@ -1,5 +1,5 @@
 .contacts {
-  margin-bottom: 60px;
+  margin-bottom: 0;
 
   background-color: $gray;
   color: white;
@@ -8,12 +8,12 @@
   &__feedback-form {
     width: 630px;
     height: 400px;
+    margin: 0 auto;
     margin-bottom: 60px;
     padding: 45px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 70px auto;
     -webkit-border-radius: 20px;
     border-radius: 20px;
   }

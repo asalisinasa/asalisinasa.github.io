@@ -3,100 +3,274 @@
   color: white;
 
     &__content {
-
-
       margin-bottom: 100px;
     }
 
   &__title {
-    // flex: 1 1 100%;
+    margin-bottom: 50px;
+
     color: white;
+
+    &::after {
+      background-color: white;
+    }
   }
-    &__item {
-      position: relative;
 
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
 
-      min-height: 350px;
-      margin-bottom: 40px;
-      flex: 0 1 260px;
+    // &__item {
+    //   position: relative;
+    //
+    //   display: flex;
+    //   justify-content: space-around;
+    //   flex-wrap: wrap;
+    //
+    //   min-height: 350px;
+    //   margin-bottom: 40px;
+    //   flex: 0 1 260px;
+    //
+    //   &:nth-child(1n) {
+    //     -webkit-flex-direction: row-reverse;
+    //         -ms-flex-direction: row-reverse;
+    //             flex-direction: row-reverse;
+    //   }
+    //
+    //   &:nth-child(2n) {
+    //      -webkit-flex-direction: row;
+    //          -ms-flex-direction: row;
+    //              flex-direction: row;
+    //   }
+    // }
+    //
+    // &__img {
+    //     width: 50%;
+    //     height:   auto;
+    //
+    //     background: radial-gradient(white, transparent) 50% 50% no-repeat;
+    // }
+    //
+    //
+    // &__details {
+    //   width: 50%;
+    //   min-height: 350px;
+    //
+    //   text-align: center;
+    //
+    //
+    //
+    //   header {
+    //     display: block;
+    //
+    //     padding-top: 40px;
+    //     padding-bottom: 10px;
+    //
+    //
+    //     font-size: 26px;
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    //   }
+    //
+    //   p {
+    //     width: 70%;
+    //     margin: 15px auto;
+    //
+    //     line-height: 1.4;
+    //   }
+    // }
+    //
+    // &__btn {
+    //   position: relative;
+    //   z-index: 2;
+    //
+    //   display: inline-block;
+    //   vertical-align: top;
+    //
+    //   height: 40px;
+    //   padding: 0 30px;
+    //   margin-bottom: 25px;
+    //   margin-top: 15px;
+    //
+    //   text-transform: uppercase;
+    //   text-decoration: none;
+    //
+    //   color: #fff;
+    //   background-color: $gray;
+    //   border-radius: 25px;
+    //
+    //
+    //   line-height:  40px;
+    // }
+    //
+    // &__btn:hover {
+    //     background-color: white;
+    //
+    // }
+  }
 
-      &:nth-child(1n) {
-        -webkit-flex-direction: row-reverse;
-            -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;
-      }
+  .slider {
+    position: relative;
 
-      &:nth-child(2n) {
-         -webkit-flex-direction: row;
-             -ms-flex-direction: row;
-                 flex-direction: row;
-      }
+    width: 940px;
+    min-height: 500px;
+    margin-bottom: 30px;
+
+    input[type="radio"] {
+      display: none;
     }
 
-    &__img {
-        width: 50%;
-        height:   auto;
+    &__active {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
 
-        background: radial-gradient(white, transparent) 50% 50% no-repeat;
-    }
-
-
-    &__details {
-      width: 50%;
-      min-height: 350px;
+      width: 200px;
+      margin-left: -100px;
 
       text-align: center;
 
+      label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
 
+        vertical-align: top;
 
-      header {
-        display: block;
-
-        padding-top: 40px;
-        padding-bottom: 10px;
-
-
-        font-size: 26px;
-        font-weight: bold;
-        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
       }
+    }
+    &__controls label {
+      cursor: pointer;
+    }
+    &__controls label::before {
+      content: "";
+      position: absolute;
+      top: 44%;
+      left: -77px;
+      border: 10px solid transparent;
+      border-right: 10px solid white;
+    }
 
-      p {
-        width: 70%;
-        margin: 15px auto;
+    &__controls label::after {
+      content: "";
+      position: absolute;
+      top: 44%;
+      right: -18px;
+      border: 10px solid transparent;
+      border-left: 10px solid white;
+    }
+//
+    &__items {
+      overflow: hidden;
+    }
+  }
 
-        line-height: 1.4;
+  .slide {
+    @include clearfix;
+    display: none;
+
+    min-height: 440px;
+    // margin-top: -75px;
+
+    transition: all 4s linear;
+
+    &__title {
+      @include indent-reset;
+      margin-left: 52%;
+      margin-bottom: 40px;
+      text-align: left;
+
+      font-family: $incon-bol;
+      font-size: $fs-xl;
+      line-height: $lh-xl;
+
+      a {
+        @include link-reset;
       }
     }
 
-    &__btn {
-      position: relative;
-      z-index: 2;
+    &__big-col {
+      width: 540px;
+    }
 
+    &__small-col {
+      width: 380px;
+    }
+
+
+    &__img,
+    &__details {
       display: inline-block;
       vertical-align: top;
+    }
 
-      height: 40px;
-      padding: 0 30px;
-      margin-bottom: 25px;
-      margin-top: 15px;
+    &__details {
+      width: 320px;
+      margin-top: 90px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+
+      font-family: $din;
+      font-size: $fs-s;
+      line-height: $lh-s;
+    }
+
+    &__btn {
+      padding: 5px 10px;
+      border: 1px solid white;
 
       text-transform: uppercase;
       text-decoration: none;
 
-      color: #fff;
-      background-color: $gray;
-      border-radius: 25px;
-
-
-      line-height:  40px;
+      color: white;
+      font-family: $din-med;
+      font-size: $fs-xs;
+      line-height: $lh-s;
     }
 
-    &__btn:hover {
-        background-color: white;
+    &:nth-child(odd) {
+      .slide__img {
+        float: left;
+        margin-right: 40px;
+      }
+      .slide__details {
+        float: right;
+      }
+    }
 
+    &:nth-child(even) {
+      .slide__img {
+        float: right;
+      }
+      .slide__details {
+        float: left;
+        margin-right: 40px;
+        margin-left: 35px;
+      }
     }
   }
+
+  #btn-1:checked ~ .slider__items .slide:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .slider__items .slide:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .slider__items .slide:nth-child(3) {
+  display: block;
+}
+
+#btn-1:checked ~ .slider__active label[for="btn-1"],
+#btn-2:checked ~ .slider__active label[for="btn-2"],
+#btn-3:checked ~ .slider__active label[for="btn-3"] {
+  background-color: white;
+}
+
+// p.slider__text::selection {
+//   background-color: white;
+// }
