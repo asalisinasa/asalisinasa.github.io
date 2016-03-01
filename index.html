@@ -83,49 +83,11 @@
 
   <main>
 
-    <!-- <section class="section intro" id="intro">
-
-      <article class="section__content  intro__content">
-        <h1 class="intro__title">Алина Степанова</h1>
-        <h2 class="intro__descript">
-          <span>верстка сайтов</span>
-          <span>front-end разработка</span>
-        </h2>
-      </article>
-
-    </section> -->
-
-
-    <!-- <div class="article__wrap about__wrap" id="about">
-      <article class="article  about">
-        <div class="about__inner">
-
-          <p class="about__greating">Привет!</p>
-
-          <div class="about__photo">
-            <img src="img/photo.png" alt="Алина Степанова веб-разработчик" width="150" height="200">
-          </div>
-
-          <div class="about__content">
-            <h1 class="about__title">
-                                  Меня зовут Алина Степанова и я начинающий
-                                  веб-разработчик.</h1>
-            <p class="about__text">
-              Верстаю <strong>чисто</strong> и <em>семантично</em>, <strong>валидно</strong> и
-              <em>кроссбраузерно</em>.</p>
-            <p class="about__text">
-              На этой странице вы можете увидеть примеры моих работ и связаться со мной.</p>
-          </div>
-        </div>
-      </article>
-    </div> -->
-
-
     <section class="section features" id="features">
 
       <article class="section__content  features__content">
 
-        <h3 class="features__title  section__title">Вот, что я умею:</h3>
+        <h3 class="features__title  section__title">Вот, что я умею</h3>
 
         <div class="features__item-wrap">
 
@@ -155,13 +117,10 @@
 
       </article>
 
-      <h3 class="features__title  section__title">Инструменты:</h3>
+      <h3 class="features__title  section__title">Инструменты</h3>
 
       <div id="skills" class="skills">
-        <img src="img/content/skills.JPG" alt="">
-        <!-- <span class="skills__bg">
-            <span class="skills__scroll" style="background-image: url('./img/content/skills.jpg');"></span>
-          </span> -->
+        <img class="skills__scroll" src="img/content/skills__marquee.png" alt="" width="4862" height="46">
       </div>
 
     </section>
@@ -172,17 +131,52 @@
       <article class="section__content  portfolio__content">
 
         <h3 class="portfolio__title  section__title">Портфолио</h3>
+        <div class="slider">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <input type="radio" id="btn-3" name="toggle">
 
-        <div class="portfolio__item  portfolio__nerds">
-          <img src="img/content/mockup__nerds__535x276.png" width="535" height="276">
-          <div class="portfolio__details">
-            <header>Nerds</header>
-            <p>Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
-            <a href="portfolio/nerds/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
+          <div class="slider__controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
           </div>
+
+
+          <div class="slider__items">
+
+            <div class="slide">
+              <h5 class="slide__title">Gllacy</h5>
+              <img class="slide__img" src="img/content/mockup_gllacy__537x468.png" width="535" height="276">
+              <div class="slide__details">
+                <p class="slide__text">Онлайн-магазин мороженого: резиновая верстка, SVG, HTML5, CSS3, Javascript</p>
+                <a class="slide__btn"href="portfolio/gllacy/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <h5 class="slide__title">Sedona</h5>
+              <img class="slide__img" src="img/content/mockup__sedona__534x400.png" width="535" height="276">
+              <div class="slide__details">
+                <p class="slide__text">Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+                <a class="slide__btn" href="portfolio/sedona/index.html" target="_blank">Смотреть</a>
+              </div>
+            </div>
+
+            <div class="slide">
+              <h5 class="slide__title">Nerds</h5>
+              <img class="slide__img" src="img/content/mockup__nerds__535x276.png" width="535" height="276">
+              <div class="slide__details">
+                <p class="slide__text">Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
+                <a class="slide__btn" href="portfolio/nerds/index.html" target="_blank">Смотреть</a>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="portfolio__item  portfolio__glassy">
+        <!-- <div class="portfolio__item  portfolio__glassy">
           <img src="img/content/mockup_gllacy__537x468.png" width="537" height="468">
           <div class="portfolio__details">
             <header>Gllacy</header>
@@ -198,7 +192,7 @@
             <p>Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
             <a href="portfolio/sedona/index.html" class="portfolio__btn" target="_blank">Смотреть</a>
           </div>
-        </div>
+        </div> -->
 
       </article>
 

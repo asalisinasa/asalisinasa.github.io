@@ -476,7 +476,8 @@ body {
   align-items: center;
   width: 100%;
   height: 100vmin;
-  min-height: 480px;
+  min-height: 740px;
+  min-width: 1024px;
   margin-bottom: 60px;
   overflow: hidden;
 }
@@ -499,13 +500,25 @@ body {
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
+  position: relative;
   padding-top: 110px;
   margin-bottom: 43px;
-  margin-right: 50%;
+  margin-right: 52%;
   text-align: right;
   font-family: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
   font-size: 32px;
   line-height: 60px;
+}
+
+.section__title:after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 103%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0076fe;
 }
 
 section > article {
@@ -831,38 +844,44 @@ h2 {
   color: #0076fe;
 }
 
-.skills {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 100px;
-  overflow: hidden;
-  font-size: 40px;
-  line-height: 1.2;
+@-webkit-keyframes marquee {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -150%;
+  }
+  100% {
+    left: 0;
+  }
 }
 
-.skills__bg {
-  width: 100%;
-  height: 100px;
-  display: inline-block;
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -150%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.skills {
   position: relative;
+  width: 100%;
+  height: 47px;
+  margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .skills__scroll {
   position: absolute;
-  left: 0;
-  background-position: 10px 0;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100px;
-  transition: all 20s linear 0s;
-  -webkit-transition: all 20s linear 0s;
-  -moz-transition: all 20s linear 0s;
-  -ms-transition: all 20s linear 0s;
-  -o-transition: all 20s linear 0s;
-}
-
-.skills__bg:hover .skills__scroll {
-  background-position: -4600px 0 !important;
+  display: block;
+  height: 47px;
+  -webkit-animation: marquee 30s linear infinite;
+          animation: marquee 30s linear infinite;
 }
 
 .portfolio {
@@ -876,6 +895,10 @@ h2 {
 
 .portfolio__title {
   color: white;
+}
+
+.portfolio__title::after {
+  background-color: white;
 }
 
 .portfolio__item {
@@ -961,6 +984,75 @@ h2 {
 
 .portfolio__btn:hover {
   background-color: white;
+}
+
+.slider {
+  position: relative;
+  width: 940px;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
+}
+
+.slider__controls label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slide {
+  display: none;
+  min-height: 440px;
+}
+
+.slide__title {
+  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.slide__text {
+  font-family: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.slide__btn {
+  padding: 5px 10px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-family: "PFDinDisplayPro-Medium", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+#btn-1:checked ~ .slider__items .slide:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .slider__items .slide:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .slider__items .slide:nth-child(3) {
+  display: block;
 }
 
 .contacts {
