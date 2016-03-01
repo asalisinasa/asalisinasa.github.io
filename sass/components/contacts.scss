@@ -1,3 +1,17 @@
+@keyframes shake {
+  25% {
+    transform:translateY(5px)
+    }
+  50% {
+    transform:translateY(0px)
+    }
+  75% {
+    transform:translateY(-5px)
+    }
+  100% {
+    transform:translateY(0px)
+    }
+}
 .contacts {
   margin-bottom: 0;
 
@@ -6,16 +20,15 @@
 
   &__content {}
   &__feedback-form {
-    width: 630px;
-    height: 400px;
+    width: 440px;
+    height: 240px;
     margin: 0 auto;
     margin-bottom: 60px;
-    padding: 45px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
+    padding: 30px 20px;
+
+    background-color: white;
+
+    font-size: 0;
   }
 }
 .feedback-form {
@@ -26,26 +39,65 @@
   &__half-width {
     display: inline-block;
     vertical-align: top;
-    width: 240px;
-    height: 40px;
-    margin-bottom: 25px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 30px;
+
     &:first-of-type {
-      margin-right: 30px;
+      margin-right: 20px;
     }
   }
-  &__whole-width {
-    width: 525px;
-    height: 65px;
-    resize: none;
-  }
+
   &__text-field {
     padding: 5px;
     border: 0;
     outline: 0;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    color: $gray;
-    font-size: 12px;
+
+    // text-transform: uppercase;
+
+    width: 194px;
+    height: 44px;
+    border: 3px solid $blue;
+    color: $blue;
+
+    font-family: $din;
+    font-size: $fs-m;
+
+    &:hover {
+      background-color: rgba(0, 118, 254, 0.2);
+    }
+    &:focus {
+      background-color: $blue;
+      color: white;
+    }
+  }
+
+  &__whole-width {
+    width: 425px;
+    height: 65px;
+    resize: none;
+  }
+
+  &__btn {
+    position: relative;
+
+    width: 0;
+    height: 0;
+
+    margin-left: 100%;
+    margin-top: 55px;
+
+    animation: shake 1s infinite linear;
+
+    &::after {
+      content: "";
+      width: 102px;
+      height: 75px;
+      position: absolute;
+      top: -20px;
+      left: -70px;
+
+      background: url(../img/icon/initial_icon/icon__airplane.png) no-repeat;
+    }
   }
 }
