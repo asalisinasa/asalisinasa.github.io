@@ -13,12 +13,16 @@
     }
 }
 .contacts {
-  margin-bottom: 0;
+  @include section-height;
 
   background-color: $gray;
   color: white;
 
-  &__content {}
+  &__content {
+    @include container;
+    @include content-align;
+    padding-bottom: 150px;
+  }
   &__feedback-form {
     width: 440px;
     height: 240px;

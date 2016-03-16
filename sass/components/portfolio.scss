@@ -1,9 +1,12 @@
 .portfolio {
+  @include section-height;
   background-color: $blue;
   color: white;
 
     &__content {
-      margin-bottom: 100px;
+      @include container;
+      @include content-align;
+      padding: 0 10%;
     }
 
   &__title {

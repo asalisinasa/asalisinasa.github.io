@@ -1,12 +1,19 @@
 .page-footer {
-  width: 100%;
-  height: 110px;
-  padding: 40px 20px;
-  text-align: center;
+  display: flex;
+  height: 150px;
+  margin-top: -150px;
+  
   background-color: white;
   color: $blue;
+  
   font-family: $incon-bol;
   font-size: $fs-xs;
+  text-align: center;
+  
+  &__content {
+    @include container;
+    margin: auto;
+  }
   &__title {
     @include indent-reset;
     margin-bottom: 20px;

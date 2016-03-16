@@ -2,13 +2,31 @@
 
   @include clearfix;
 
-    display: block;
+    @include section-height;
 
     color: $blue;
 
     font-family: $incon-bol;
     font-size: $fs-m;
     line-height: 1.2;
+    
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      @include container;
+      height: 100%;
+      outline: 2px solid black;
+      
+    }
+    &__skills {
+      outline: 2px solid green;
+    }
+
+    &__instruments {
+      outline: 2px solid green;
+    }
 
     &__title {
       color: $gray;
@@ -40,6 +58,8 @@
       margin: 0 20px;
 
       color: $gray;
+      
+      outline: 2px solid gray;
     }
 
     &__icon {

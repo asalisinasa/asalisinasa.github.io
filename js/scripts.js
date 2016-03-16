@@ -1,3 +1,26 @@
+$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll(".section");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+	});
+
+
 // $(window).scroll(function() {
 
 //   var st = $(this).scrollTop();
@@ -33,9 +56,9 @@
 
 
 
-    $(window).load(function(){
-        $('body').addClass('loaded');   
-        $('.loader').fadeOut(200);
+    // $(window).load(function(){
+    //     $("body").addClass("loaded");
+    //     $(".loader").fadeOut(200);
     });
 
 
@@ -61,23 +84,23 @@
 
 
 
-//     var navbar=$('.navbar');
+//     var navbar=$(".navbar");
 //     var navbarAffixHeight=56
 
 
-//     $('.navbar-collapse').on('show.bs.collapse', function () {
-//         navbar.addClass('affix');
+//     $(".navbar-collapse").on("show.bs.collapse", function () {
+//         navbar.addClass("affix");
 //     });
 
-//     $('.navbar-collapse').on('hidden.bs.collapse', function () {
-//         if (navbar.hasClass('affix-top')){
-//             navbar.removeClass('affix');
+//     $(".navbar-collapse").on("hidden.bs.collapse", function () {
+//         if (navbar.hasClass("affix-top")){
+//             navbar.removeClass("affix");
 //         }
-            
+
 //     });
 
-//     $(".navbar-nav > li > a").on('click', function() {
-//         $(".navbar-collapse").collapse('hide');
+//     $(".navbar-nav > li > a").on("click", function() {
+//         $(".navbar-collapse").collapse("hide");
 //     });
 
 
@@ -94,13 +117,13 @@
 //       }
 //     });
 
-//     navbar.on('affixed-top.bs.affix', function() {
-//         if ($('.navbar-collapse').hasClass('in')){
-//             navbar.addClass('affix');
-//         }   
+//     navbar.on("affixed-top.bs.affix", function() {
+//         if ($(".navbar-collapse").hasClass("in")){
+//             navbar.addClass("affix");
+//         }
 //     });
 
-    
+
 
 
 //     /*-------------------------------------------------------------------------------
@@ -110,11 +133,11 @@
 
 
 
-//     $('.js-scroller').on('click', function(e) {
+//     $(".js-scroller").on("click", function(e) {
 //         e.preventDefault();
 //         var target = $(this.hash);
 //         if (target.length) {
-//             $('html,body').animate({
+//             $("html,body").animate({
 //                 scrollTop: (target.offset().top - navbarAffixHeight + 1)
 //             }, 1000);
 //         }
@@ -129,8 +152,6 @@
 
 
 
-//     $('body').scrollspy({
+//     $("body").scrollspy({
 //         offset:  navbarAffixHeight + 1
 //     });
-    
-

@@ -1,0 +1,126 @@
+.intro {
+  display: flex;
+  height: 100vh;
+  min-height: 570px;
+  padding-top: 60px;
+  
+  font-family: $din-bol;
+  
+  &__content {
+    @include container;
+    @include content-align;
+    outline: 2px solid black;
+  }
+
+  &__title {
+    @include indent-reset;
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: $din-bol;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
+  }
+
+  &__text {
+    @include indent-reset;
+
+    text-align: center;
+
+    color: $blue;
+
+    font-family: $din-bol;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
+
+    &:nth-of-type(1) {
+      position: relative;
+      margin-bottom: 75px;
+
+      &::after {
+        content: "&";
+        position: absolute;
+        top: 62px;
+        left: 48%;
+
+        color: white;
+
+        font-family: $din-bol;
+        font-size: $fs-xl;
+        line-height: $lh-xl;
+      }
+    }
+  }
+
+  &__descr {
+    @include indent-reset;
+
+    margin-top: 12px;
+
+    color: white;
+
+    font-family: $din-bol;
+    font-size: $fs-xl;
+    line-height: $lh-xl;
+
+    &--right {
+      margin-bottom: 63px;
+
+      text-align: right;
+    }
+
+    &--highlight {
+      color: $blue;
+    }
+  }
+
+  &__contact {
+    color: white;
+
+    padding-left: 145px;
+    // padding-right: 100px;
+    padding-bottom: 120px;
+
+    font-family: $incon-bol;
+    font-size: $fs-s;
+    line-height: $lh-s;
+  }
+
+  &__email {
+    @include link-reset;
+
+    margin-left: 330px;
+
+    color: white;
+
+    font-family: $incon-bol;
+    font-size: $fs-s;
+    line-height: $lh-s;
+  }
+
+  &__locate,
+  &__email {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__locate::before,
+  &__email::before {
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 0;
+
+    width: 48px;
+    height: 4px;
+
+    background-color: $blue;
+  }
+
+  &__email::before {
+    left: 200px;
+  }
+}

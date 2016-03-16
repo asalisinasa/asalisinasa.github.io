@@ -1,10 +1,28 @@
 ////////////////////// Most useful ////////////////////////
 
 @mixin container {
-  // max-width: 1200px;
-  // min-width: 768px;
-  width: 960px;
+  min-width: 960px;
+  padding: 0 5%;
   margin: 0 auto;
+  
+  outline: 2px solid red;
+}
+
+@mixin section-height {
+  display: flex;
+  height: 100vh;
+  min-height: 570px;
+  padding-top: 60px;
+  
+  @media (max-height: 750px) {
+        // стили для очень маленькой высоты
+        height: 750px;
+    }
+}
+
+@mixin content-align {
+  margin: auto;
+  padding-top: 60px;
 }
 
 @mixin clearfix {
