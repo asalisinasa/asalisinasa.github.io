@@ -1,3 +1,10 @@
+////////////////////// breackpoints
+$mobile-width: "(max-width: 767px)";
+$tablet-width: "(min-width: 768px)";
+$desktop-width: "(min-width: 960px)";
+$mobile-height: "(max-height: 640px)";
+
+
 //fonts
 
 $din: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
@@ -24,6 +31,12 @@ $col-3: 100%/3;
 ////////////////////////////////////////////////////////////
 
 ////////////////////////// font-size
+
+// $fs-xl: 3rem;
+// $fs-l: 2rem;
+// $fs-m: 1.5rem;
+// $fs-s: 1.3rem;
+// $fs-xs: 1rem;
 
 $fs-xl: 48px;
 $fs-l: 32px;
