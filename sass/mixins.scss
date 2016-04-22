@@ -3,28 +3,33 @@
     width: 87.5%;
     min-width: 290px;
     margin: 0 auto;
+
     @media #{$tablet-width} {
         width: 88.57142857142857%; // 940/1200
     }
+
     @media #{$desktop-width} {
         width: 78.33333333333333%; // 620/700
         max-width: 1150px;
     }
-    outline: 2px solid red;
 }
+
 @mixin section-height {
     display: flex;
     height: 100vh;
     min-height: 568px;
     overflow: hidden;
+
     @media (max-height: 750px) {
         // стили для очень маленькой высоты вьюпорта
     }
 }
+
 @mixin content-align {
     margin: auto;
     padding-top: 60px;
 }
+
 @mixin clearfix {
     &::after {
         content: "";
@@ -32,6 +37,7 @@
         clear: both;
     }
 }
+
 ////////////////////// Resets ////////////////////////
 @mixin ul-reset {
     margin-top: 0;
@@ -39,10 +45,12 @@
     padding-left: 0;
     list-style: none;
 }
+
 @mixin link-reset {
     color: inherit;
     text-decoration: none;
 }
+
 @mixin indent-reset {
     margin: 0;
     padding: 0;

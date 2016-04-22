@@ -1,31 +1,35 @@
 .features {
-    @include section-height;
+    // @include section-height;
+    background-color: #FFF;
     color: $blue;
     font-family: $incon-bol;
     font-size: $fs-m;
     line-height: 1.2;
+
     &__content {
         @include content-align;
         width: 100%;
-        // outline: 2px solid black;
     }
+
     &__title-wrap {
         @include container;
     }
+
     &__title {
         position: relative;
-        margin-top: 5%;
+        margin-top: 3vh;
         margin-bottom: 7%;
         padding-left: 5vh;
         font-family: $din-bol;
         font-size: $fs-m;
         line-height: $lh-s;
         color: $gray;
+
         &:after {
             content: "";
             position: absolute;
             top: 34%;
-            left: 2%;
+            left: 1.2%;
             width: 10px;
             height: 10px;
             border-radius: 50%;
@@ -39,9 +43,11 @@
         overflow: hidden;
         // outline: 2px solid green;
     }
+
     &__instruments {
         // outline: 2px solid green;
     }
+
     &__items-wrap {
         display: flex;
         flex-wrap: nowrap;
@@ -52,11 +58,13 @@
         margin: 0 auto;
         // outline: 2px solid yellow;
     }
+
     &__item {
         // position: relative;
         // margin-left: 10%;
         color: $gray;
     }
+
     &__icon {
         position: relative;
         display: block;
@@ -68,6 +76,7 @@
             transform: rotate(45deg);
         }
     }
+
     &__img {
         position: absolute;
         top: 37px;
@@ -78,18 +87,22 @@
             left: 10px;
             transform: rotate(-45deg);
         }
+
         &--adaptive {
             top: 27px;
             left: 9px;
         }
+
         &--sparks {
             left: 15px;
         }
+
         &--mobile {
             left: 41px;
             top: 28px;
         }
     }
+
     &__text {
         font-size: $fs-s;
         text-align: center;
@@ -97,6 +110,7 @@
     }
 
     @media #{$tablet-width} {
+
         &__title {
             margin-top: 4%;
             margin-bottom: 5%;
@@ -104,33 +118,41 @@
             text-align: right;
             font-size: $fs-l;
             line-height: $lh-l;
+    
             &:after {
                 top: 45%;
                 left: 103%;
             }
         }
+
         &__skills {
             margin-bottom: 12%;
         }
+
         &__instruments {}
         &__items-wrap {
             justify-content: space-between;
             align-items: baseline;
             width: auto;
         }
+
         &__item {
             position: relative;
             color: $gray;
         }
+
         &__text {
             font-size: $fs-m;
         }
     }
+
     @media #{$mobile-height} {
+
         &__title {
             margin-top: 2%;
             margin-bottom: 2%;
         }
+
         &__skills {
             margin-bottom: 4%;
         }

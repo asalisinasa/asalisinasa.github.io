@@ -16,10 +16,14 @@
     "autoprefixer": "6.3.3",
     "browser-sync": "2.11.1",
     "editorconfig-tools": "0.1.1",
+    "eslint": "^2.8.0",
     "gulp": "3.9.1",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.0",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^2.2.0",
+    "page-scroll-to-id": "^1.5.4",
+    "webpack": "^1.13.0",
+    "webpack-stream": "^3.2.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",

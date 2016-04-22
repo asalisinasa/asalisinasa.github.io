@@ -1,0 +1,140 @@
+.slider {
+    position: relative;
+    min-height: 500px;
+    margin-bottom: 30px;
+    
+    &__toggle {
+        display: none;
+    }
+
+    &__items-wrap {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    &__items {
+        display: flex;
+        width: 400%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &__item {
+        // display: inline-block;
+        width: 25%;
+    }
+   
+    &__controls {
+        width: 80px;
+        height: 15px;
+        margin: 4vh auto;
+        font-size: 0;
+    }
+    
+    &__control {
+        display: inline-block;
+        vertical-align: top;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0.3;
+        transition: opacity 0.4s;
+        
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+        
+        // &:hover {
+        //     opacity: 1;
+        // }
+
+        // &:active {
+        //     opacity: 0.7;
+        // }
+    }
+
+    &__arrows {
+        display: none;
+    }
+
+    &__items--show-first {
+        transform: translateX(0);
+    }
+
+    &__items--show-second {
+        transform: translateX(-25%);
+    }
+
+    &__items--show-third {
+        transform: translateX(-50%);
+    }
+
+    &__items--show-fourth {
+        transform: translateX(-75%);
+    }
+    
+    // &__toggle[id="toggle-1"]:checked ~ &__controls &__control[for~="toggle-1"],
+    // &__toggle[id="toggle-2"]:checked ~ &__controls &__control[for~="toggle-2"],
+    // &__toggle[id="toggle-3"]:checked ~ &__controls &__control[for~="toggle-3"],
+    // &__toggle[id="toggle-4"]:checked ~ &__controls &__control[for~="toggle-4"] {
+    //     opacity: 1;
+    // }
+
+    // &__toggle[id="toggle-1"]:checked ~ &__items-wrap &__items {
+    //     transform: translateX(0);
+    // }
+
+    // &__toggle[id="toggle-2"]:checked ~ &__items-wrap &__items {
+    //     transform: translateX(-25%);
+    // }
+
+    // &__toggle[id="toggle-3"]:checked ~ &__items-wrap &__items {
+    //     transform: translateX(-50%);
+    // }
+
+    // &__toggle[id="toggle-4"]:checked ~ &__items-wrap &__items {
+    //     transform: translateX(-75%);
+    // }
+
+    @media #{$tablet-width} {
+
+        &__arrows {
+            display: block;
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 45%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            
+            &::after {
+                content: "";
+                position: absolute;
+                right: -5px;
+                width: 29px;
+                height: 2px;
+                border: 20px solid transparent;
+                border-right: 20px solid #fff;
+            }
+        }
+
+        &__arrow--next {
+            right: 0;
+            
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__arrow--disabled {
+
+            &::after {
+                pointer-events: none;
+                opacity: 0.3;
+            }
+        }
+    }
+}

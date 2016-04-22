@@ -1,157 +1,59 @@
 .portfolio {
     @include section-height;
     background-color: $blue;
-    color: white;
+    color: #fff;
+    
     &__content {
         @include container;
         @include content-align;
-        padding: 0 10%;
     }
+
     &__title {
-        margin-bottom: 50px;
-        color: white;
-        &::after {
-            background-color: white;
-        }
-    }
-}
-.slider {
-    position: relative;
-    width: 940px;
-    min-height: 500px;
-    margin-bottom: 30px;
-    input[type="radio"] {
-        display: none;
-    }
-    &__active {
-        position: absolute;
-        bottom: -40px;
-        left: 50%;
-        width: 200px;
-        margin-left: -100px;
-        text-align: center;
-        label {
-            display: inline-block;
+        position: relative;
+        margin-top: 3vh;
+        margin-bottom: 7%;
+        padding-left: 5vh;
+        font-family: $din-bol;
+        font-size: $fs-m;
+        line-height: $lh-s;
+        color: $gray;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 34%;
+            left: 1.2%;
             width: 10px;
             height: 10px;
-            margin: 0 10px;
-            vertical-align: top;
-            background-color: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
-            cursor: pointer;
+            background-color: #fff;
         }
     }
-    &__controls label {
-        cursor: pointer;
-    }
-    &__controls label::before {
-        content: "";
-        position: absolute;
-        top: 44%;
-        left: -77px;
-        border: 10px solid transparent;
-        border-right: 10px solid white;
-    }
-    &__controls label::after {
-        content: "";
-        position: absolute;
-        top: 44%;
-        right: -18px;
-        border: 10px solid transparent;
-        border-left: 10px solid white;
-    }
-    //
-    &__items {
-        overflow: hidden;
-    }
-}
-.slide {
-    @include clearfix;
-    display: none;
-    min-height: 440px;
-    // margin-top: -75px;
-    transition: all 4s linear;
-    &__title {
-        @include indent-reset;
-        margin-left: 52%;
-        margin-bottom: 40px;
-        text-align: left;
-        font-family: $incon-bol;
-        font-size: $fs-xl;
-        line-height: $lh-xl;
-        a {
-            @include link-reset;
+
+    @media #{$tablet-width} {
+
+        &__title {
+            margin-top: 4%;
+            margin-bottom: 5%;
+            margin-right: 52%;
+            text-align: right;
+            font-size: $fs-l;
+            line-height: $lh-l;
+
+            &:after {
+                top: 45%;
+                left: 103%;
+            }
         }
     }
-    &__big-col {
-        width: 540px;
-    }
-    &__small-col {
-        width: 380px;
-    }
-    &__img,
-    &__details {
-        display: inline-block;
-        vertical-align: top;
-    }
-    &__img {
-        width: 80%;
-        height: auto;
-    }
-    &__details {
-        width: 320px;
-        margin-top: 90px;
-    }
-    &__text {
-        margin-bottom: 40px;
-        font-family: $din;
-        font-size: $fs-s;
-        line-height: $lh-s;
-    }
-    &__btn {
-        padding: 5px 10px;
-        border: 1px solid white;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        font-family: $din-med;
-        font-size: $fs-xs;
-        line-height: $lh-s;
-    }
-    &:nth-child(odd) {
-        .slide__img {
-            float: left;
-            margin-right: 40px;
-        }
-        .slide__details {
-            float: right;
-        }
-    }
-    &:nth-child(even) {
-        .slide__img {
-            float: right;
-        }
-        .slide__details {
-            float: left;
-            margin-right: 40px;
-            margin-left: 35px;
+
+    @media #{$mobile-height} {
+
+        &__title {
+            margin-top: 2%;
+            margin-bottom: 2%;
         }
     }
 }
-#btn-1:checked ~ .slider__items .slide:nth-child(1) {
-    display: block;
-}
-#btn-2:checked ~ .slider__items .slide:nth-child(2) {
-    display: block;
-}
-#btn-3:checked ~ .slider__items .slide:nth-child(3) {
-    display: block;
-}
-#btn-1:checked ~ .slider__active label[for="btn-1"],
-#btn-2:checked ~ .slider__active label[for="btn-2"],
-#btn-3:checked ~ .slider__active label[for="btn-3"] {
-    background-color: white;
-}
-// p.slider__text::selection {
-//   background-color: white;
-// }
+
+

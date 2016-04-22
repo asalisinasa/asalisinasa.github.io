@@ -1,0 +1,68 @@
+.hamburger {
+  	display: block;
+    width: 40px;
+    height: 30px;
+  	margin: 5px 0 0 auto;
+  	background-color: transparent;
+  	border: none;
+  	outline: none;
+
+  &__line {
+  	position: relative;
+  	width: 35px;
+  	height: 3px;
+  	background-color: $blue;
+
+  	&::after,
+  	&::before {
+  		content: "";
+  		position: absolute;
+  		right: 0;
+  		width: 35px;
+  		height: 3px;
+  		background-color: $blue;
+  	}
+
+  	&::after {
+  		top: 8px;
+  	}
+
+  	&::before {
+  		bottom: 8px;
+  	}
+  }
+
+  &__line--cross {
+
+    &::after,
+  	&::before {
+      top: 0;
+      bottom: 0;
+    }
+
+    background-color: transparent;
+
+    &::after {
+      transform: rotate(45deg)
+    }
+
+    &::before {
+      transform: rotate(-45deg)
+    }
+  }
+
+  &:hover &__line,
+  &:hover &__line::after,
+  &:hover &__line::before {
+    background-color: $gray;
+    transition:
+      transform 0.3s linear,
+      top0.3s linear,
+      bottom 0.3s linear,
+      background-color 0.1s ease-in;
+  }
+
+  &:hover &__line--cross {
+    background-color: transparent;
+  }
+}

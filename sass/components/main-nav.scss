@@ -1,6 +1,6 @@
 .main-nav {
-  display: flex;
-  position: fixed;
+  position: absolute;
+  top: 60px;
   z-index: 100;
   width: 100%;
   min-height: 60px;
@@ -13,51 +13,70 @@
   text-transform: uppercase;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-center;
-    justify-content: space-around;
     @include ul-reset;
-    @include container;
     box-sizing: content-box;
+    text-align: center;
   }
 
   &__item {
-    // display: inline-block;
-    // vertical-align: baseline;
-    // min-width: 120px;
-    
-    a {
-      display: block;
-      text-decoration: none;
+    display: block;
+    border-bottom: 2px solid $blue;
 
-      color: $blue;
-
-      line-height: 60px;
+    &:last-child {
+      margin-right: 0;
     }
-    // a::before {
-    //   content: attr(data-hover);
-    //   position: absolute;
-    //   color: white;
-    //   transition: transform 0.3s, opacity 0.3s;
-    // }
-    // a:hover::before {
-    //   transform: scale(0.2);
-    //   opacity: 0;
-    // }
   }
 
-  &__item:last-child {
-    margin-right: 0;
-  }
-  
-  &__item--active {
-    background-color: white;
-    a {
+  &__item-link {
+    display: block;
+    text-decoration: none;
+    color: $blue;
+    line-height: 60px;
+    transition: 0.1s ease-in;
 
-      &::before {
-        color: $gray;
-      }
+    &:hover {
+      color: $gray;
+    }
+
+    &:active {
+      color: rgba(black, 0.5);
+    }
+  }
+
+  &__item-link--current {
+    color: $gray;
+  }
+
+  @media #{$mobile-width} {
+    margin: 0;
+    transition: margin 0.5s ease-out;
+
+    &--hidden {
+      margin-top: -300px;
+    }
+  }
+
+  @media #{$tablet-width} {
+    position: fixed;
+    top: 0;
+    display: flex;
+
+    &__mobile {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-center;
+      justify-content: space-around;
+      @include container;
+      box-sizing: content-box;
+    }
+
+    &__item {
+      display: block;
+      border-bottom: none;
     }
   }
 }

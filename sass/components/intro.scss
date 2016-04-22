@@ -7,7 +7,6 @@
         position: relative;
         @include container;
         @include content-align;
-        // outline: 2px solid black;
     }
     &__title {
         @include indent-reset;
