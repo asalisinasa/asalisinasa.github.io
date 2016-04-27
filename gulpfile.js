@@ -4,8 +4,6 @@
 /* ESLint browser: true */
 
 var gulp = require('gulp');
-// var webpackStream = require('webpack-stream');
-// var webpack = webpackStream.webpack;
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');

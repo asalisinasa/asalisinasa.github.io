@@ -17,12 +17,8 @@
 @mixin section-height {
     display: flex;
     height: 100vh;
-    min-height: 568px;
+    min-height: 670px;
     overflow: hidden;
-
-    @media (max-height: 750px) {
-        // стили для очень маленькой высоты вьюпорта
-    }
 }
 
 @mixin content-align {

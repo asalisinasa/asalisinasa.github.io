@@ -20,7 +20,6 @@
     }
 
     &__item {
-        // display: inline-block;
         width: 25%;
     }
    
@@ -44,18 +43,44 @@
         &:not(:last-child) {
             margin-right: 12px;
         }
-        
-        // &:hover {
-        //     opacity: 1;
-        // }
-
-        // &:active {
-        //     opacity: 0.7;
-        // }
     }
 
     &__arrows {
-        display: none;
+        display: block;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 40%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            width: 29px;
+            height: 2px;
+            border: 20px solid transparent;
+            border-right: 20px solid #fff;
+        }
+    }
+
+    &__arrow--next {
+        right: -44px;
+        
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__arrow--disabled {
+
+        &::after {
+            pointer-events: none;
+            opacity: 0.3;
+        }
     }
 
     &__items--show-first {
@@ -74,67 +99,19 @@
         transform: translateX(-75%);
     }
     
-    // &__toggle[id="toggle-1"]:checked ~ &__controls &__control[for~="toggle-1"],
-    // &__toggle[id="toggle-2"]:checked ~ &__controls &__control[for~="toggle-2"],
-    // &__toggle[id="toggle-3"]:checked ~ &__controls &__control[for~="toggle-3"],
-    // &__toggle[id="toggle-4"]:checked ~ &__controls &__control[for~="toggle-4"] {
-    //     opacity: 1;
-    // }
-
-    // &__toggle[id="toggle-1"]:checked ~ &__items-wrap &__items {
-    //     transform: translateX(0);
-    // }
-
-    // &__toggle[id="toggle-2"]:checked ~ &__items-wrap &__items {
-    //     transform: translateX(-25%);
-    // }
-
-    // &__toggle[id="toggle-3"]:checked ~ &__items-wrap &__items {
-    //     transform: translateX(-50%);
-    // }
-
-    // &__toggle[id="toggle-4"]:checked ~ &__items-wrap &__items {
-    //     transform: translateX(-75%);
-    // }
 
     @media #{$tablet-width} {
 
-        &__arrows {
-            display: block;
-        }
-
         &__arrow {
-            position: absolute;
             top: 45%;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            
+
             &::after {
-                content: "";
-                position: absolute;
                 right: -5px;
-                width: 29px;
-                height: 2px;
-                border: 20px solid transparent;
-                border-right: 20px solid #fff;
             }
         }
 
         &__arrow--next {
             right: 0;
-            
-            &::after {
-                transform: rotate(180deg);
-            }
-        }
-
-        &__arrow--disabled {
-
-            &::after {
-                pointer-events: none;
-                opacity: 0.3;
-            }
         }
     }
 }

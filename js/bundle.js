@@ -49,6 +49,7 @@
 	__webpack_require__(1);
 	__webpack_require__(2);
 	__webpack_require__(3);
+	__webpack_require__(4);
 
 
 /***/ },
@@ -239,6 +240,40 @@
 
 /***/ },
 /* 3 */
+/***/ function(module, exports) {
+
+	/* jslint browser: true */
+	/* ESLint browser: true */
+
+	'use strict';
+
+	var navLinks = document.querySelectorAll('main-nav__item-link');
+	var V = 2; // скорость, может иметь дробное значение через точку
+	for (var i = 0; i < navLinks.length; i++) {
+	  navLinks[i].addEventListener('click', function(e) {
+	    e.preventDefault();
+	    var w = window.pageYOffset, // прокрутка
+	      hash = this.href.replace(/[^#]*(.*)/, '$1'); // id элемента, к которому нужно перейти
+	    var t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
+	      start = null;
+	    requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+	    function step(time) {
+	      if (start === null) start = time;
+	      var progress = time - start,
+	        r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+	      window.scrollTo(0, r);
+	      if (r != w + t) {
+	        requestAnimationFrame(step);
+	      } else {
+	        location.hash = hash; // URL с хэшем
+	      }
+	    }
+	  }, false);
+	}
+
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @fileoverview Поведение слайдера в секции портфолио */
@@ -329,8 +364,7 @@
 	  showPrev();
 	}
 
-	function _onDocumentKeyDown(evt) {
-	  evt.preventDefault();
+	function _onDocumentKeyDown() {
 	  switch (event.keyCode) {
 	    case utilities.KeyCode.RIGHT:
 	      showNext();
@@ -343,61 +377,61 @@
 	  }
 	}
 
-	function _onSwipe(el, callback) {
-
-	  var touchsurface = el,
-	    swipedir,
-	    startX,
-	    startY,
-	    distX,
-	    distY,
-	    threshold = 150, //required min distance traveled to be considered swipe
-	    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-	    allowedTime = 300, // maximum time allowed to travel that distance
-	    elapsedTime,
-	    startTime,
-	    handleswipe = callback || function(swipedir) {};
-
-	  touchsurface.addEventListener('touchstart', function(e) {
-	    var touchobj = e.changedTouches[0];
-	    swipedir = 'none';
-	    distX = 0;
-	    distY = 0;
-	    startX = touchobj.pageX;
-	    startY = touchobj.pageY;
-	    startTime = new Date().getTime(); // record time when finger first makes contact with surface
-	    e.preventDefault();
-	  }, false);
-
-	  touchsurface.addEventListener('touchmove', function(e) {
-	    e.preventDefault(); // prevent scrolling when inside DIV
-	  }, false);
-
-	  touchsurface.addEventListener('touchend', function(e) {
-	    var touchobj = e.changedTouches[0];
-	    distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
-	    distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
-	    elapsedTime = new Date().getTime() - startTime; // get time elapsed
-	    if (elapsedTime <= allowedTime) { // first condition for awipe met
-	      if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
-	        swipedir = (distX < 0) ? 'left' : 'right'; // if dist traveled is negative, it indicates left swipe
-	      } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
-	        swipedir = (distY < 0) ? 'up' : 'down'; // if dist traveled is negative, it indicates up swipe
-	      }
-	    }
-	    handleswipe(swipedir);
-	    e.preventDefault();
-	  }, false);
-	}
-
-	_onSwipe(slider, function(swipedir) {
-	  if (swipedir === 'left') {
-	    showNext();
-	  }
-	  if (swipedir === 'right') {
-	    showPrev();
-	  }
-	});
+	// function _onSwipe(el, callback) {
+	//
+	//   var touchsurface = el,
+	//     swipedir,
+	//     startX,
+	//     startY,
+	//     distX,
+	//     distY,
+	//     threshold = 150, //required min distance traveled to be considered swipe
+	//     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+	//     allowedTime = 300, // maximum time allowed to travel that distance
+	//     elapsedTime,
+	//     startTime,
+	//     handleswipe = callback || function(swipedir) {};
+	//
+	//   touchsurface.addEventListener('touchstart', function(e) {
+	//     var touchobj = e.changedTouches[0];
+	//     swipedir = 'none';
+	//     distX = 0;
+	//     distY = 0;
+	//     startX = touchobj.pageX;
+	//     startY = touchobj.pageY;
+	//     startTime = new Date().getTime(); // record time when finger first makes contact with surface
+	//     e.preventDefault();
+	//   }, false);
+	//
+	//   touchsurface.addEventListener('touchmove', function(e) {
+	//     e.preventDefault(); // prevent scrolling when inside DIV
+	//   }, false);
+	//
+	//   touchsurface.addEventListener('touchend', function(e) {
+	//     var touchobj = e.changedTouches[0];
+	//     distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+	//     distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+	//     elapsedTime = new Date().getTime() - startTime; // get time elapsed
+	//     if (elapsedTime <= allowedTime) { // first condition for awipe met
+	//       if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
+	//         swipedir = (distX < 0) ? 'left' : 'right'; // if dist traveled is negative, it indicates left swipe
+	//       } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
+	//         swipedir = (distY < 0) ? 'up' : 'down'; // if dist traveled is negative, it indicates up swipe
+	//       }
+	//     }
+	//     handleswipe(swipedir);
+	//     e.preventDefault();
+	//   }, false);
+	// }
+	//
+	// _onSwipe(slider, function(swipedir) {
+	//   if (swipedir === 'left') {
+	//     showNext();
+	//   }
+	//   if (swipedir === 'right') {
+	//     showPrev();
+	//   }
+	// });
 
 
 /***/ }
