@@ -521,6 +521,7 @@ body {
   outline: none; }
   .hamburger__line {
     position: relative;
+    display: inherit;
     width: 35px;
     height: 3px;
     background-color: #0076fe; }
@@ -620,9 +621,6 @@ body {
       .main-nav__item {
         display: block;
         border-bottom: none; } }
-
-.active {
-  color: #cdcdcd; }
 
 .intro {
   display: flex;

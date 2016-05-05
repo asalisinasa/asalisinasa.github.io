@@ -38,7 +38,7 @@
     <div class="page-header__inner">
         <div class="page-header__mobile">
             <button class="hamburger" type="button">
-                <div class="hamburger__line  hamburger__line--cross"></div>
+                <span class="hamburger__line  hamburger__line--cross"></span>
             </button>
         </div>
         <nav class="main-nav" id="#nav">
@@ -137,7 +137,7 @@
                         <article class="portfolio-item  slider__item">
                             <h5 class="portfolio-item__title">Pink</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  slider__big-col" src="img/content/mockup__pink--left__540x312.png">
+                                <img class="portfolio-item__img  slider__big-col" src="img/content/mockup__pink--left__540x312.png" alt="Pink мобильное приложение">
                             </div>
                             <div class="portfolio-item__details  portfolio-item__small-col">
                                 <p class="portfolio-item__text">Сайт мобильного приложения: адаптивность, SVG, HTML5, CSS3, Javascript</p>
@@ -147,7 +147,7 @@
                         <article class="portfolio-item  slider__item">
                             <h5 class="portfolio-item__title">Gllacy</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__gllacy__540x312.png">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__gllacy__540x312.png" alt="Gllacy мороженое">
                             </div>
                             <div class="portfolio-item__details  portfolio-item__small-col">
                                 <p class="portfolio-item__text">Онлайн-магазин мороженого: резиновая верстка, SVG, HTML5, CSS3, Javascript</p>
@@ -157,7 +157,7 @@
                         <article class="portfolio-item  slider__item">
                             <h5 class="portfolio-item__title">Sedona</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__sedona__540x312.png">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__sedona__540x312.png" alt="Седона">
                             </div>
                             <div class="portfolio-item__details  slider__small-col">
                                 <p class="portfolio-item__text">Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
@@ -167,7 +167,7 @@
                         <article class="portfolio-item  slider__item">
                             <h5 class="portfolio-item__title">Nerds</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__nerds__540x312.png">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__nerds__540x312.png" alt="Nerds дизайн студия">
                             </div>
                             <div class="portfolio-item__details  slider__small-col">
                                 <p class="portfolio-item__text">Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
@@ -226,25 +226,12 @@
     </div>
 </footer>
 
-</body>
-
 <script src="js/bundle.js"></script>
 <script src="js/jquery-2.2.3.min.js"></script>
 <script>
   new WOW().init();
 </script>
 
-<script>
-  function Anchor(active) {
-    if (active == true) {
-      var hash = window.location.hash;
-      if (hash) {
-        $('#nav a').removeClass('active');
-        $('a[href="+hash+"]').addClass('active');
-      }
-    }
-  }
-  Anchor(true);
-</script>
+</body>
 
 </html>

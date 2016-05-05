@@ -9,6 +9,7 @@
 
   &__line {
   	position: relative;
+    display: inherit;
   	width: 35px;
   	height: 3px;
   	background-color: $blue;
