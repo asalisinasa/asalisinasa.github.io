@@ -46,7 +46,7 @@ function showNext() {
 
 function _onDocumentKeyDown(evt) {
   evt.preventDefault();
-  switch (event.keyCode) {
+  switch (evt.keyCode) {
     case utilities.KeyCode.RIGHT:
       showNext();
       break;

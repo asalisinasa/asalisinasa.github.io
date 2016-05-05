@@ -621,6 +621,9 @@ body {
         display: block;
         border-bottom: none; } }
 
+.active {
+  color: #cdcdcd; }
+
 .intro {
   display: flex;
   height: 100vh;
@@ -810,7 +813,7 @@ body {
     color: #0076fe; }
     .features__img--progressive {
       top: 0;
-      left: 10px;
+      left: 6px;
       transform: rotate(-45deg); }
     .features__img--adaptive {
       top: 4px;
@@ -1079,24 +1082,20 @@ body {
   .slider__arrow {
     position: absolute;
     top: 40%;
+    width: 29px;
+    height: 2px;
     background-color: transparent;
-    border: none;
-    outline: none; }
-    .slider__arrow::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      width: 29px;
-      height: 2px;
-      border: 20px solid transparent;
-      border-right: 20px solid #fff; }
+    outline: none;
+    border: 20px solid transparent;
+    border-right: 20px solid #fff; }
   .slider__arrow--next {
-    right: -44px; }
-    .slider__arrow--next::after {
-      transform: rotate(180deg); }
-  .slider__arrow--disabled::after {
-    pointer-events: none;
-    opacity: 0.3; }
+    right: -45px;
+    transform: rotate(180deg); }
+  .slider__arrow--prev {
+    left: -45px; }
+  .slider__arrow--disabled {
+    opacity: 0.3;
+    pointer-events: none; }
   .slider__items--show-first {
     transform: translateX(0); }
   .slider__items--show-second {
@@ -1108,8 +1107,6 @@ body {
   @media (min-width: 768px) {
     .slider__arrow {
       top: 45%; }
-      .slider__arrow::after {
-        right: -5px; }
     .slider__arrow--next {
       right: 0; } }
 
@@ -1196,11 +1193,12 @@ body {
     resize: none; }
   .feedback-form__btn {
     position: relative;
+    left: 50%;
+    bottom: -20px;
     z-index: 100;
-    width: 0;
-    height: 0;
-    margin-left: 55%;
-    margin-top: 35px;
+    width: 102px;
+    height: 75px;
+    margin-left: -51px;
     background-color: transparent;
     font-size: 0;
     outline: none;
@@ -1208,11 +1206,11 @@ body {
     animation: shake 1s infinite linear; }
     .feedback-form__btn::after {
       content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 102px;
       height: 75px;
-      position: absolute;
-      top: -20px;
-      left: -70px;
       background: url("../img/icon/initial_icon/icon__airplane.png") no-repeat; }
   .feedback-form__btn--onsubmit {
     animation: fly-away 0.7s ease-in; }
@@ -1228,6 +1226,8 @@ body {
         .feedback-form__half-width:nth-child(1) {
           margin-right: 5%; }
       .feedback-form__btn {
+        left: -130px;
+        bottom: 40px;
         margin-left: 100%;
         margin-top: 55px; } }
   @media (max-height: 640px) {

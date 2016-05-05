@@ -2,7 +2,11 @@
     position: relative;
     min-height: 500px;
     margin-bottom: 30px;
-    
+
+    &--no-js {
+      
+    }
+
     &__toggle {
         display: none;
     }
@@ -12,7 +16,7 @@
         margin: 0 auto;
         overflow: hidden;
     }
-    
+
     &__items {
         display: flex;
         width: 400%;
@@ -22,14 +26,14 @@
     &__item {
         width: 25%;
     }
-   
+
     &__controls {
         width: 80px;
         height: 15px;
         margin: 4vh auto;
         font-size: 0;
     }
-    
+
     &__control {
         display: inline-block;
         vertical-align: top;
@@ -39,7 +43,7 @@
         border-radius: 50%;
         opacity: 0.3;
         transition: opacity 0.4s;
-        
+
         &:not(:last-child) {
             margin-right: 12px;
         }
@@ -52,35 +56,26 @@
     &__arrow {
         position: absolute;
         top: 40%;
+        width: 29px;
+        height: 2px;
         background-color: transparent;
-        border: none;
         outline: none;
-        
-        &::after {
-            content: "";
-            position: absolute;
-            right: 10px;
-            width: 29px;
-            height: 2px;
-            border: 20px solid transparent;
-            border-right: 20px solid #fff;
-        }
+        border: 20px solid transparent;
+        border-right: 20px solid #fff;
     }
 
     &__arrow--next {
-        right: -44px;
-        
-        &::after {
-            transform: rotate(180deg);
-        }
+        right: -45px;
+        transform: rotate(180deg);
+    }
+
+    &__arrow--prev {
+        left: -45px;
     }
 
     &__arrow--disabled {
-
-        &::after {
-            pointer-events: none;
-            opacity: 0.3;
-        }
+        opacity: 0.3;
+        pointer-events: none;
     }
 
     &__items--show-first {
@@ -98,16 +93,20 @@
     &__items--show-fourth {
         transform: translateX(-75%);
     }
-    
+
+    // &__items--show-fifth {
+    //     transform: translateX(-75%);
+    // }
+    //
+    // &__items--show-sixth {
+    //     transform: translateX(-75%);
+    // }
+
 
     @media #{$tablet-width} {
 
         &__arrow {
             top: 45%;
-
-            &::after {
-                right: -5px;
-            }
         }
 
         &__arrow--next {
