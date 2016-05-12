@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <title>Алина Степанова</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/wow/wow.min.js"></script>
 </head>
 
 <body>
@@ -41,65 +39,70 @@
                 <span class="hamburger__line  hamburger__line--cross"></span>
             </button>
         </div>
-        <nav class="main-nav" id="#nav">
+        <nav class="main-nav">
             <ul class="main-nav__list">
                 <li class="main-nav__item">
-                    <a class="main-nav__item-link" href="#features">Навыки</a>
+                    <a class="main-nav__item-link" href="#features" id="nav1">Навыки</a>
                 </li>
                 <li class="main-nav__item">
-                    <a class="main-nav__item-link" href="#portfolio">Портфолио</a>
+                    <a class="main-nav__item-link" href="#portfolio " id="nav2">Портфолио</a>
                 </li>
                 <li class="main-nav__item">
-                    <a class="main-nav__item-link" href="#contacts">Контакты</a>
+                    <a class="main-nav__item-link" href="#about" id="nav3">Обо мне</a>
+                </li>
+                <li class="main-nav__item">
+                    <a class="main-nav__item-link" href="#" id="contact">Связаться</a>
                 </li>
             </ul>
         </nav>
     </div>
 
-    <section class="intro" id="intro" data-type="section">
-        <div class="intro__content">
-            <h1 class="intro__title">Алина Степанова</h1>
-            <h2 class="intro__text  wow  pulse" data-wow-duration="1s">CSS/HTML</h2>
-            <h2 class="intro__text">&</h2>
-            <h2 class="intro__text  wow  pulse" data-wow-duration="1s" data-wow-delay="1s">front-end разработка</h2>
-            <p class="intro__descr  intro__descr--left">Чистый, семантичный, понятный <span class="intro__descr--highlight">код</span>.</p>
-            <p class="intro__descr  intro__descr--right"><span class="intro__descr--highlight">Внимание</span> к пользователю и деталям.</p>
-            <div class="intro__contact">
-                <span class="intro__locate">Москва</span>
-                <a class="intro__email" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
-            </div>
-        </div>
-    </section>
+    
 </header>
 
 
 <main>
-    <section class="features" id="features">
+    <section class="intro  panel" id="intro" data-type="section">
+        <div class="intro__content">
+            <h1 class="intro__title  wow  fadeInUp">Алина Степанова</h1>
+            <h2 class="intro__text  wow  fadeInUp" data-wow-duration="1s">HTML/CSS</h2>
+            <h2 class="intro__text  wow  fadeInUp">&</h2>
+            <h2 class="intro__text  wow  fadeInUp" data-wow-duration="1s">frontend разработка</h2>
+            <p class="intro__descr  intro__descr--left  wow  fadeInUp">Чистый, семантичный, понятный <span class="intro__descr--highlight">код</span>.</p>
+            <p class="intro__descr  intro__descr--right  wow  fadeInUp"><span class="intro__descr--highlight">Внимание</span> к пользователю и деталям.</p>
+            <div class="intro__contact">
+                <span class="intro__locate  wow  fadeInUp">Москва</span>
+                <a class="intro__email  wow  fadeInUp" href="mailto:asalisinasa@gmail.com">asalisinasa@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features  panel" id="features">
         <div class="features__content">
             <div class="features__skills">
                 <h3 class="features__title">Навыки</h3>
                 <div class="features__items-wrap">
                     <div class="features__item ">
-                        <div class="features__icon">
-                            <svg class="features__img  features__img--adaptive" width="104" height="66">
+                        <div class="features__icon  features__icon--adaptive">
+                            <!-- <svg class="features__img  features__img--adaptive" width="104" height="66">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon__adaptive"></use>
-                            </svg>
+                            </svg> -->
                         </div>
-                        <h4 class="features__text">Адаптивность</h4>
+                        <h4 class="features__text" id="animation">Адаптивность</h4>
                     </div>
-                    <div class="features__item">
-                        <div class="features__icon  features__icon--tilt">
-                            <svg class="features__img  features__img--progressive" width="98" height="66">
+                    <div class="features__item" id="scene">
+                        <div class="features__icon  features__icon--progressive">
+                            <!-- <svg class="features__img  features__img--progressive" width="98" height="66">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon__progressive"></use>
-                            </svg>
+                            </svg> -->
                         </div>
                         <h4 class="features__text">Прогрессивное <br> улучшение</h4>
                     </div>
                     <div class="features__item">
-                        <div class="features__icon">
-                            <svg class="features__img  features__img--mobile" width="40" height="66">
+                        <div class="features__icon  features__icon--mobile">
+                            <!-- <svg class="features__img  features__img--mobile" width="40" height="66">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon__mobile"></use>
-                            </svg>
+                            </svg> -->
                         </div>
                         <h4 class="features__text">Mobile first</h4>
                     </div>
@@ -121,68 +124,100 @@
                     </ul>
                 </div>
                 <div id="skills" class="skills">
-                    <img class="skills__scroll" src="img/content/skills__marquee.png" alt="" width="4862" height="46">
+                    <img class="skills__scroll" src="img/content/skills__marquee.png" alt="Навыки и инструменты frontend" width="3696" height="48">
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="portfolio" id="portfolio" data-type="section">
+    <section class="portfolio  portfolio--no-js  panel" id="portfolio" data-type="section">
         <div class="portfolio__content">
             <h3 class="portfolio__title">Портфолио</h3>
-            <div class="slider">
+            <div class="slider  slider--no-js">
                 <div class="slider__items-wrap">
-                    <div class="slider__items">
-                        <article class="portfolio-item  slider__item">
+                    <div class="slider__items  slider__items--no-js">
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
                             <h5 class="portfolio-item__title">Pink</h5>
                             <div class="portfolio-item__img-wrap">
                                 <img class="portfolio-item__img  slider__big-col" src="img/content/mockup__pink--left__540x312.png" alt="Pink мобильное приложение">
                             </div>
                             <div class="portfolio-item__details  portfolio-item__small-col">
-                                <p class="portfolio-item__text">Сайт мобильного приложения: адаптивность, SVG, HTML5, CSS3, Javascript</p>
+                                <p class="portfolio-item__text">Aдаптивность, SVG, HTML5, CSS3, Javascript</p>
                                 <a class="portfolio-item__btn" href="portfolio/pink/index.html" target="_blank">Смотреть</a>
                             </div>
                         </article>
-                        <article class="portfolio-item  slider__item">
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
+                            <h5 class="portfolio-item__title">Code and Magic</h5>
+                            <div class="portfolio-item__img-wrap">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__code-and-magic--right__540x312.png" alt="Игра Code and Magic">
+                            </div>
+                            <div class="portfolio-item__details  slider__small-col">
+                                <p class="portfolio-item__text">Javascript</p>
+                                <a class="portfolio-item__btn" href="https://htmlacademy-javascript.github.io/128861-code-and-magick/20/" target="_blank">Смотреть</a>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
                             <h5 class="portfolio-item__title">Gllacy</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__gllacy__540x312.png" alt="Gllacy мороженое">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__gllacy--left__540x312.png" alt="Gllacy мороженое">
                             </div>
                             <div class="portfolio-item__details  portfolio-item__small-col">
-                                <p class="portfolio-item__text">Онлайн-магазин мороженого: резиновая верстка, SVG, HTML5, CSS3, Javascript</p>
+                                <p class="portfolio-item__text">Резиновая верстка, SVG, HTML5, CSS3, Javascript</p>
                                 <a class="portfolio-item__btn" href="portfolio/gllacy/index.html" target="_blank">Смотреть</a>
                             </div>
                         </article>
-                        <article class="portfolio-item  slider__item">
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
                             <h5 class="portfolio-item__title">Sedona</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__sedona__540x312.png" alt="Седона">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__sedona--right__540x312.png" alt="Седона">
                             </div>
                             <div class="portfolio-item__details  slider__small-col">
-                                <p class="portfolio-item__text">Сервис бронирования отелей: резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
+                                <p class="portfolio-item__text">Резиновая верстка, спрайты, HTML5, CSS3, Javascript</p>
                                 <a class="portfolio-item__btn" href="portfolio/sedona/index.html" target="_blank">Смотреть</a>
                             </div>
                         </article>
-                        <article class="portfolio-item  slider__item">
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
                             <h5 class="portfolio-item__title">Nerds</h5>
                             <div class="portfolio-item__img-wrap">
-                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__nerds__540x312.png" alt="Nerds дизайн студия">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__nerds--left__540x312.png" alt="Nerds дизайн студия">
                             </div>
                             <div class="portfolio-item__details  slider__small-col">
-                                <p class="portfolio-item__text">Сайт дизайн-студии: фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
+                                <p class="portfolio-item__text">Фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
                                 <a class="portfolio-item__btn" href="portfolio/nerds/index.html" target="_blank">Смотреть</a>
                             </div>
                         </article>
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
+                            <h5 class="portfolio-item__title">Barbershop</h5>
+                            <div class="portfolio-item__img-wrap">
+                                <img class="portfolio-item__img  portfolio-item__big-col" src="img/content/mockup__barbershop--right__540x312.png" alt="Barbershop Borodinski">
+                            </div>
+                            <div class="portfolio-item__details  slider__small-col">
+                                <p class="portfolio-item__text">Фиксированная верстка, спрайты, HTML5, CSS3, Javascript</p>
+                                <a class="portfolio-item__btn" href="portfolio/barbershop/index.html" target="_blank">Смотреть</a>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-item  slider__item  slider__item--no-js">
+                            <h5 class="portfolio-item__title">this</h5>
+                        </article>
                     </div>
                 </div>
-                <div class="slider__controls">
+                <div class="slider__controls  slider__controls--no-js">
+                    <span class="slider__control"></span>
+                    <span class="slider__control"></span>
+                    <span class="slider__control"></span>
                     <span class="slider__control"></span>
                     <span class="slider__control"></span>
                     <span class="slider__control"></span>
                     <span class="slider__control"></span>
                 </div>
-                <div class="slider__arrows">
+                <div class="slider__arrows  slider__arrows--no-js">
                     <button class="slider__arrow  slider__arrow--prev" type="button"></button>
                     <button class="slider__arrow  slider__arrow--next" type="button"></button>
                 </div>
@@ -192,16 +227,26 @@
 </main>
 
 
-<section class="contacts" id="contacts" data-type="section">
-    <div class="contacts__content">
-        <h3 class="contacts__title">Написать мне</h3>
-        <div class="feedback-form">
-            <form action="//formspree.io/asalisinasa@gmail.com" method="POST">
-                <input class="feedback-form__text-field  feedback-form__half-width" type="text" name="name" value="" placeholder="ваше имя" id="name">
-                <input class="feedback-form__text-field  feedback-form__half-width" type="email" name="email" value="" placeholder="e-mail" id="email">
-                <textarea class="feedback-form__text-field  feedback-form__whole-width" cols="50" rows="10" name="text" placeholder="текст письма" id="text"></textarea>
-                <button class="feedback-form__btn btn btn-red" type="submit" value="Send">Отправить</button>
-            </form>
+<section class="about  panel" id="about" data-type="section">
+    <div class="about__content">
+        <h3 class="about__title">Обо мне</h3>
+        <img class="about__photo" src="../img/content/iam.png" alt="Алина Степанова frontend developer" title="Алина Степанова frontend developer">
+        <div class="about__inner">
+          <p class="about__text">Ценю хороший дизайн, а еще большее удовольствие мне доставляет воплощать его в реальность.</p>
+          <p class="about__text">Уверенно использую HTML5 и CSS3, а также имею базовые знания Javascript и продолжаю активно изучать. </p>
+          <p class="about__text">Знакома с основными аспектами тестирования и оптимизации верстки.</p>
+          <p class="about__text">Имеющиеся знания получила на курсах <a class="about__link" href="https://htmlacademy.ru/">HTML Academy</a> под наставничеством специалистов.</p>
+          <div class="about__certification">
+            <a class="about__certificate" href="../certification/HTMLAcademy-base.pdf" target="_blank">
+              <img src="../img/content/HTMLAcademy-base.JPG" alt="Базовый HTML и CSS" title="Базовый HTML и CSS">
+            </a>
+            <a class="about__certificate" href="../certification/HTMLAcademy-upp.pdf" target="_blank">
+              <img src="../img/content/HTMLAcademy-upp.JPG" alt="Продвинутый HTML и CSS" title="Продвинутый HTML и CSS">
+            </a>
+            <a class="about__certificate" href="../certification/HTMLAcademy-js.pdf" target="_blank">
+              <img src="../img/content/HTMLAcademy-js.JPG" alt="Базовый Javascript" title="Базовый Javascript">
+            </a>
+          </div>
         </div>
     </div>
 </section>
@@ -226,11 +271,23 @@
     </div>
 </footer>
 
+
+<div class="feedback-form">
+    <form action="//formspree.io/asalisinasa@gmail.com" method="POST">
+        <input class="feedback-form__text-field  feedback-form__half-width" type="text" name="name" value="" placeholder="ваше имя" id="name" required>
+        <input class="feedback-form__text-field  feedback-form__half-width" type="email" name="email" value="" placeholder="e-mail" id="email" required>
+        <textarea class="feedback-form__text-field  feedback-form__whole-width" cols="50" rows="10" name="text" placeholder="текст письма" id="text" required></textarea>
+        <button class="feedback-form__btn btn btn-red" type="submit" value="Send">Отправить</button>
+        <button class="feedback-form__close" type="button"></button>
+    </form>
+</div>
+
+
+<!-- <script src="js/jquery-2.2.3.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script src="js/bundle.js"></script>
-<script src="js/jquery-2.2.3.min.js"></script>
-<script>
-  new WOW().init();
-</script>
 
 </body>
 

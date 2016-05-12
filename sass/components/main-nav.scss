@@ -4,10 +4,8 @@
   z-index: 100;
   width: 100%;
   min-height: 60px;
-
   background-color: white;
   color: white;
-
   font-family: $incon-bol;
   font-size: $fs-xs;
   text-transform: uppercase;
@@ -32,14 +30,21 @@
     text-decoration: none;
     color: $blue;
     line-height: 60px;
-    transition: 0.1s ease-in;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 
     &:hover {
-      color: $gray;
+      animation-name: hvr-bob-float, hvr-bob;
+      animation-duration: .3s, 1.5s;
+      animation-delay: 0s, .3s;
+      animation-timing-function: ease-out, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-fill-mode: forwards;
+      animation-direction: normal, alternate;
     }
 
     &:active {
-      color: rgba(black, 0.5);
+      color: $gray;
     }
   }
 
@@ -52,23 +57,18 @@
     transition: margin 0.5s ease-out;
 
     &--hidden {
-      margin-top: -300px;
+      margin-top: -500px;
     }
   }
 
   @media #{$tablet-width} {
-    position: fixed;
+    // position: fixed;
     top: 0;
     display: flex;
-
-    &__mobile {
-      display: none;
-    }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-center;
       justify-content: space-around;
       @include container;
       box-sizing: content-box;

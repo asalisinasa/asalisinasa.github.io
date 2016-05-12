@@ -1,4 +1,5 @@
-////////////////////// Most useful ////////////////////////
+//////////////////// Most useful ////////////////////////
+
 @mixin container {
     width: 87.5%;
     min-width: 290px;
@@ -35,6 +36,7 @@
 }
 
 ////////////////////// Resets ////////////////////////
+
 @mixin ul-reset {
     margin-top: 0;
     margin-bottom: 0;

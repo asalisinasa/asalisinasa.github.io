@@ -1,15 +1,13 @@
 .page-header {
-  background-color: $gray;
-  color: white;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
 
-  font-family: $din-bol;
-  font-size: $fs-xl;
-  line-height: $lh-xl;
+  &__inner {
+    position: relative;
+  }
 
   &__mobile {
-  	position: fixed;
-  	z-index: 200;
-  	width: 100%;
   	height: 60px;
   	padding: 10px 6.25%;
     background-color: #fff;

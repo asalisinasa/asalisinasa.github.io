@@ -50,6 +50,8 @@
 	__webpack_require__(2);
 	__webpack_require__(3);
 	__webpack_require__(4);
+	__webpack_require__(5);
+	__webpack_require__(6);
 
 
 /***/ },
@@ -149,10 +151,41 @@
 /* 2 */
 /***/ function(module, exports) {
 
+	/** @fileoverview Прогрессивное улучшение */
+
 	'use strict';
 
-	/* jslint browser: true */
-	/* ESLint browser: true */
+
+	var portfolioSection = document.querySelector('.portfolio');
+	var slider = document.querySelector('.slider');
+	var sliderItem = document.querySelectorAll('.slider__item');
+	var sliderItems = document.querySelector('.slider__items');
+	var sliderControls = document.querySelector('.slider__controls');
+	var sliderArrows = document.querySelector('.slider__arrows');
+
+
+	portfolioSection.classList.remove('portfolio--no-js');
+	slider.classList.remove('slider--no-js');
+	sliderItems.classList.remove('slider__items--no-js');
+	sliderControls.classList.remove('slider__controls--no-js');
+	sliderArrows.classList.remove('slider__arrows--no-js');
+
+	for (var i = 0; i < sliderItem.length; i++) {
+	  if (sliderItem[i].classList.contains('slider__item--no-js')) {
+	    sliderItem[i].classList.remove('slider__item--no-js');
+	  }
+	}
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/** @fileoverview Открытие и скрытие меню навигации */
+
+	'use strict';
+
+
 
 	var hamburgerBtn = document.querySelector('.hamburger');
 	var hamburgerLines = document.querySelector('.hamburger__line');
@@ -160,6 +193,7 @@
 	var headerMobile = document.querySelector('.page-header__mobile');
 	var navContainer = document.querySelector('.main-nav');
 	var nav = document.querySelector('.main-nav__list');
+	var navItem = document.querySelector('.main-nav__link');
 
 	var isNavigationOpen = function() {
 	  return hamburgerLines.classList.contains(hamburgerCross);
@@ -193,25 +227,30 @@
 	closeNavigation();
 
 	nav.onclick = function(evt) {
-	  // var navItem = document.querySelectorAll('.main-nav__item');
 	  if (evt.target.classList.contains('.main-nav__item')) {
 	    hamburgerLines.classList.remove('hamburgerCross');
 	    navContainer.classList.add('main-nav--hidden');
 	  }
 	};
 
+
+	window.addEventListener("scroll", function() {
+	  closeNavigation();
+	});
+
+
 	// var headerElement = document.querySelector('.main-nav');
 	// var sectionIntro = document.getElementById('intro');
 	// var sectionFeatures = document.getElementById('features');
 	// var sectionPortfolio = document.getElementById('portfolio');
 	// var sectionContacts = document.getElementById('contacts');
-	//
+
 	// var gray = '#cdcdcd';
 	// var blue = '#0076fe';
 	// var white = '#ffffff';
 	//
 	// var headerPOsition = headerElement.getBoundingClientRect();
-	//
+
 	// /**
 	// * @param  {HTMLElement} element
 	// * @return {Boolean}
@@ -219,7 +258,7 @@
 	// var isVisible = function(element) {
 	//   return element.getBoundingClientRect().bottom < 0;
 	// };
-	//
+
 	// var colorElement = function(element, bgColor, fontColor) {
 	//   var elementStyle = element.style;
 	//   element.style.color = fontColor;
@@ -231,57 +270,38 @@
 	//     window.addEventListener('scroll', colorElement(headerElement, blue, gray));
 	//   }
 	// };
-	//
-	// window.addEventListener('scroll', function() {
-	//   console.log(scroll);
-	//   changeHeaderStyles();
-	// });
 
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
+
+	/** @fileoverview Прокрутка до якоря */
 
 	/* jslint browser: true */
 	/* ESLint browser: true */
 
 	'use strict';
 
-	var navLinks = document.querySelectorAll('main-nav__item-link');
-	var V = 2; // скорость, может иметь дробное значение через точку
-	for (var i = 0; i < navLinks.length; i++) {
-	  navLinks[i].addEventListener('click', function(e) {
+	$(document).ready(function() {
+	  var links = $('.main-nav__item-link')
+	  links.on( 'click', function(e) {
 	    e.preventDefault();
-	    var w = window.pageYOffset, // прокрутка
-	      hash = this.href.replace(/[^#]*(.*)/, '$1'); // id элемента, к которому нужно перейти
-	    var t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
-	      start = null;
-	    requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
-	    function step(time) {
-	      if (start === null) start = time;
-	      var progress = time - start,
-	        r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
-	      window.scrollTo(0, r);
-	      if (r != w + t) {
-	        requestAnimationFrame(step);
-	      } else {
-	        location.hash = hash; // URL с хэшем
-	      }
-	    }
-	  }, false);
-	}
+	    var targetSection = $(this).attr('href');
+	    var targetOffset = $(targetSection).offset().top;
+	    TweenMax.to(window, 1, { scrollTo:{y:targetOffset }, ease: Power3.easeOut } );
+	  });
+	});
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @fileoverview Поведение слайдера в секции портфолио */
 
 	'use strict';
 
-	/* jslint browser: true */
-	/* ESLint browser: true */
 
 	var utilities = __webpack_require__(1);
 
@@ -322,9 +342,24 @@
 	      break;
 	    case 4:
 	      slidesContainer.classList.add('slider__items--show-fourth');
-	      btnNext.classList.add('slider__arrow--disabled');
 	      stateIndicator[2].style.opacity = '0.3';
 	      stateIndicator[3].style.opacity = '1';
+	      break;
+	    case 5:
+	      slidesContainer.classList.add('slider__items--show-fifth');
+	      stateIndicator[3].style.opacity = '0.3';
+	      stateIndicator[4].style.opacity = '1';
+	      break;
+	    case 6:
+	      slidesContainer.classList.add('slider__items--show-sixth');
+	      stateIndicator[4].style.opacity = '0.3';
+	      stateIndicator[5].style.opacity = '1';
+	      break;
+	    case 7:
+	      slidesContainer.classList.add('slider__items--show-seventh');
+	      btnNext.classList.add('slider__arrow--disabled');
+	      stateIndicator[5].style.opacity = '0.3';
+	      stateIndicator[6].style.opacity = '1';
 	      break;
 	  }
 	}
@@ -347,9 +382,24 @@
 	      break;
 	    case 3:
 	      slidesContainer.classList.remove('slider__items--show-fourth');
-	      btnNext.classList.remove('slider__arrow--disabled');
 	      stateIndicator[2].style.opacity = '1';
 	      stateIndicator[3].style.opacity = '0.3';
+	      break;
+	    case 4:
+	      slidesContainer.classList.remove('slider__items--show-fifth');
+	      stateIndicator[3].style.opacity = '1';
+	      stateIndicator[4].style.opacity = '0.3';
+	      break;
+	    case 5:
+	      slidesContainer.classList.remove('slider__items--show-sixth');
+	      stateIndicator[4].style.opacity = '1';
+	      stateIndicator[5].style.opacity = '0.3';
+	      break;
+	    case 6:
+	      slidesContainer.classList.remove('slider__items--show-seventh');
+	      btnNext.classList.remove('slider__arrow--disabled');
+	      stateIndicator[5].style.opacity = '1';
+	      stateIndicator[6].style.opacity = '0.3';
 	      break;
 	  }
 	}
@@ -364,7 +414,7 @@
 	  showPrev();
 	}
 
-	function _onDocumentKeyDown() {
+	function _onDocumentKeyDown(event) {
 	  switch (event.keyCode) {
 	    case utilities.KeyCode.RIGHT:
 	      showNext();
@@ -377,61 +427,68 @@
 	  }
 	}
 
-	// function _onSwipe(el, callback) {
-	//
-	//   var touchsurface = el,
-	//     swipedir,
-	//     startX,
-	//     startY,
-	//     distX,
-	//     distY,
-	//     threshold = 150, //required min distance traveled to be considered swipe
-	//     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-	//     allowedTime = 300, // maximum time allowed to travel that distance
-	//     elapsedTime,
-	//     startTime,
-	//     handleswipe = callback || function(swipedir) {};
-	//
-	//   touchsurface.addEventListener('touchstart', function(e) {
-	//     var touchobj = e.changedTouches[0];
-	//     swipedir = 'none';
-	//     distX = 0;
-	//     distY = 0;
-	//     startX = touchobj.pageX;
-	//     startY = touchobj.pageY;
-	//     startTime = new Date().getTime(); // record time when finger first makes contact with surface
-	//     e.preventDefault();
-	//   }, false);
-	//
-	//   touchsurface.addEventListener('touchmove', function(e) {
-	//     e.preventDefault(); // prevent scrolling when inside DIV
-	//   }, false);
-	//
-	//   touchsurface.addEventListener('touchend', function(e) {
-	//     var touchobj = e.changedTouches[0];
-	//     distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
-	//     distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
-	//     elapsedTime = new Date().getTime() - startTime; // get time elapsed
-	//     if (elapsedTime <= allowedTime) { // first condition for awipe met
-	//       if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
-	//         swipedir = (distX < 0) ? 'left' : 'right'; // if dist traveled is negative, it indicates left swipe
-	//       } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
-	//         swipedir = (distY < 0) ? 'up' : 'down'; // if dist traveled is negative, it indicates up swipe
-	//       }
-	//     }
-	//     handleswipe(swipedir);
-	//     e.preventDefault();
-	//   }, false);
-	// }
-	//
-	// _onSwipe(slider, function(swipedir) {
-	//   if (swipedir === 'left') {
-	//     showNext();
-	//   }
-	//   if (swipedir === 'right') {
-	//     showPrev();
-	//   }
-	// });
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @fileoverview Открытие и валидация формы обратной связи */
+
+	'use strict';
+
+
+	var utilities = __webpack_require__(1);
+
+	var form = document.querySelector('.feedback-form');
+	var btnShowForm = document.getElementById('contact');
+	var btnSend = document.querySelector('.feedback-form__btn');
+	var btnClose = document.querySelector('.feedback-form__close');
+
+
+	var isFormOpen = function() {
+	  return form.classList.contains('feedback-form--show');
+	};
+
+	var closeForm = function() {
+	  if (form.classList.contains('feedback-form--show')) {
+	    form.classList.remove('feedback-form--show');
+	  }
+	};
+
+	var formInit = function() {
+	  btnShowForm.addEventListener('click', _onOpenClick);
+
+	  if(isFormOpen) {
+	    btnClose.addEventListener('click', _onCloseClick);
+	    document.addEventListener('keydown', _onKeyDown);
+	  } else {
+	    btnClose.removeEventListener('click', _onCloseClick);
+	    document.removeEventListener('keydown', _onKeyDown);
+	  }
+	};
+
+	var _onOpenClick = function(evt) {
+	  evt.preventDefault();
+	  form.classList.toggle('feedback-form--show');
+	};
+
+	var _onCloseClick = function(evt) {
+	  evt.preventDefault();
+	  closeForm();
+	};
+
+	var _onKeyDown = function(evt) {
+	  if (evt.keyCode === utilities.KeyCode.ESC) {
+	    evt.preventDefault();
+	    closeForm();
+	  }
+	};
+
+	formInit();
+
+	form.onsubmit = function(evt) {
+	  evt.preventDefault();
+	};
 
 
 /***/ }

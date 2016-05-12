@@ -3,10 +3,6 @@
     min-height: 500px;
     margin-bottom: 30px;
 
-    &--no-js {
-      
-    }
-
     &__toggle {
         display: none;
     }
@@ -19,19 +15,33 @@
 
     &__items {
         display: flex;
-        width: 400%;
+        width: 700%;
         transition: transform 0.4s ease-in-out;
+
+        &--no-js {
+          display: block;
+          width: auto;
+        }
     }
 
     &__item {
         width: 25%;
+
+        &--no-js {
+          width: auto;
+          margin-bottom: 50px;
+        }
     }
 
     &__controls {
-        width: 80px;
+        width: 145px;
         height: 15px;
         margin: 4vh auto;
         font-size: 0;
+
+        &--no-js {
+          display: none;
+        }
     }
 
     &__control {
@@ -51,6 +61,10 @@
 
     &__arrows {
         display: block;
+
+        &--no-js {
+          display: none;
+        }
     }
 
     &__arrow {
@@ -60,17 +74,17 @@
         height: 2px;
         background-color: transparent;
         outline: none;
-        border: 20px solid transparent;
-        border-right: 20px solid #fff;
+        border: 15px solid transparent;
+        border-right: 15px solid #fff;
     }
 
     &__arrow--next {
-        right: -45px;
+        right: -25px;
         transform: rotate(180deg);
     }
 
     &__arrow--prev {
-        left: -45px;
+        left: -25px;
     }
 
     &__arrow--disabled {
@@ -83,30 +97,34 @@
     }
 
     &__items--show-second {
-        transform: translateX(-25%);
+        transform: translateX(-100%/7*1);
     }
 
     &__items--show-third {
-        transform: translateX(-50%);
+        transform: translateX(-100%/7*2);
     }
 
     &__items--show-fourth {
-        transform: translateX(-75%);
+        transform: translateX(-100%/7*3);
     }
 
-    // &__items--show-fifth {
-    //     transform: translateX(-75%);
-    // }
-    //
-    // &__items--show-sixth {
-    //     transform: translateX(-75%);
-    // }
+    &__items--show-fifth {
+        transform: translateX(-100%/7*4);
+    }
 
+    &__items--show-sixth {
+        transform: translateX(-100%/7*5);
+    }
+
+    &__items--show-seventh {
+        transform: translateX(-100%/7*6);
+    }
 
     @media #{$tablet-width} {
 
         &__arrow {
             top: 45%;
+            border-width: 20px;
         }
 
         &__arrow--next {

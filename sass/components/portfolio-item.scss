@@ -1,10 +1,15 @@
 .portfolio-item {
 
-	&__title {
-		margin: 5vh 0 8vh;
+	  &__title {
+		    margin: 5vh 0 8vh;
         font-family: $incon;
         font-size: $fs-l;
         text-align: center;
+
+        &:last-child {
+          margin-top: 20%;
+          font-size: 48px;
+        }
     }
 
     &__img-wrap {
@@ -13,7 +18,7 @@
 
     &__img {
     	display: block;
-        width: 100%;
+        width: 90%;
         max-width: 450px;
         margin: 0 auto;
         height: auto;
@@ -23,26 +28,26 @@
     	display: none;
     }
 
-    &__btn {
-    	display: block;
-    	width: 110px;
-    	height: 40px;
-    	margin: 4vh auto;
-      border: 1px solid #fff;
-      color: #fff;
-      font-family: $din-med;
-      font-size: $fs-xs;
-      line-height: 40px;
-      text-transform: uppercase;
-      text-decoration: none;
-    	text-align: center;
-		transition: 0.1s ease-in;
+	&__btn {
+	    display: block;
+	    width: 110px;
+	    height: 40px;
+	    margin: 4vh auto;
+	    border: 3px solid #fff;
+	    color: #fff;
+	    font-family: $din-med;
+	    font-size: $fs-xs;
+	    line-height: 36px;
+	    text-transform: uppercase;
+	    text-decoration: none;
+	    text-align: center;
+	    transition: 0.1s ease-in;
 
-    	&:hover {
-    		color: $blue;
-    		background-color: #fff;
-    	}
-    }
+	    &:hover {
+		    color: $blue;
+		    background-color: #fff;
+	    }
+	}
 
 	@media #{$tablet-width} {
 
@@ -68,6 +73,10 @@
 	    &__img-wrap {
 	    	width: 55%;
 	    }
+
+        &:nth-of-type(2n-1) &__img-wrap {
+            order: 2;
+        }
 
 	    &__details {
 	    	width: 35%;

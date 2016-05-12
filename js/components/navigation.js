@@ -1,7 +1,8 @@
+/** @fileoverview Открытие и скрытие меню навигации */
+
 'use strict';
 
-/* jslint browser: true */
-/* ESLint browser: true */
+
 
 var hamburgerBtn = document.querySelector('.hamburger');
 var hamburgerLines = document.querySelector('.hamburger__line');
@@ -9,6 +10,7 @@ var hamburgerCross = 'hamburger__line--cross';
 var headerMobile = document.querySelector('.page-header__mobile');
 var navContainer = document.querySelector('.main-nav');
 var nav = document.querySelector('.main-nav__list');
+var navItem = document.querySelector('.main-nav__link');
 
 var isNavigationOpen = function() {
   return hamburgerLines.classList.contains(hamburgerCross);
@@ -42,25 +44,30 @@ var closeNavigation = function() {
 closeNavigation();
 
 nav.onclick = function(evt) {
-  // var navItem = document.querySelectorAll('.main-nav__item');
   if (evt.target.classList.contains('.main-nav__item')) {
     hamburgerLines.classList.remove('hamburgerCross');
     navContainer.classList.add('main-nav--hidden');
   }
 };
 
+
+window.addEventListener("scroll", function() {
+  closeNavigation();
+});
+
+
 // var headerElement = document.querySelector('.main-nav');
 // var sectionIntro = document.getElementById('intro');
 // var sectionFeatures = document.getElementById('features');
 // var sectionPortfolio = document.getElementById('portfolio');
 // var sectionContacts = document.getElementById('contacts');
-//
+
 // var gray = '#cdcdcd';
 // var blue = '#0076fe';
 // var white = '#ffffff';
 //
 // var headerPOsition = headerElement.getBoundingClientRect();
-//
+
 // /**
 // * @param  {HTMLElement} element
 // * @return {Boolean}
@@ -68,7 +75,7 @@ nav.onclick = function(evt) {
 // var isVisible = function(element) {
 //   return element.getBoundingClientRect().bottom < 0;
 // };
-//
+
 // var colorElement = function(element, bgColor, fontColor) {
 //   var elementStyle = element.style;
 //   element.style.color = fontColor;
@@ -80,8 +87,3 @@ nav.onclick = function(evt) {
 //     window.addEventListener('scroll', colorElement(headerElement, blue, gray));
 //   }
 // };
-//
-// window.addEventListener('scroll', function() {
-//   console.log(scroll);
-//   changeHeaderStyles();
-// });
