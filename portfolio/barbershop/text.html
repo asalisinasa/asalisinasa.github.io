@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Барбершоп «Бородинский»</title>
+    <link href="img/favicon.png" type="image/png" rel="shortcut icon">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container clearfix">
+            <nav class="main-navigation">
+                <ul>
+                    <li>
+                        <a class="button nav-item" href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a class="button nav-item" href="#">Информация</a>
+                    </li>
+                    <li>
+                        <a class="button nav-item" href="#">Новости</a>
+                    </li>
+                    <li>
+                        <a class="button nav-item nav-item-active">Прайс-лист</a>
+                    </li>
+                    <li>
+                        <a class="button nav-item" href="catalog.html">Магазин</a>
+                    </li>
+                    <li>
+                        <a class="button nav-item" href="index.html#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-block">
+                <a href="#" class="login">Вход</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content main-content-price">
+        <div class="container clearfix">
+            <header class="content-header content-header-price">
+                <h1>ПРАЙС-ЛИСТ</h1>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs-item">
+                        <a href="index.html">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="breadcrumbs-item">
+                        <a>ПРАЙС-ЛИСТ</a>
+                    </li>
+                </ul>
+            </header>
+
+            <div class="price-main-title">
+                <h2>ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
+            </div>
+
+            <div class="clearfix">
+                <div class="products">
+                    <h3 class="products-title">МЫ ИСПОЛЬЗУЕМ ТОЛЬКО ЛУЧШИЕ СРЕДСТВА:</h3>
+                    <ul class="products-list">
+                        <li class="products-item">Baxter of California</li>
+                        <li class="products-item">Mr Natty</li>
+                        <li class="products-item">Suavecito</li>
+                        <li class="products-item">Malin+Goetz</li>
+                    </ul>
+                </div>
+
+                <div class="price">
+                    <h3 class="price-title">ЦЕНЫ НА УСЛУГИ <br/> НАШИХ МАСТЕРОВ:</h3>
+                    <table class="price-table">
+                        <tbody>
+                            <tr>
+                              <td>Стрижка</td>
+                              <td>1500 р.</td>
+                            </tr>
+                            <tr>
+                              <td>Стрижка бороды</td>
+                              <td>500 р.</td>
+                            </tr>
+                            <tr>
+                              <td>Накрутка усов</td>
+                              <td>350 р.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="about clearfix">
+                <h3 class="about-title">НЕСКОЛЬКО СЛОВ О НАС:</h3>
+                <p class="about-descr about-descr-left">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+                <p class="about-descr about-descr-right">Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container clearfix">
+            <section class="footer-contacts">
+                Барбершоп «Бородинский»
+                <br> Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                <br>
+                <a href="#">Как нас найти?</a>
+                <br>телефон: +7 (495) 666-02-66
+            </section>
+
+            <section class="footer-social">
+                <p>Давайте дружить!</p>
+                <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
+                <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+                <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+            </section>
+
+            <section class="footer-copyright">
+                <p>Дизайн сайта:</p>
+                <a href="#" class="button button-copyright">htmlacademy.ru</a>
+            </section>
+        </div>
+    </footer>
+
+    <div class="overlay overlay-signin invisible">
+        <div class="signin">
+            <h3 class="signin-title">лИЧНЫЙ КАБИНЕТ</h3>
+            <p class="signin-descr">ВВедите пожалуйста свой логин и пароль</p>
+            <form id="signin-form" action="#" method="post">
+                <input class="field field-login" type="text" name="login" placeholder="Логин">
+                <input class="field field-password" type="password" name="password" placeholder="Пароль">
+                <input class="checkbox checkbox-signin" id="remember" type="checkbox" checked>
+                <label class="checkbox-label checkbox-label-signin" for="remember">ЗАПОМНИТЕ МЕНЯ</label>
+                <a href="#" class="help">Я ЗАБЫЛ ПАРОЛЬ!</a>
+                <input class="accept-button button" type="submit" value="Войти">
+            </form>
+            <button class="close-button close-button-signin" type="button">
+                <span class="cross"></span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
