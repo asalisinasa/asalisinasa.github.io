@@ -578,9 +578,10 @@ a {
   min-height: 60px;
   background-color: white;
   color: white;
-  font-family: "Inconsolata-LGC-Bold", Courier, monospace;
+  font-family: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 3px; }
   .main-nav__list {
     margin-top: 0;
     margin-bottom: 0;
@@ -730,7 +731,8 @@ a {
     .intro {
       min-height: 640px; }
       .intro__content {
-        font-size: 80%; }
+        font-size: 100%;
+        line-height: 1.2; }
       .intro__title {
         margin-bottom: 12px; }
       .intro__descr {
@@ -740,18 +742,17 @@ a {
       .intro__contact {
         flex-direction: row;
         width: 685px;
-        text-align: right;
-        font-size: 0.5em; }
+        text-align: right; }
       .intro__email::before {
         right: 0; } }
   @media (max-height: 640px) {
-    .intro {
-      font-size: 50%; }
-      .intro__title {
-        margin-bottom: 12px; }
-      .intro__descr {
-        margin-top: 12px;
-        font-size: 0.7em; } }
+    .intro__content {
+      font-size: 50%;
+      line-height: 1.2; }
+    .intro__title {
+      margin-bottom: 12px; }
+    .intro__descr {
+      margin-top: 12px; } }
 
 .features {
   display: flex;

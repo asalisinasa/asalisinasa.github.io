@@ -6,9 +6,10 @@
   min-height: 60px;
   background-color: white;
   color: white;
-  font-family: $incon-bol;
+  font-family: $din;
   font-size: $fs-xs;
   text-transform: uppercase;
+  letter-spacing: 3px;
 
   &__list {
     @include ul-reset;
