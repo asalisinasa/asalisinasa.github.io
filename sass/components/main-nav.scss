@@ -4,8 +4,8 @@
   z-index: 100;
   width: 100%;
   min-height: 60px;
-  background-color: white;
-  color: white;
+  background-color: #fff;
+  color: $blue;
   font-family: $din;
   font-size: $fs-xs;
   text-transform: uppercase;
@@ -29,10 +29,11 @@
   &__item-link {
     display: block;
     text-decoration: none;
-    color: $blue;
+    color: inherit;
     line-height: 60px;
     transform: translateZ(0);
     backface-visibility: hidden;
+    transition: color 0.2s ease-out;
 
     &:hover {
       animation-name: hvr-bob-float, hvr-bob;
@@ -49,21 +50,26 @@
     }
   }
 
-  &__item-link--current {
+  &__item-link--current-gray {
     color: $gray;
+    pointer-events: none;
+  }
+
+  &__item-link--current-white {
+    color: #fff;
+    pointer-events: none;
   }
 
   @media #{$mobile-width} {
-    margin: 0;
-    transition: margin 0.5s ease-out;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
 
     &--hidden {
-      margin-top: -500px;
+      transform: translateY(-500px);
     }
   }
 
   @media #{$tablet-width} {
-    // position: fixed;
     top: 0;
     display: flex;
 

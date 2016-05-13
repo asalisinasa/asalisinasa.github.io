@@ -72,31 +72,6 @@
           background-color: $blue;
         }
       }
-/////////// самолет
-    // &__btn {
-    //     position: relative;
-    //     left: 50%;
-    //     bottom: -20px;
-    //     z-index: 100;
-    //     width: 102px;
-    //     height: 75px;
-    //     margin-left: -51px;
-    //     background-color: transparent;
-    //     font-size: 0;
-    //     outline: none;
-    //     border: none;
-    //     animation: shake 1s infinite linear;
-    //
-    //     &::after {
-    //         content: "";
-    //         position: absolute;
-    //         left: 0;
-    //         top: 0;
-    //         width: 102px;
-    //         height: 75px;
-    //         background: url("../img/icon/initial_icon/icon__airplane.png") no-repeat;
-    //     }
-    // }
 
     &__btn--onsubmit {
       animation: fly-away 0.7s ease-in;
@@ -174,13 +149,6 @@
             &:nth-child(2) {
                 float: right;
             }
-        }
-
-        &__btn {
-        //   left: -130px;
-        //   bottom: 40px;
-        //   margin-left: 100%;
-        //   margin-top: 55px;
         }
     }
 

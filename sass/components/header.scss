@@ -8,6 +8,8 @@
   }
 
   &__mobile {
+    position: relative;
+    z-index: 200;
   	height: 60px;
   	padding: 10px 6.25%;
     background-color: #fff;

@@ -6,7 +6,8 @@
 var utilities = require('../utilities');
 
 var form = document.querySelector('.feedback-form');
-var btnShowForm = document.getElementById('contact');
+var btnShowForm1 = document.getElementById('contact');
+var btnShowForm2 = document.querySelector('.about__btn');
 var btnSend = document.querySelector('.feedback-form__btn');
 var btnClose = document.querySelector('.feedback-form__close');
 
@@ -22,7 +23,8 @@ var closeForm = function() {
 };
 
 var formInit = function() {
-  btnShowForm.addEventListener('click', _onOpenClick);
+  btnShowForm1.addEventListener('click', _onOpenClick);
+  btnShowForm2.addEventListener('click', _onOpenClick);
 
   if(isFormOpen) {
     btnClose.addEventListener('click', _onCloseClick);

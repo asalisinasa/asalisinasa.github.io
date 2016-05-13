@@ -19,6 +19,15 @@ module.exports = {
     DOWN: 40
   },
 
+  /** Список основных цветов
+   * @enum {string}
+   */
+  Color: {
+    white: '#ffffff',
+    blue: '#0076fe',
+    gray: '#cdcdcd'
+  },
+
   /** Показывает элемент
    * @param {Element} element
    */
