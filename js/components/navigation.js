@@ -106,10 +106,9 @@ var setEnabledCurrentLink = function() {
   }
   if (windowTop > about.top - 100 && windowTop < about.bottom) {
     removeCurrenClass();
-    console.log('lf');
     nav.style.backgroundColor = utilities.Color.gray;
     nav.style.color = utilities.Color.white;
-    $('#nav3').addClass('main-nav__item-link--current-white');
+    $('#nav3').addClass('main-nav__item-link--current-blue');
   }
 };
 
@@ -118,6 +117,5 @@ var setEnabledCurrentLinkThrottle = utilities.throttle(setEnabledCurrentLink, 10
 
 
 window.addEventListener('scroll', function() {
-  // closeNavigation();
   setEnabledCurrentLinkThrottle();
 });

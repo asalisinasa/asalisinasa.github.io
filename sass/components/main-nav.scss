@@ -60,6 +60,11 @@
     pointer-events: none;
   }
 
+  &__item-link--current-white {
+    color: $blue;
+    pointer-events: none;
+  }
+
   @media #{$mobile-width} {
     transform: translateY(0);
     transition: transform 0.5s ease-out;

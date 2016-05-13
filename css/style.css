@@ -620,6 +620,9 @@ a {
   .main-nav__item-link--current-white {
     color: #fff;
     pointer-events: none; }
+  .main-nav__item-link--current-white {
+    color: #0076fe;
+    pointer-events: none; }
   @media (max-width: 767px) {
     .main-nav {
       transform: translateY(0);
@@ -1306,7 +1309,7 @@ a {
       float: left;
       position: absolute;
       left: 0;
-      bottom: 50px;
+      bottom: -34;
       width: 40%;
       height: auto; }
     .about__certificate {
