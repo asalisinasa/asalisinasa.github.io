@@ -24,6 +24,7 @@
     &__item {
         position: relative;
         display: inline-block;
+        vertical-align: top;
 
         &:not(:first-child)::after {
             content: "/";
@@ -45,25 +46,25 @@
         transition: 0.1s ease-in;
 
         &:hover {
-          color: #fff;
-          border-bottom: 1px solid rgba(#fff, 0.5);
+            color: #fff;
+            border-bottom: 1px solid rgba(#fff, 0.5);
         }
     }
 
     &__button-up {
-      display: inherit;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      width: 29px;
-      height: 2px;
-      background-color: transparent;
-      border: 15px solid transparent;
-      border-bottom: 15px solid $blue;
-      transition: 0.1s ease-in;
+        display: inherit;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 29px;
+        height: 2px;
+        background-color: transparent;
+        border: 15px solid transparent;
+        border-bottom: 15px solid $blue;
+        transition: 0.1s ease-in;
 
-      &:hover {
-          border-bottom-color: #fff;
-      }
+        &:hover {
+            border-bottom-color: #fff;
+        }
     }
 
     @media #{$tablet-width} {
@@ -83,7 +84,7 @@
         }
 
         &__button-up {
-          border-width: 20px;
+            border-width: 20px;
         }
     }
 

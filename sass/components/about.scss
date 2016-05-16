@@ -13,12 +13,12 @@
     }
 
     &__inner {
-      position: relative;
-      width: 100%;
-      padding: 15px;
-      background: #fff;
-      border: 6px solid $blue;
-      color: $blue;
+        position: relative;
+        width: 100%;
+        padding: 15px;
+        background: #fff;
+        border: 6px solid $blue;
+        color: $blue;
     }
 
     &__btn {
@@ -71,15 +71,15 @@
         transition: 0.1s ease-in;
 
         &:hover {
-          color: $gray;
-          border-bottom: 1px solid rgba($gray, 0.5);
+            color: $gray;
+            border-bottom: 1px solid rgba($gray, 0.5);
         }
     }
 
     @media #{$tablet-width} {
 
         &__content {
-          margin: auto;
+            margin: auto;
         }
 
         &__inner {
@@ -121,7 +121,7 @@
     @media #{$mobile-height} {
 
       &__certificate {
-          display: none;
+            display: none;
       }
     }
 }

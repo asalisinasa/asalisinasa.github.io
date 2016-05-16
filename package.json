@@ -18,10 +18,12 @@
     "editorconfig-tools": "0.1.1",
     "eslint": "^2.8.0",
     "gulp": "3.9.1",
+    "gulp-csso": "^2.0.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
-    "page-scroll-to-id": "^1.5.4",
+    "gulp-uglify": "^1.5.3",
     "sasslintConfig": "./.sass-lint.yml",
     "webpack": "^1.13.0",
     "webpack-stream": "^3.2.0"

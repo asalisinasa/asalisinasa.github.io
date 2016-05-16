@@ -1,95 +1,95 @@
 .main-nav {
-  position: absolute;
-  top: 60px;
-  z-index: 100;
-  width: 100%;
-  min-height: 60px;
-  background-color: #fff;
-  color: $blue;
-  font-family: $din;
-  font-size: $fs-xs;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: background-color 0.1s ease-in-out;
-
-  &__list {
-    @include ul-reset;
-    box-sizing: content-box;
-    text-align: center;
-  }
-
-  &__item {
-    display: block;
-    border-bottom: 2px solid $blue;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__item-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    line-height: 60px;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: color 0.2s ease-out;
-
-    &:hover {
-      animation-name: hvr-bob-float, hvr-bob;
-      animation-duration: .3s, 1.5s;
-      animation-delay: 0s, .3s;
-      animation-timing-function: ease-out, ease-in-out;
-      animation-iteration-count: 1, infinite;
-      animation-fill-mode: forwards;
-      animation-direction: normal, alternate;
-    }
-
-    &:active {
-      color: $gray;
-    }
-  }
-
-  &__item-link--current-gray {
-    color: $gray;
-    pointer-events: none;
-  }
-
-  &__item-link--current-white {
-    color: #fff;
-    pointer-events: none;
-  }
-
-  &__item-link--current-white {
+    position: absolute;
+    top: 60px;
+    z-index: 100;
+    width: 100%;
+    min-height: 60px;
+    background-color: #fff;
     color: $blue;
-    pointer-events: none;
-  }
-
-  @media #{$mobile-width} {
-    transform: translateY(0);
-    transition: transform 0.5s ease-out;
-
-    &--hidden {
-      transform: translateY(-500px);
-    }
-  }
-
-  @media #{$tablet-width} {
-    top: 0;
-    display: flex;
+    font-family: $din;
+    font-size: $fs-xs;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: background-color 0.1s ease-in-out;
 
     &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      @include container;
-      box-sizing: content-box;
+        @include ul-reset;
+        box-sizing: content-box;
+        text-align: center;
     }
 
     &__item {
-      display: block;
-      border-bottom: none;
+        display: block;
+        border-bottom: 2px solid $blue;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
-  }
+
+    &__item-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        line-height: 60px;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        transition: color 0.2s ease-out;
+
+        &:hover {
+            animation-name: hvr-bob-float, hvr-bob;
+            animation-duration: .3s, 1.5s;
+            animation-delay: 0s, .3s;
+            animation-timing-function: ease-out, ease-in-out;
+            animation-iteration-count: 1, infinite;
+            animation-fill-mode: forwards;
+            animation-direction: normal, alternate;
+        }
+
+        &:active {
+            color: $gray;
+        }
+    }
+
+    &__item-link--current-gray {
+        color: $gray;
+        pointer-events: none;
+    }
+
+    &__item-link--current-white {
+        color: #fff;
+        pointer-events: none;
+    }
+
+    &__item-link--current-white {
+        color: $blue;
+        pointer-events: none;
+    }
+
+    @media #{$mobile-width} {
+        transform: translateY(0);
+        transition: transform 0.5s ease-out;
+
+        &--hidden {
+            transform: translateY(-500px);
+        }
+    }
+
+    @media #{$tablet-width} {
+        top: 0;
+        display: flex;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            @include container;
+            box-sizing: content-box;
+        }
+
+        &__item {
+            display: block;
+            border-bottom: none;
+        }
+    }
 }

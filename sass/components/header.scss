@@ -1,29 +1,29 @@
 .page-header {
-  position: fixed;
-  z-index: 200;
-  width: 100%;
-
-  &__inner {
-    position: relative;
-  }
-
-  &__mobile {
-    position: relative;
+    position: fixed;
     z-index: 200;
-  	height: 60px;
-  	padding: 10px 6.25%;
-    background-color: #fff;
-    border-bottom: 2px solid $blue;
-  }
+    width: 100%;
 
-  &__mobile--closed {
-    border-bottom: none;
-  }
-
-  @media #{$tablet-width} {
+    &__inner {
+        position: relative;
+    }
 
     &__mobile {
-      display: none;
+        position: relative;
+        z-index: 200;
+        height: 60px;
+        padding: 10px 6.25%;
+        background-color: #fff;
+        border-bottom: 2px solid $blue;
     }
-  }
+
+    &__mobile--closed {
+        border-bottom: none;
+    }
+
+    @media #{$tablet-width} {
+
+        &__mobile {
+            display: none;
+        }
+    }
 }

@@ -251,6 +251,7 @@ select {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *  Known issue: inner spacing remains in IE 6.
  */
+/* 1 */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -295,7 +296,7 @@ input[type="radio"] {
   /* 2 */ }
 
 /**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * Fix the cursor style for Chrome"s increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
@@ -332,7 +333,7 @@ fieldset {
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 2. Remove padding so people aren"t caught out if they zero out fieldsets.
  * 3. Corrects text not wrapping in Firefox 3.
  * 4. Corrects alignment displayed oddly in IE 6/7.
  */
@@ -349,7 +350,7 @@ textarea {
   overflow: auto; }
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
+ * Don"t inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 optgroup {
@@ -843,6 +844,7 @@ a {
       margin-top: 10px; }
   .features__icon {
     display: inline-block;
+    vertical-align: top;
     width: 50px;
     height: 50px;
     border: 3px solid #cdcdcd;
@@ -879,6 +881,7 @@ a {
       top: 2px; }
   .features__text {
     display: inline-block;
+    vertical-align: top;
     margin-left: 20px;
     font-size: 20px;
     text-align: center;
@@ -895,6 +898,7 @@ a {
     font-size: 14px; }
   .features__list-item {
     display: inline-block;
+    vertical-align: top;
     margin-right: 10px;
     margin-bottom: 15px;
     line-height: 1.5;
@@ -1469,7 +1473,8 @@ a {
     margin-bottom: 20px; }
   .about-footer__item {
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
     .about-footer__item:not(:first-child)::after {
       content: "/";
       position: absolute;

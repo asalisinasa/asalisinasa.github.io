@@ -50,25 +50,26 @@
 
     &__icon {
         display: inline-block;
+        vertical-align: top;
         width: 50px;
         height: 50px;
         border: 3px solid $gray;
         overflow: hidden;
 
         &--progressive {
-            background: url('../img/icon/initial_icon/icon-progressive--abstract.png') no-repeat;
+            background: url("../img/icon/initial_icon/icon-progressive--abstract.png") no-repeat;
             background-position: -20px -19px;
             background-size: 100px 100px;
         }
 
         &--adaptive {
-            background: url('../img/icon/initial_icon/icon-responsive--abstract.png') no-repeat;
+            background: url("../img/icon/initial_icon/icon-responsive--abstract.png") no-repeat;
             background-position: -17px -8px;
             background-size: 100px 100px;
         }
 
         &--mobile {
-            background: url('../img/icon/initial_icon/icon-mobile--abstract.png') no-repeat;
+            background: url("../img/icon/initial_icon/icon-mobile--abstract.png") no-repeat;
             background-position: -17px -18px;
             background-size: 100px 100px;
         }
@@ -104,6 +105,7 @@
 
     &__text {
         display: inline-block;
+        vertical-align: top;
         margin-left: 20px;
         font-size: $fs-s;
         text-align: center;
@@ -124,6 +126,7 @@
 
     &__list-item {
         display: inline-block;
+        vertical-align: top;
         margin-right: 10px;
         margin-bottom: 15px;
         line-height: 1.5;

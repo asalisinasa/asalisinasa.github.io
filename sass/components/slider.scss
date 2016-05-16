@@ -19,8 +19,8 @@
         transition: transform 0.4s ease-in-out;
 
         &--no-js {
-          display: block;
-          width: auto;
+            display: block;
+            width: auto;
         }
     }
 
@@ -28,8 +28,8 @@
         width: 25%;
 
         &--no-js {
-          width: auto;
-          margin-bottom: 50px;
+            width: auto;
+            margin-bottom: 50px;
         }
     }
 
@@ -40,7 +40,7 @@
         font-size: 0;
 
         &--no-js {
-          display: none;
+             display: none;
         }
     }
 
@@ -63,7 +63,7 @@
         display: block;
 
         &--no-js {
-          display: none;
+             display: none;
         }
     }
 
