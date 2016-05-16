@@ -51,7 +51,7 @@
 	__webpack_require__(3);
 	__webpack_require__(5);
 	__webpack_require__(6);
-	__webpack_require__(4);
+	__webpack_require__(7);
 
 
 /***/ },
@@ -86,20 +86,6 @@
 	    white: '#ffffff',
 	    blue: '#0076fe',
 	    gray: '#cdcdcd'
-	  },
-
-	  /** Показывает элемент
-	   * @param {Element} element
-	   */
-	  showElem: function(element) {
-	    element.classList.remove('invisible');
-	  },
-
-	  /** Скрывает элемент
-	   * @param {Element} element
-	   */
-	  hideElem: function(element) {
-	    element.classList.add('invisible');
 	  },
 
 	  /** Проверяет, находится ли элемент в видимой области окна
@@ -236,12 +222,14 @@
 	};
 
 
+	/** @param {MouseEvent} evt */
 	hamburgerBtn.addEventListener('click', function(evt) {
 	  evt.preventDefault();
 	  setNavigationEnabled();
 	});
 
 
+	/** @param {KeyboardEvent} evt */
 	document.body.addEventListener('keydown', function(evt) {
 	  if (evt.keyCode === 27 && isNavigationOpen()) {
 	    hamburgerLines.classList.remove(hamburgerCross);
@@ -252,7 +240,7 @@
 
 
 	var utilities = __webpack_require__(1);
-	var Section = __webpack_require__(7);
+	var Section = __webpack_require__(4);
 
 	var nav = document.querySelector('.main-nav');
 	var toggles = document.querySelectorAll('.main-nav__item-link');
@@ -261,9 +249,10 @@
 	var portfolio = new Section($('#portfolio'));
 	var about = new Section($('#about'));
 	var windowTop;
+	var windowHeight;
 
 
-	var removeCurrenClass = function() {
+	var _removeCurrenClass = function() {
 	  for (var i = 0; i < toggles.length; i++) {
 	    var toggle = toggles[i];
 	    toggle.classList.remove('main-nav__item-link--current-gray');
@@ -276,66 +265,82 @@
 	nav.style.color = utilities.Color.blue;
 
 
-	var setEnabledCurrentLink = function() {
+	var _onWindowResize = function() {
 	  windowTop = window.pageYOffset;
+	  windowHeight = window.innerHeight;
+	};
+
+
+	var _setEnabledCurrentLink = function() {
+	  _onWindowResize();
 
 	  if (windowTop < window.innerHeight) {
-	    removeCurrenClass();
+	    _removeCurrenClass();
 	    nav.style.backgroundColor = utilities.Color.gray;
 	    nav.style.color = utilities.Color.blue;
 	  }
 	  if (windowTop > features.top - 60 && windowTop < features.bottom) {
-	    removeCurrenClass();
+	    _removeCurrenClass();
 	    nav.style.backgroundColor = utilities.Color.white;
 	    nav.style.color = utilities.Color.blue;
 	    $('#nav1').addClass('main-nav__item-link--current-gray');
 	  }
 	  if (windowTop > portfolio.top - 60 && windowTop < portfolio.bottom) {
-	    removeCurrenClass();
+	    _removeCurrenClass();
 	    nav.style.backgroundColor = utilities.Color.blue;
 	    nav.style.color = utilities.Color.white;
 	    $('#nav2').addClass('main-nav__item-link--current-gray');
 	  }
 	  if (windowTop > about.top - 100 && windowTop < about.bottom) {
-	    removeCurrenClass();
-	    console.log('lf');
+	    _removeCurrenClass();
 	    nav.style.backgroundColor = utilities.Color.gray;
 	    nav.style.color = utilities.Color.white;
-	    $('#nav3').addClass('main-nav__item-link--current-white');
+	    $('#nav3').addClass('main-nav__item-link--current-blue');
 	  }
 	};
 
 
-	var setEnabledCurrentLinkThrottle = utilities.throttle(setEnabledCurrentLink, 100);
+	var setEnabledCurrentLinkThrottle = utilities.throttle(_setEnabledCurrentLink, 100);
+	var onWindowResizeThrottle = utilities.throttle(_onWindowResize, 100);
 
 
 	window.addEventListener('scroll', function() {
-	  // closeNavigation();
 	  setEnabledCurrentLinkThrottle();
+	  closeNavigation();
 	});
+
+
+	window.addEventListener('resize', onWindowResizeThrottle);
 
 
 /***/ },
 /* 4 */
 /***/ function(module, exports) {
 
-	/** @fileoverview Прокрутка до якоря */
-
+	/** @fileoverview Свойства и методы элемента секции */
 
 
 	'use strict';
 
 
 
-	var links = $('.main-nav__item-link')
+	/**
+	 * @param {HTMLElement} section
+	 * @constructor
+	 */
+	var Section = function(section) {
+	  this.element = section;
+	  this.height = this.element.height();
+	  this.offset = this.element.offset();
+	  this.top = this.offset.top;
+	  this.left = this.offset.left;
+	  this.bottom = this.top + this.height;
+	  this.active = 'main-nav__item-link--current';
+	};
 
-	links.on('click', function(e) {
-	  e.preventDefault();
-	  console.dir(e.target);
-	  var targetSection = $(this).attr('href');
-	  var targetOffset = $(targetSection).offset().top;
-	  TweenMax.to(window, 1, { scrollTo:{y:targetOffset }, ease: Power3.easeOut } );
-	});
+
+
+	module.exports = Section;
 
 
 /***/ },
@@ -353,9 +358,16 @@
 	var btnNext = slider.querySelector('.slider__arrow--next');
 	var btnPrev = slider.querySelector('.slider__arrow--prev');
 	var slidesContainer = slider.querySelector('.slider__items');
+
+	/** @type {Array.<Object>} */
 	var slides = slidesContainer.querySelectorAll('.slider__item');
+
+	/** @type {Array.<Object>} */
 	var stateIndicator = slider.querySelectorAll('.slider__control');
+
+	/** @type {number} */
 	var counter = 1;
+
 
 	function sliderInit() {
 	  btnPrev.classList.add('slider__arrow--disabled');
@@ -366,7 +378,9 @@
 	  window.addEventListener('keydown', _onDocumentKeyDown);
 	}
 
+
 	sliderInit();
+
 
 	function showNext() {
 	  if (counter <= slides.length - 1) {
@@ -408,6 +422,7 @@
 	  }
 	}
 
+
 	function showPrev() {
 	  if (counter > 1) {
 	    counter--;
@@ -448,16 +463,22 @@
 	  }
 	}
 
+
+	/** @param {MouseEvent} evt */
 	function _onNextClick(evt) {
 	  evt.preventDefault();
 	  showNext();
 	}
 
+
+	/** @param {MouseEvent} evt */
 	function _onPrevClick(evt) {
 	  evt.preventDefault();
 	  showPrev();
 	}
 
+
+	/** @param {KeyboardEvent} evt */
 	function _onDocumentKeyDown(event) {
 	  switch (event.keyCode) {
 	    case utilities.KeyCode.RIGHT:
@@ -494,11 +515,13 @@
 	  return form.classList.contains('feedback-form--show');
 	};
 
+
 	var closeForm = function() {
 	  if (form.classList.contains('feedback-form--show')) {
 	    form.classList.remove('feedback-form--show');
 	  }
 	};
+
 
 	var formInit = function() {
 	  btnShowForm1.addEventListener('click', _onOpenClick);
@@ -513,16 +536,22 @@
 	  }
 	};
 
+
+	/** @param {MouseEvent} evt */
 	var _onOpenClick = function(evt) {
 	  evt.preventDefault();
 	  form.classList.toggle('feedback-form--show');
 	};
 
+
+	/** @param {MouseEvent} evt */
 	var _onCloseClick = function(evt) {
 	  evt.preventDefault();
 	  closeForm();
 	};
 
+
+	/** @param {KeyboardEvent} evt */
 	var _onKeyDown = function(evt) {
 	  if (evt.keyCode === utilities.KeyCode.ESC) {
 	    evt.preventDefault();
@@ -532,42 +561,27 @@
 
 	formInit();
 
-	form.onsubmit = function(evt) {
-	  evt.preventDefault();
-	};
-
 
 /***/ },
 /* 7 */
 /***/ function(module, exports) {
 
-	/** @fileoverview Свойства и методы элемента секции */
+	/** @fileoverview Прокрутка до якоря */
+
 
 
 	'use strict';
 
 
 
-	/**
-	* @param {HTMLElement} section
-	* @constructor
-	*/
-	var Section = function(section) {
-	  this.element  =   section;
-	  // this.toggle   =   $('a[href="#section"]');
-	  this.height   =   this.element.height();
-	  this.offset   =   this.element.offset();
-	  this.top      =   this.offset.top;
-	  this.left     =   this.offset.left;
-	  this.bottom   =   this.top + this.height;
-	  this.active   =   'main-nav__item-link--current';
-	};
+	var links = $('.main-nav__item-link')
 
-	// Section.prototype.highlightLink = function() {
-	//
-	// }
-
-	module.exports = Section;
+	links.on('click', function(e) {
+	  e.preventDefault();
+	  var targetSection = $(this).attr('href');
+	  var targetOffset = $(targetSection).offset().top;
+	  TweenMax.to(window, 1, { scrollTo:{y:targetOffset }, ease: Power3.easeOut } );
+	});
 
 
 /***/ }

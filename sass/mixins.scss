@@ -18,13 +18,13 @@
 @mixin section-height {
     display: flex;
     height: 100vh;
-    min-height: 670px;
+    min-height: 590px;
     overflow: hidden;
 }
 
 @mixin content-align {
     margin: auto;
-    padding-top: 60px;
+    //padding-top: 60px;
 }
 
 @mixin clearfix {
@@ -32,6 +32,53 @@
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+@mixin section-title($textColor, $dotColor) {
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 7%;
+    padding-left: 5vh;
+    font-family: $din-bol;
+    font-size: $fs-m;
+    line-height: $lh-s;
+    color: $textColor;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 34%;
+        left: 1.2%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $dotColor;
+    }
+
+    @media #{$tablet-width} {
+
+        &__title {
+            margin-top: 4%;
+            margin-bottom: 5%;
+            margin-right: 52%;
+            text-align: right;
+            font-size: $fs-l;
+            line-height: $lh-l;
+
+            &:after {
+                top: 45%;
+                left: 103%;
+            }
+        }
+    }
+
+    @media #{$mobile-height} {
+
+        &__title {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
     }
 }
 

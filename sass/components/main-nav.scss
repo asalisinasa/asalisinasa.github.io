@@ -10,6 +10,7 @@
   font-size: $fs-xs;
   text-transform: uppercase;
   letter-spacing: 3px;
+  transition: background-color 0.1s ease-in-out;
 
   &__list {
     @include ul-reset;

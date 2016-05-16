@@ -44,12 +44,14 @@ var setNavigationEnabled = function() {
 };
 
 
+/** @param {MouseEvent} evt */
 hamburgerBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
   setNavigationEnabled();
 });
 
 
+/** @param {KeyboardEvent} evt */
 document.body.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27 && isNavigationOpen()) {
     hamburgerLines.classList.remove(hamburgerCross);
@@ -69,9 +71,10 @@ var features = new Section($('#features'));
 var portfolio = new Section($('#portfolio'));
 var about = new Section($('#about'));
 var windowTop;
+var windowHeight;
 
 
-var removeCurrenClass = function() {
+var _removeCurrenClass = function() {
   for (var i = 0; i < toggles.length; i++) {
     var toggle = toggles[i];
     toggle.classList.remove('main-nav__item-link--current-gray');
@@ -84,28 +87,34 @@ nav.style.backgroundColor = utilities.Color.gray;
 nav.style.color = utilities.Color.blue;
 
 
-var setEnabledCurrentLink = function() {
+var _onWindowResize = function() {
   windowTop = window.pageYOffset;
+  windowHeight = window.innerHeight;
+};
+
+
+var _setEnabledCurrentLink = function() {
+  _onWindowResize();
 
   if (windowTop < window.innerHeight) {
-    removeCurrenClass();
+    _removeCurrenClass();
     nav.style.backgroundColor = utilities.Color.gray;
     nav.style.color = utilities.Color.blue;
   }
   if (windowTop > features.top - 60 && windowTop < features.bottom) {
-    removeCurrenClass();
+    _removeCurrenClass();
     nav.style.backgroundColor = utilities.Color.white;
     nav.style.color = utilities.Color.blue;
     $('#nav1').addClass('main-nav__item-link--current-gray');
   }
   if (windowTop > portfolio.top - 60 && windowTop < portfolio.bottom) {
-    removeCurrenClass();
+    _removeCurrenClass();
     nav.style.backgroundColor = utilities.Color.blue;
     nav.style.color = utilities.Color.white;
     $('#nav2').addClass('main-nav__item-link--current-gray');
   }
   if (windowTop > about.top - 100 && windowTop < about.bottom) {
-    removeCurrenClass();
+    _removeCurrenClass();
     nav.style.backgroundColor = utilities.Color.gray;
     nav.style.color = utilities.Color.white;
     $('#nav3').addClass('main-nav__item-link--current-blue');
@@ -113,9 +122,14 @@ var setEnabledCurrentLink = function() {
 };
 
 
-var setEnabledCurrentLinkThrottle = utilities.throttle(setEnabledCurrentLink, 100);
+var setEnabledCurrentLinkThrottle = utilities.throttle(_setEnabledCurrentLink, 100);
+var onWindowResizeThrottle = utilities.throttle(_onWindowResize, 100);
 
 
 window.addEventListener('scroll', function() {
   setEnabledCurrentLinkThrottle();
+  closeNavigation();
 });
+
+
+window.addEventListener('resize', onWindowResizeThrottle);

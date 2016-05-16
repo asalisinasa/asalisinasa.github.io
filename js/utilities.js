@@ -28,20 +28,6 @@ module.exports = {
     gray: '#cdcdcd'
   },
 
-  /** Показывает элемент
-   * @param {Element} element
-   */
-  showElem: function(element) {
-    element.classList.remove('invisible');
-  },
-
-  /** Скрывает элемент
-   * @param {Element} element
-   */
-  hideElem: function(element) {
-    element.classList.add('invisible');
-  },
-
   /** Проверяет, находится ли элемент в видимой области окна
   * @param  {HTMLElement} element
   * @return {Boolean}

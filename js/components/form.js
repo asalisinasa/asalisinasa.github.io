@@ -16,11 +16,13 @@ var isFormOpen = function() {
   return form.classList.contains('feedback-form--show');
 };
 
+
 var closeForm = function() {
   if (form.classList.contains('feedback-form--show')) {
     form.classList.remove('feedback-form--show');
   }
 };
+
 
 var formInit = function() {
   btnShowForm1.addEventListener('click', _onOpenClick);
@@ -35,16 +37,22 @@ var formInit = function() {
   }
 };
 
+
+/** @param {MouseEvent} evt */
 var _onOpenClick = function(evt) {
   evt.preventDefault();
   form.classList.toggle('feedback-form--show');
 };
 
+
+/** @param {MouseEvent} evt */
 var _onCloseClick = function(evt) {
   evt.preventDefault();
   closeForm();
 };
 
+
+/** @param {KeyboardEvent} evt */
 var _onKeyDown = function(evt) {
   if (evt.keyCode === utilities.KeyCode.ESC) {
     evt.preventDefault();
@@ -53,7 +61,3 @@ var _onKeyDown = function(evt) {
 };
 
 formInit();
-
-form.onsubmit = function(evt) {
-  evt.preventDefault();
-};

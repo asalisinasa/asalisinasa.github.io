@@ -5,7 +5,10 @@ $desktop-width: "(min-width: 960px)";
 $mobile-height: "(max-height: 640px)";
 
 
-//fonts
+
+////////////////////// typography
+
+//font-family
 
 $din: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
 $din-med: "PFDinDisplayPro-Medium", Arial, Helvetica, sans-serif;
@@ -14,6 +17,25 @@ $din-bol: "PFDinDisplayPro-Bold", Arial, Helvetica, sans-serif;
 $incon: "Inconsolata-LGC", Courier, monospace;
 $incon-bol: "Inconsolata-LGC-Bold", Courier, monospace;
 
+
+// font-size
+
+$fs-xl: 48px;
+$fs-l: 32px;
+$fs-m: 24px;
+$fs-s: 20px;
+$fs-xs: 14px;
+
+
+// line-height
+$lh-xl: 48px;
+$lh-l: 60px;
+$lh-m: 60px;
+$lh-s: 30px;
+
+
+
+////////////////////// other
 
 // colors
 $gray: #cdcdcd;
@@ -24,54 +46,3 @@ $pink: #f49ac1;
 
 //grid
 $col-3: 100%/3;
-
-
-
-////////////////////////////////////////////////////////////
-//////////////////////// Typography ////////////////////////
-////////////////////////////////////////////////////////////
-
-////////////////////////// font-size
-
-// $fs-xl: 3rem;
-// $fs-l: 2rem;
-// $fs-m: 1.5rem;
-// $fs-s: 1.3rem;
-// $fs-xs: 1rem;
-
-$fs-xl: 48px;
-$fs-l: 32px;
-$fs-m: 24px;
-$fs-s: 20px;
-$fs-xs: 16px;
-
-
-////////////////////////// line-height
-$lh-xl: 48px;
-$lh-l: 60px;
-$lh-m: 60px;
-$lh-s: 30px;
-
-
-
-
-
-// ////////////////////// Links ////////////////////////
-
-// $link_color: $white;
-// $link_color--hover: $orange;
-// $link_color--active: $red;
-// $link_color--current: $dark-gray;
-
-// $link_underline: 1px solid  $white--transparent;
-// $link_underline--hover: 1px solid  $orange--transparent;
-// $link_underline--active: 1px solid  $red--transparent;
-// $link_underline--current: 1px solid  $dark-gray--transparent;
-
-// $nav-link_color: ;
-// $nav-link_color--hover: ;
-// $nav-link_color--active: ;
-
-// $nav-link_color--current: ;
-
-// $nav-link_bg--xs: ;

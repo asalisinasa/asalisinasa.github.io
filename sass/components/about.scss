@@ -1,14 +1,15 @@
 .about {
+    position: relative;
     @include section-height;
+    flex-wrap: wrap;
     background-color: $gray;
     color: white;
 
     &__content {
+        position: relative;
         @include container;
         @include content-align;
         @include clearfix;
-        position: relative;
-        padding-bottom: 196px;
     }
 
     &__inner {
@@ -32,7 +33,7 @@
         font-size: 0;
         outline: none;
         border: none;
-        animation: shake 1s infinite linear;
+        animation: hvr-bob 1s infinite linear;
 
         &::after {
             content: "";
@@ -46,33 +47,11 @@
     }
 
     &__title {
-        position: relative;
-        margin-top: 3vh;
-        margin-bottom: 1vh;
-        padding-left: 5vh;
-        font-family: $din-bol;
-        font-size: $fs-m;
-        line-height: $lh-s;
-
-        &:after {
-            content: "";
-            position: absolute;
-            top: 34%;
-            left: 1.2%;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: $blue;
-        }
+        @include section-title(#fff, $blue);
     }
 
     &__photo {
-        position: absolute;
-        left: 0;
-        bottom: -80px;
-        z-index: 20;
-        width: 200px;
-        height: auto;
+        display: none;
     }
 
     &__text {}
@@ -97,8 +76,17 @@
         }
     }
 
+    @media #{$mobile-width} {
+      &__content {
+          margin-top: 0;
+      }
+    }
 
     @media #{$tablet-width} {
+
+        &__content {
+          margin: auto;
+        }
 
         &__inner {
             float: right;
@@ -106,27 +94,13 @@
             padding: 20px;
         }
 
-        &__title {
-            margin-top: 3%;
-            margin-bottom: 6%;
-            margin-right: 52%;
-            text-align: right;
-            font-size: 32px;
-            line-height: $lh-s;
-
-            &:after {
-                top: 30%;
-                left: 103%;
-            }
-        }
-
         &__photo {
+            display: block;
             float: left;
             position: absolute;
             left: 0;
-            bottom: -34;
-            width: 40%;
-            height: auto;
+            bottom: -3px;
+            height: 80%;
         }
 
         &__certificate {

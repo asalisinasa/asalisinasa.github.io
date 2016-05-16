@@ -9,9 +9,16 @@ var slider = document.querySelector('.slider');
 var btnNext = slider.querySelector('.slider__arrow--next');
 var btnPrev = slider.querySelector('.slider__arrow--prev');
 var slidesContainer = slider.querySelector('.slider__items');
+
+/** @type {Array.<Object>} */
 var slides = slidesContainer.querySelectorAll('.slider__item');
+
+/** @type {Array.<Object>} */
 var stateIndicator = slider.querySelectorAll('.slider__control');
+
+/** @type {number} */
 var counter = 1;
+
 
 function sliderInit() {
   btnPrev.classList.add('slider__arrow--disabled');
@@ -22,7 +29,9 @@ function sliderInit() {
   window.addEventListener('keydown', _onDocumentKeyDown);
 }
 
+
 sliderInit();
+
 
 function showNext() {
   if (counter <= slides.length - 1) {
@@ -64,6 +73,7 @@ function showNext() {
   }
 }
 
+
 function showPrev() {
   if (counter > 1) {
     counter--;
@@ -104,16 +114,22 @@ function showPrev() {
   }
 }
 
+
+/** @param {MouseEvent} evt */
 function _onNextClick(evt) {
   evt.preventDefault();
   showNext();
 }
 
+
+/** @param {MouseEvent} evt */
 function _onPrevClick(evt) {
   evt.preventDefault();
   showPrev();
 }
 
+
+/** @param {KeyboardEvent} evt */
 function _onDocumentKeyDown(event) {
   switch (event.keyCode) {
     case utilities.KeyCode.RIGHT:
