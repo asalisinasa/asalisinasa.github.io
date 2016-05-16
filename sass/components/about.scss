@@ -76,12 +76,6 @@
         }
     }
 
-    @media #{$mobile-width} {
-      &__content {
-          margin-top: 0;
-      }
-    }
-
     @media #{$tablet-width} {
 
         &__content {

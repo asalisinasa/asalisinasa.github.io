@@ -642,6 +642,7 @@ a {
 
 .intro {
   display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 590px;
   overflow: hidden;
@@ -756,6 +757,7 @@ a {
 
 .features {
   display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 590px;
   overflow: hidden;
@@ -986,6 +988,7 @@ a {
 
 .portfolio {
   display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 590px;
   overflow: hidden;
@@ -1187,6 +1190,7 @@ a {
 .about {
   position: relative;
   display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 590px;
   overflow: hidden;
@@ -1286,9 +1290,6 @@ a {
     .about__link:hover {
       color: #cdcdcd;
       border-bottom: 1px solid rgba(205, 205, 205, 0.5); }
-  @media (max-width: 767px) {
-    .about__content {
-      margin-top: 0; } }
   @media (min-width: 768px) {
     .about__content {
       margin: auto; }
@@ -1372,7 +1373,6 @@ a {
     background-color: transparent;
     font-family: "PFDinDisplayPro-Medium", Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 36px;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
