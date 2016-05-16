@@ -118,5 +118,10 @@
         }
     }
 
-    @media #{$desktop-width} {}
+    @media #{$mobile-height} {
+
+      &__certificate {
+          display: none;
+      }
+    }
 }

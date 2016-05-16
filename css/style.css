@@ -1322,6 +1322,9 @@ a {
         -webkit-filter: grayscale(0);
                 filter: grayscale(0);
         transform: translate3d(0, -5px, 0); } }
+  @media (max-height: 640px) {
+    .about__certificate {
+      display: none; } }
 
 .feedback-form {
   position: fixed;
