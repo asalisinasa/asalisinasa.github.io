@@ -397,7 +397,7 @@
 	var renderedReviews = [];
 
 	/** @constant {string} */
-	var REVIEWS_LOAD_URL = '//o0.github.io/assets/json/reviews.json';
+	var REVIEWS_LOAD_URL = 'https://o0.github.io/assets/json/reviews.json';
 
 	/** @constant {number} */
 	var PAGE_SIZE = 3;
@@ -1406,7 +1406,7 @@
 	        this._drawTextContainer('Мимо! Попробуй еще раз.');
 	        break;
 	      case Verdict.PAUSE:
-	        this._drawTextContainer('Игра на паузе... Для продолжения - пробел.');
+	        this._drawTextContainer('Игра на паузе...');
 	        break;
 	      case Verdict.INTRO:
 	        this._drawTextContainer('Пробел для старта');
