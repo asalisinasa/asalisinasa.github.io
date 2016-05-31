@@ -3,7 +3,7 @@
 'use strict';
 
 
-var utilities = require('../utilities');
+var utilities = require('../common/utilities');
 
 var slider = document.querySelector('.slider');
 var btnNext = slider.querySelector('.slider__arrow--next');

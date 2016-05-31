@@ -257,6 +257,7 @@
 	    var toggle = toggles[i];
 	    toggle.classList.remove('main-nav__item-link--current-gray');
 	    toggle.classList.remove('main-nav__item-link--current-white');
+	    toggle.classList.remove('main-nav__item-link--current-blue');
 	  }
 	};
 

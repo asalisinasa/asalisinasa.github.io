@@ -3,7 +3,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './js/main',
+  entry: './js/common/main.js',
   output: {
     filename: './js/script.js'
   },

@@ -10,6 +10,7 @@
         @include container;
         @include content-align;
         @include clearfix;
+        margin-bottom: 0;
     }
 
     &__inner {
@@ -120,8 +121,17 @@
 
     @media #{$mobile-height} {
 
-      &__certificate {
+        &__photo {
             display: none;
-      }
+        }
+
+        &__inner {
+            float: inherit;
+            margin: 0 auto;
+        }
+
+        &__certificate {
+            display: none;
+        }
     }
 }

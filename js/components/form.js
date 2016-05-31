@@ -3,7 +3,7 @@
 'use strict';
 
 
-var utilities = require('../utilities');
+var utilities = require('../common/utilities');
 
 var form = document.querySelector('.feedback-form');
 var btnShowForm1 = document.getElementById('contact');

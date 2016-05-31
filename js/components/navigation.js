@@ -61,7 +61,7 @@ document.body.addEventListener('keydown', function(evt) {
 
 
 
-var utilities = require('../utilities');
+var utilities = require('../common/utilities');
 var Section = require('./section');
 
 var nav = document.querySelector('.main-nav');
@@ -79,6 +79,7 @@ var _removeCurrenClass = function() {
     var toggle = toggles[i];
     toggle.classList.remove('main-nav__item-link--current-gray');
     toggle.classList.remove('main-nav__item-link--current-white');
+    toggle.classList.remove('main-nav__item-link--current-blue');
   }
 };
 

@@ -31,7 +31,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('script', function() {
-  gulp.src('js/bundle.js')
+  gulp.src('js/script.js')
     .pipe(uglify())
     .pipe(rename('script.min.js'))
     .pipe(gulp.dest('js'));
