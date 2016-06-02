@@ -2,6 +2,8 @@
     position: fixed;
     z-index: 200;
     width: 100%;
+    min-height: 60px;
+    transition: transform 0.3s ease-in-out;
 
     &__inner {
         position: relative;
@@ -16,8 +18,8 @@
         border-bottom: 2px solid $blue;
     }
 
-    &__mobile--closed {
-        border-bottom: none;
+    &--hidden {
+        transform: translateY(-110%);
     }
 
     @media #{$tablet-width} {

@@ -501,7 +501,9 @@ a {
 .page-header {
   position: fixed;
   z-index: 200;
-  width: 100%; }
+  width: 100%;
+  min-height: 60px;
+  transition: transform 0.3s ease-in-out; }
   .page-header__inner {
     position: relative; }
   .page-header__mobile {
@@ -511,8 +513,8 @@ a {
     padding: 10px 6.25%;
     background-color: #fff;
     border-bottom: 2px solid #0076fe; }
-  .page-header__mobile--closed {
-    border-bottom: none; }
+  .page-header--hidden {
+    transform: translateY(-110%); }
   @media (min-width: 768px) {
     .page-header__mobile {
       display: none; } }
