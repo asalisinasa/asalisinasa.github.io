@@ -1253,45 +1253,62 @@ a {
       color: #cdcdcd;
       border-bottom: 1px solid rgba(205, 205, 205, 0.5); }
   @media (min-width: 768px) {
-    .about__content {
-      margin: auto; }
-    .about__inner {
-      float: right;
-      width: 50%;
-      padding: 20px; }
-    .about__photo {
-      display: block;
-      float: left;
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      height: 80%; }
-    .about__certificate {
-      position: relative;
-      display: inline-block;
-      vertical-align: top;
-      width: 20%;
-      margin-right: 10px; }
-      .about__certificate img {
+    .about {
+      background-image: url("/img/content/iam--tablet.png");
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: auto 80%; } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .about {
+      background-image: url("/img/content/iam--tablet@2x.png"); } }
+  @media (min-width: 768px) {
+      .about__content {
+        margin: auto; }
+      .about__inner {
+        float: right;
+        width: 50%;
+        padding: 20px; }
+      .about__photo {
+        display: block;
+        float: left;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        height: 85%; }
+      .about__certificate {
         position: relative;
-        width: 100%;
-        -webkit-filter: grayscale(100%);
-                filter: grayscale(100%);
-        transition: transform 0.2s ease-in, -webkit-filter 0.2s ease-in;
-        transition: transform 0.2s ease-in, filter 0.2s ease-in;
-        transition: transform 0.2s ease-in, filter 0.2s ease-in, -webkit-filter 0.2s ease-in; }
-      .about__certificate:hover img {
-        -webkit-filter: grayscale(0);
-                filter: grayscale(0);
-        transform: translate3d(0, -5px, 0); } }
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin-right: 10px; }
+        .about__certificate img {
+          position: relative;
+          width: 100%;
+          -webkit-filter: grayscale(100%);
+                  filter: grayscale(100%);
+          transition: transform 0.2s ease-in, -webkit-filter 0.2s ease-in;
+          transition: transform 0.2s ease-in, filter 0.2s ease-in;
+          transition: transform 0.2s ease-in, filter 0.2s ease-in, -webkit-filter 0.2s ease-in; }
+        .about__certificate:hover img {
+          -webkit-filter: grayscale(0);
+                  filter: grayscale(0);
+          transform: translate3d(0, -5px, 0); } }
+  @media (min-width: 960px) {
+    .about {
+      background-image: url("/img/content/iam--desktop.png"); } }
+  @media (min-width: 1000px) {
+    .about {
+      background-position-x: 15%; } }
   @media (max-height: 640px) {
-    .about__photo {
-      display: none; }
-    .about__inner {
-      float: inherit;
-      margin: 0 auto; }
-    .about__certificate {
-      display: none; } }
+    .about {
+      background: none; }
+      .about__photo {
+        display: none; }
+      .about__inner {
+        float: inherit;
+        margin: 0 auto; }
+      .about__certificate {
+        display: none; } }
 
 .feedback-form {
   position: fixed;

@@ -93,13 +93,14 @@ var _onWindowResize = function() {
 
 var _navInit = function() {
   if (window.innerWidth > 768) {
+    header.classList.remove('page-header--hidden');
     nav.style.backgroundColor = utilities.Color.gray;
     nav.style.color = utilities.Color.blue;
   } else {
     _hideHeader();
     nav.style.backgroundColor = utilities.Color.white;
   }
-}
+};
 
 
 var _setEnabledCurrentLink = function() {

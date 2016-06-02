@@ -78,6 +78,16 @@
     }
 
     @media #{$tablet-width} {
+        background-image: url("/img/content/iam--tablet.png");
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: auto 80%;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+            & {
+                background-image: url("/img/content/iam--tablet@2x.png");
+            }
+        }
 
         &__content {
             margin: auto;
@@ -95,7 +105,7 @@
             position: absolute;
             left: 0;
             bottom: -3px;
-            height: 80%;
+            height: 85%;
         }
 
         &__certificate {
@@ -119,7 +129,16 @@
         }
     }
 
+    @media #{$desktop-width} {
+        background-image: url("/img/content/iam--desktop.png");
+    }
+
+    @media (min-width: 1000px) {
+        background-position-x: 15%;
+    }
+
     @media #{$mobile-height} {
+        background: none;
 
         &__photo {
             display: none;
