@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мнемотехники :: Wikium.ru</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700,800&amp;subset=cyrillic,latin"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,800" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="mnemonics">
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="cards-1" viewBox="0 0 40 32">
+                <title>
+                    cards-1
+                </title>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M36.857 11.093v16.902h-26.534v4.005h29.677v-20.907z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M30.65 6.827v14.998h-24.629v4.202h28.387v-19.2z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M0 0h28.387v19.2h-28.387v-19.2zM12.459 13.714h1.941l3.314-7.433v-1.139h-6.286v1.526h4.32l-3.29 7.045z">
+                </path>
+            </symbol>
+            <symbol id="cards-2" viewBox="0 0 32 32">
+                <title>
+                    cards-2
+                </title>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M30.303 22.586h-2.133v-0.98c0-1.912-1.537-3.468-3.426-3.468h-8.006v-3.969h5.17c1.628 0 2.952-1.341 2.952-2.988v-4.517c0-1.648-1.324-2.988-2.952-2.988h-11.816c-1.628 0-2.952 1.341-2.952 2.988v4.517c0 1.648 1.324 2.988 2.952 2.988h5.17v3.969h-8.006c-1.889 0-3.426 1.556-3.426 3.468v0.98h-2.133c-0.936 0-1.697 0.771-1.697 1.718v2.302c0 0.947 0.761 1.718 1.697 1.718h5.742c0.936 0 1.697-0.771 1.697-1.718v-2.302c0-0.947-0.761-1.718-1.697-1.718h-2.133v-0.98c0-1.088 0.875-1.974 1.95-1.974h8.006v2.954h-2.133c-0.936 0-1.697 0.771-1.697 1.718v2.302c0 0.947 0.761 1.718 1.697 1.718h5.742c0.936 0 1.697-0.771 1.697-1.718v-2.302c0-0.947-0.761-1.718-1.697-1.718h-2.133v-2.954h8.006c1.075 0 1.95 0.885 1.95 1.974v0.98h-2.133c-0.936 0-1.697 0.771-1.697 1.718v2.302c0 0.947 0.761 1.718 1.697 1.718h5.742c0.936 0 1.697-0.771 1.697-1.718v-2.302c0-0.947-0.761-1.718-1.697-1.718z">
+                </path>
+            </symbol>
+            <symbol id="cards-3" viewBox="0 0 32 32">
+                <title>
+                    cards-3
+                </title>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M19.046 6.639c-0.525 0-0.951-0.421-0.951-0.941v-5.698h-13.644c-0.525 0-0.951 0.421-0.951 0.941v26.059l20.5-0.005v-20.356h-4.954z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M20 0.5v4h3.5z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M27.538 4.5h-1.814v23.321c0 0.523-0.431 0.946-0.962 0.946l-18.262 0.006v2.28c0 0.523 0.431 0.946 0.962 0.946h20.076c0.531 0 0.962-0.424 0.962-0.946v-25.607c0-0.523-0.431-0.946-0.962-0.946z">
+                </path>
+            </symbol>
+            <symbol id="cards-4" viewBox="0 0 32 32">
+                <title>
+                    cards-4
+                </title>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M21.002 12.371c0 1.913-1.568 3.464-3.502 3.464s-3.502-1.551-3.502-3.464c0-1.913 1.568-3.464 3.502-3.464s3.502 1.551 3.502 3.464z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M29.78 11.995c-0.171-6.276-5.216-11.524-11.52-11.963-6.99-0.491-12.858 4.758-13.307 11.479h-0.033v0.34c0 1.119-0.422 2.853-0.943 3.848-0.547 1.041-1.121 2.061-1.589 2.781-0.462 0.713 0.053 1.643 0.903 1.643h1.629v5.922c0 1.198 0.976 2.166 2.183 2.166h3.402v2.971c0 0.563 0.554 0.955 1.095 0.772l14.316-4.843c0.501-0.17 0.837-0.635 0.837-1.158v-5.556c1.952-2.232 3.112-5.183 3.027-8.403zM25.448 13.768l-1.596 0.268c-0.152 0.596-0.389 1.171-0.712 1.708l0.936 1.302c0.171 0.242 0.145 0.576-0.066 0.785l-1.134 1.126c-0.211 0.209-0.547 0.236-0.791 0.065l-1.319-0.929c-0.528 0.308-1.095 0.543-1.675 0.694l-0.257 1.597c-0.053 0.294-0.303 0.504-0.6 0.504h-1.596c-0.297 0-0.547-0.209-0.6-0.504l-0.264-1.571c-0.593-0.151-1.18-0.38-1.721-0.694l-1.332 0.936c-0.244 0.17-0.58 0.144-0.791-0.065l-1.134-1.126c-0.211-0.209-0.237-0.543-0.066-0.785l0.93-1.296c-0.33-0.537-0.567-1.106-0.725-1.701l-1.609-0.268c-0.297-0.052-0.508-0.301-0.508-0.596v-1.584c0-0.294 0.211-0.55 0.508-0.596l1.583-0.249c0.152-0.589 0.382-1.171 0.699-1.708l-0.943-1.322c-0.171-0.242-0.145-0.576 0.066-0.785l1.134-1.126c0.211-0.209 0.547-0.236 0.791-0.065l1.306 0.923c0.554-0.34 1.147-0.582 1.761-0.733l0.27-1.584c0.053-0.295 0.303-0.504 0.6-0.504h1.596c0.297 0 0.554 0.209 0.6 0.504l0.27 1.584c0.6 0.151 1.18 0.386 1.721 0.707l1.312-0.929c0.237-0.17 0.574-0.144 0.785 0.052l1.134 1.126c0.211 0.209 0.237 0.543 0.066 0.785l-0.936 1.309c0.323 0.543 0.561 1.113 0.712 1.708l1.596 0.268c0.297 0.052 0.508 0.301 0.508 0.596v1.584c0 0.281-0.211 0.537-0.508 0.589z">
+                </path>
+            </symbol>
+            <symbol id="features-1" viewBox="0 0 32 32">
+                <title>
+                    features-1
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M24.14 12.998c-0.626 0-1.135 0.506-1.135 1.126s0.508 1.126 1.135 1.126c0.624 0 1.132-0.505 1.132-1.126s-0.508-1.126-1.132-1.126zM7.862 12.998c-0.626 0-1.135 0.506-1.135 1.126s0.508 1.126 1.135 1.126c0.624 0 1.133-0.505 1.133-1.126s-0.508-1.126-1.133-1.126zM20.77 10.949c-0.93 0-1.684 0.752-1.684 1.678 0 0.924 0.754 1.674 1.684 1.674s1.686-0.751 1.686-1.674c0-0.925-0.756-1.678-1.686-1.678zM26 21.144h-1.92v-3.515c0-0.604-0.178-1.165-0.465-1.653 0.169-0.049 0.342-0.084 0.525-0.084 1.024 0 1.86 0.832 1.86 1.852v3.4zM11.229 10.949c-0.93 0-1.686 0.752-1.686 1.678 0 0.924 0.756 1.674 1.686 1.674 0.927 0 1.683-0.751 1.683-1.674s-0.756-1.678-1.683-1.678zM7.862 15.891c0.183 0 0.354 0.035 0.523 0.084-0.29 0.489-0.465 1.050-0.465 1.653v3.515h-1.92v-3.4c0-1.021 0.836-1.852 1.862-1.852zM15.998 7.6c-1.372 0-2.491 1.112-2.491 2.478s1.118 2.479 2.491 2.479c1.374 0 2.493-1.113 2.493-2.479 0.001-1.367-1.119-2.478-2.493-2.478zM23.464 22.452h-2.941v-5.348c0-0.736-0.195-1.42-0.511-2.033 0.241-0.071 0.494-0.121 0.759-0.121 1.484 0 2.693 1.2 2.693 2.679v4.823zM11.475 17.103v5.348h-2.937v-4.823c0-1.477 1.207-2.679 2.694-2.679 0.265 0 0.515 0.050 0.756 0.121-0.316 0.613-0.512 1.298-0.512 2.033zM12.091 24h7.815v-6.897c0-2.144-1.753-3.887-3.908-3.887-2.156 0-3.907 1.743-3.907 3.887v6.897z">
+                </path>
+            </symbol>
+            <symbol id="features-2" viewBox="0 0 32 32">
+                <title>
+                    features-2
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M13.053 20.762l-0.783-1.253-1.652 0.293 2.173-3.802h-4.238v10h7.22v-10z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M24.788 11.214h-4.795c0.28-0.147 0.531-0.301 0.753-0.464 0.853-0.622 1.305-1.41 1.304-2.192 0-0.642-0.298-1.561-0.732-1.944-0.434-0.387-1.010-0.615-1.625-0.615-0.657 0-1.267 0.229-1.79 0.586-0.786 0.536-1.401 1.697-1.84 2.582-0.022 0.044-0.044 0.087-0.066 0.13-0.16-0.342-0.348-1.025-0.56-1.337-0.372-0.54-0.819-1.018-1.344-1.376-0.521-0.357-1.131-0.586-1.787-0.586-0.654 0.002-1.253 0.281-1.7 0.712-0.446 0.426-0.758 1.385-0.76 2.070-0.003 0.4 0.112 0.819 0.348 1.199 0.298 0.477 0.769 0.893 1.42 1.233h-4.414l0.010 4.104h8.289v-4.104h1.010v4.104h8.291l-0.012-4.104zM11.9 9.931c-0.333-0.214-0.537-0.429-0.657-0.622-0.117-0.192-0.157-0.528-0.157-0.693-0.003-0.276 0.132-0.76 0.373-0.988 0.235-0.228 0.554-0.369 0.84-0.369h0.009c0.368 0.003 0.733 0.128 1.101 0.375 0.547 0.368 1.063 1.368 1.421 2.1 0.187 0.373 0.33 0.762 0.427 1.143-1.66-0.175-2.733-0.548-3.356-0.947zM17.575 9.039c0.299-0.436 0.652-1.156 1.017-1.404 0.363-0.247 0.733-0.372 1.101-0.375h0.004c0.307 0 0.602 0.122 0.803 0.304 0.202 0.184 0.31 0.521 0.31 0.759-0.004 0.28-0.147 0.926-0.79 1.404-0.61 0.453-1.67 0.917-3.298 1.242 0.154-0.658 0.455-1.354 0.853-1.929z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M21.82 19.786l-1.66-0.277-0.784 1.267-2.7-4.713v9.936h7.221v-10h-4.259z">
+                </path>
+            </symbol>
+            <symbol id="features-3" viewBox="0 0 32 32">
+                <title>
+                    features-3
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M18.499 11.602l-0.19 0.192c-0.425 0.429-0.425 1.123 0.002 1.552l0.083 0.084c0.425 0.429 1.11 0.429 1.536 0.001l1.436-1.448 0.188-0.191c0.425-0.429 0.425-1.124 0-1.552l-0.085-0.085c-0.422-0.429-1.11-0.429-1.537 0l-1.433 1.448zM21.661 12.282l-1.436 1.449c-0.422 0.427-0.422 1.122 0 1.551l0.083 0.085c0.425 0.428 1.112 0.428 1.537 0l0.19-0.193 1.244-1.254 0.188-0.192c0.426-0.429 0.425-1.121 0.002-1.552l-0.083-0.084c-0.424-0.428-1.11-0.43-1.537-0.001l-0.187 0.191zM26.4 19.325l-6.412 6.473c-0.535 0.54-1.41 0.54-1.944 0.001l-1.104-1.115-1.168 1.178c0 0-1.739 1.743-4.095 1.25-0.018-0.004-0.037-0.006-0.055-0.010-0.102-0.022-0.207-0.053-0.311-0.084-0.085-0.026-0.174-0.056-0.26-0.088-0.085-0.032-0.171-0.061-0.257-0.1-0.174-0.076-0.348-0.163-0.525-0.267-0.052-0.031-0.106-0.070-0.159-0.103-0.148-0.092-0.298-0.197-0.448-0.312-0.058-0.045-0.117-0.090-0.177-0.139-0.2-0.163-0.401-0.338-0.603-0.543-2.27-2.292-2.171-4.334-1.747-5.365 0.002-0.003 0.348-1.29 0.767-2.823 0.118-0.436 0.244-0.889 0.367-1.343l-2.669-2.695c-0.535-0.539-0.535-1.422 0-1.963l6.412-6.472c0.535-0.54 1.41-0.54 1.944 0l3.72 3.754 0.338-0.342c0.425-0.429 1.113-0.427 1.538 0l0.083 0.086c0.425 0.428 0.425 1.121 0 1.551l-0.19 0.193-1.242 1.254-0.192 0.192c-0.422 0.427-1.108 0.429-1.536 0l-0.083-0.083c-0.424-0.429-0.424-1.124 0-1.552l0.189-0.192v-0.001l0.419-0.423-3.151-3.179-7.006 7.069 1.721 1.735c0.293-1.057 0.555-1.979 0.693-2.418 0.436-1.393 1.536-1.342 2.059-0.494 0.407 0.653 0.091 2.14-0.12 3.824-0.042 0.332-0.152 0.879-0.281 1.459l6.978 7.043 7.002-7.069-0.52-0.525-0.611 0.617c-0.424 0.429-1.111 0.427-1.536 0l-0.085-0.086c-0.424-0.427-0.424-1.12 0-1.551l1.622-1.639c0.425-0.428 1.111-0.429 1.538-0.001l0.083 0.084c0.426 0.429 0.425 1.122 0 1.552l-0.188 0.191 0.002 0.002-0.149 0.149 1.347 1.359c0.535 0.539 0.535 1.421 0.001 1.962zM8.483 10.021c0.063 0.066 0.171 0.064 0.234-0.001l2.052-2.072c0.065-0.065 0.065-0.171 0-0.236s-0.171-0.066-0.234-0.001l-2.052 2.072c-0.065 0.066-0.065 0.171 0 0.238zM22.707 21.091c-0.268-0.272-0.704-0.272-0.972 0s-0.267 0.711 0 0.981c0.27 0.272 0.704 0.272 0.972 0.001s0.267-0.71 0-0.982z">
+                </path>
+            </symbol>
+            <symbol id="features-4" viewBox="0 0 32 32">
+                <title>
+                    features-4
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M12.8 10v5.6h14.8v-5.6h-14.8zM17.586 13.252l-0.4 0.693-0.786-0.454v0.907h-0.8v-0.907l-0.786 0.454-0.4-0.693 0.785-0.454-0.785-0.454 0.4-0.693 0.786 0.454v-0.907h0.8v0.907l0.786-0.454 0.4 0.693-0.785 0.454 0.785 0.454zM21.586 13.252l-0.4 0.693-0.786-0.454v0.907h-0.8v-0.907l-0.786 0.454-0.4-0.693 0.785-0.454-0.785-0.454 0.4-0.693 0.786 0.454v-0.907h0.8v0.907l0.786-0.454 0.4 0.693-0.785 0.454 0.785 0.454zM25.586 13.252l-0.4 0.693-0.786-0.454v0.907h-0.8v-0.907l-0.786 0.454-0.4-0.693 0.785-0.454-0.785-0.454 0.4-0.693 0.786 0.454v-0.907h0.8v0.907l0.786-0.454 0.4 0.693-0.785 0.454 0.785 0.454z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M11.706 16.634v-2.45h-0.824v-4.084c0-2.251 1.847-4.083 4.118-4.083 1.989 0 3.653 1.406 4.035 3.268h0.832c-0.393-2.314-2.423-4.084-4.867-4.084-2.725 0-4.941 2.198-4.941 4.9v4.084h-2.059v10.616h14v-8.166h-10.294zM16.412 22.349h-2.824l0.455-2.301c-0.278-0.256-0.455-0.618-0.455-1.024 0-0.773 0.632-1.4 1.412-1.4s1.412 0.627 1.412 1.4c0 0.406-0.177 0.768-0.455 1.024l0.455 2.301z">
+                </path>
+            </symbol>
+            <symbol id="features-5" viewBox="0 0 32 32">
+                <title>
+                    features-5
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M23.6 5.6h-16v20.8h16v-3.188l-1.991 1.966-3.485 0.009-0.009-3.455 5.485-5.417v-10.715zM13.071 8.039h5.058v1.219h-5.058v-1.219zM13.071 23.961h-3.002v-1.219h3.002v1.219zM14.306 21.521h-4.237v-1.219h4.237v1.219zM21.131 16.577h-11.062v-1.219h11.062v1.219zM21.131 14.137h-11.062v-1.219h11.062v1.219zM21.131 11.698h-11.062v-1.219h11.062v1.219z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M26.674 14.8l-7.474 7.47 0.004 1.73 1.722-0.004 7.474-7.47z">
+                </path>
+            </symbol>
+            <symbol id="features-6" viewBox="0 0 32 32">
+                <title>
+                    features-6
+                </title>
+                <path fill="#09f4e2" style="fill: var(--color3, #09f4e2)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z">
+                </path>
+                <path fill="#ad64ed" style="fill: var(--color1, #ad64ed)" d="M25.164 5.2c-8.871 0-16.168 6.908-16.942 15.686 1.474-2.104 3.28-4.129 5.534-6.456 0.168-0.175 0.445-0.178 0.617-0.006 0.172 0.17 0.175 0.45 0.006 0.625-0.339 0.35-0.684 0.713-1.031 1.080-0.198 0.209-0.392 0.418-0.582 0.623-0.035 0.038-0.070 0.076-0.105 0.115-2.786 3.019-4.777 5.647-6.223 8.911-0.099 0.223 0 0.484 0.219 0.584 0.058 0.026 0.119 0.039 0.179 0.039 0.167 0 0.326-0.097 0.399-0.261 0.515-1.162 1.113-2.239 1.785-3.288 6.095-0.158 11.643-3.59 14.551-9.051 0.072-0.137 0.069-0.302-0.010-0.436-0.079-0.133-0.222-0.215-0.375-0.215h-1.616l2.898-1.677c0.092-0.053 0.162-0.139 0.196-0.239 0.621-1.829 0.936-3.71 0.936-5.592 0-0.244-0.195-0.442-0.436-0.442z">
+                </path>
+            </symbol>
+        </defs>
+    </svg>
+
+    <section class="mnemonics-heading">
+        <header class="header header--transparent header--short">
+            <div class="header__inner">
+                <a class="header__logo" href="/">
+                    <img src="img/header-logo.svg" alt="Викиум тренажеры для мозга">
+                </a>
+                <div class="header__account">
+                    <a class="header__back" href="#">Назад</a>
+                </div>
+            </div>
+        </header>
+        <div class="mnemonics-heading__container container">
+            <div class="mnemonics-heading__content">
+                <p class="mnemonics-heading__text">
+                    Самый полезный
+                    <br> курс от Викиум
+                </p>
+                <h1 class="mnemonics-heading__title">
+                    Мнемоте&shy;хники
+                </h1>
+                <a class="mnemonics-heading__btn btn btn--yellow lp-scroll-to-action-btn lp-floating-header-start" href="#">
+                    ВКЛЮЧИТЬ
+                </a>
+            </div>
+            <div class="mnemonics-heading__img-wrap">
+                <img class="mnemonics-heading__img" src="img/mnemonics.svg" alt="Изображение мнемотехники" width="500" height="466">
+            </div>
+        </div>
+        <button class="mnemonics__floating-btn lp-floating-btn lp-scroll-to-benefits-btn">Далее</button>
+
+        <!-- .lp-floating-header--show -->
+        <header class="lp-floating-header">
+            <div class="lp-floating-header__inner container">
+                <a class="mnemonics__floating-header-btn lp-floating-header__btn btn js-mnemonics-scroll-to-pricebox-btn" href="#">
+                    Получить
+                </a>
+            </div>
+        </header>
+    </section>
+
+    <section class="lp-features">
+        <div class="container">
+            <h2 class="mnemonics__title">
+                Вы сможете:
+            </h2>
+            <ul class="lp-features__list">
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Запоминать 100 имен
+                            <br> за&nbsp;полчаса
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-1"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Поздравлять с&nbsp;днем
+                            <br> рождения вовремя
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-2"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Запоминать номера
+                            <br> телефона на&nbsp;слух
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-3"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Держать в&nbsp;голове все
+                            <br> &laquo;явки и&nbsp;пароли&raquo;
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-4"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Помнить все
+                            <br> договоренности
+                            <br> и&nbsp;соглашения
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-5"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="lp-features__item  mnemonics__features-item">
+                    <a class="lp-features__item-link">
+                        <h3 class="lp-features__text">
+                            Учить стихотворения
+                            <br> мгновенно
+                        </h3>
+                        <svg class="lp-features__img" aria-hidden="true" width="80" height="80">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#features-6"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lp-banner">
+        <div class="mnemonics__banner-container lp-banner__container container">
+            <div class="mnemonics__banner lp-banner__banner">
+                <p class="lp-banner__text lp-banner__text--size-large">
+                    Мнемотехники&nbsp;&mdash; комплекс особых методик запоминания информации посредством ассоциаций, основаны на&nbsp;естественных
+                    механизмах памяти мозга
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="lp-cards">
+        <div class="container">
+            <h2 class="mnemonics__title mnemonics__title--cards">
+                Включает:
+            </h2>
+            <ul class="lp-cards__items">
+                <li class="lp-cards__item mnemonics__cards-item">
+                    <div class="lp-cards__img-wrap mnemonics__cards-img-wrap">
+                        <svg class="lp-cards__img" aria-hidden="true" width="70" height="56">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cards-1"></use>
+                        </svg>
+                    </div>
+                    <p class="lp-cards__text">
+                        7&nbsp;уникальных тренажеров на&nbsp;мнемотехники
+                    </p>
+                </li>
+                <li class="lp-cards__item mnemonics__cards-item">
+                    <div class="lp-cards__img-wrap mnemonics__cards-img-wrap">
+                        <svg class="lp-cards__img" aria-hidden="true" width="74" height="57">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cards-2"></use>
+                        </svg>
+                    </div>
+                    <p class="lp-cards__text">
+                        Набор ключевых методик запоминания
+                    </p>
+                </li>
+                <li class="lp-cards__item mnemonics__cards-item">
+                    <div class="lp-cards__img-wrap mnemonics__cards-img-wrap">
+                        <svg class="lp-cards__img" aria-hidden="true" width="50" height="64">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cards-3"></use>
+                        </svg>
+                    </div>
+                    <p class="lp-cards__text">
+                        Вводный и&nbsp;финальный тесты
+                    </p>
+                </li>
+                <li class="lp-cards__item mnemonics__cards-item">
+                    <div class="lp-cards__img-wrap mnemonics__cards-img-wrap">
+                        <svg class="lp-cards__img" aria-hidden="true" width="56" height="65">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cards-4"></use>
+                        </svg>
+                    </div>
+                    <p class="lp-cards__text">
+                        Программу развития памяти
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="mnemonics__container">
+        <section class="lp-how mnemonics__how">
+            <div class="container">
+                <h2 class="mnemonics__title">Этот курс поможет:</h2>
+                <ol class="lp-how__items">
+                    <li class="lp-how__item">
+                        <a class="lp-how__item-link">
+                            <span class="lp-how__item-number mnemonics__how-number">1</span>
+                            <p class="lp-how__item-text">
+                                Овладеть мнемотехниками и&nbsp;использовать их&nbsp;в&nbsp;повседневной жизни
+                            </p>
+                        </a>
+                    </li>
+                    <li class="lp-how__item">
+                        <a class="lp-how__item-link">
+                            <span class="lp-how__item-number mnemonics__how-number">2</span>
+                            <p class="lp-how__item-text">
+                                Запоминать нужную информацию в&nbsp;любом количестве
+                            </p>
+                        </a>
+                    </li>
+                    <li class="lp-how__item">
+                        <a class="lp-how__item-link">
+                            <span class="lp-how__item-number mnemonics__how-number">3</span>
+                            <p class="lp-how__item-text">
+                                Быстрее и&nbsp;проще учить иностранные языки
+                            </p>
+                        </a>
+                    </li>
+                    <li class="lp-how__item">
+                        <a class="lp-how__item-link">
+                            <span class="lp-how__item-number mnemonics__how-number">4</span>
+                            <p class="lp-how__item-text">
+                                Эффективнее обучаться в&nbsp;любой области
+                            </p>
+                        </a>
+                    </li>
+                    <li class="lp-how__item">
+                        <a class="lp-how__item-link">
+                            <span class="lp-how__item-number mnemonics__how-number">5</span>
+                            <p class="lp-how__item-text">
+                                Поражать окружающих своими способностями
+                            </p>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="lp-banner">
+            <div class="mnemonics__banner-container lp-banner__container container">
+                <div class="mnemonics__banner lp-banner__banner">
+                    <p class="lp-banner__text lp-banner__text--size-small">
+                        Станьте лучшей версией себя с&nbsp;курсом &laquo;Мнемотехники&raquo; от&nbsp;Викиум
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="lp-action mnemonics-action">
+        <div class="container">
+            <article class="lp-action__card lp-action__card--basic">
+                <div class="lp-action__card-heading lp-action__card-heading--label-new mnemonics-action__card-heading">
+                    <h4 class="lp-action__title">
+                        <span class="lp-action__start-text">старт продаж</span>
+                        <span class="mnemonics-action__title">Курс &laquo;Мнемотехники&raquo;</span>
+                    </h4>
+                    <div class="lp-action__label">
+                        <span>NEW</span>
+                    </div>
+                </div>
+                <div class="lp-action__card-content">
+                    <p class="lp-action__old-price">
+                        3990&nbsp;
+                        <span class="lp-action__currency">₽</span>
+                    </p>
+                    <p class="lp-action__price">
+                        <b>990</b>&nbsp;
+                        <span class="lp-action__currency">₽</span>
+                    </p>
+                    <a class="lp-action__btn btn btn--yellow lp-floating-header-end" href="#">
+                        ВКЛЮЧИТЬ
+                    </a>
+                    <p class="lp-action__patch mnemonics-action__patch">
+                        Запуск в&nbsp;сентябре&nbsp;2018!
+                    </p>
+                </div>
+            </article>
+            <p class="lp-action__caption">
+                Курс &laquo;Мнемотехники&raquo;&nbsp;&mdash; это отдельный продукт, не&nbsp;входит ни&nbsp;в&nbsp;один тарифный план
+            </p>
+        </div>
+    </section>
+</body>

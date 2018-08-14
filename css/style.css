@@ -1284,14 +1284,10 @@ a {
         .about__certificate img {
           position: relative;
           width: 100%;
-          -webkit-filter: grayscale(100%);
-                  filter: grayscale(100%);
-          transition: transform 0.2s ease-in, -webkit-filter 0.2s ease-in;
-          transition: transform 0.2s ease-in, filter 0.2s ease-in;
-          transition: transform 0.2s ease-in, filter 0.2s ease-in, -webkit-filter 0.2s ease-in; }
+          filter: grayscale(100%);
+          transition: transform 0.2s ease-in, filter 0.2s ease-in; }
         .about__certificate:hover img {
-          -webkit-filter: grayscale(0);
-                  filter: grayscale(0);
+          filter: grayscale(0);
           transform: translate3d(0, -5px, 0); } }
   @media (min-width: 960px) {
     .about {
