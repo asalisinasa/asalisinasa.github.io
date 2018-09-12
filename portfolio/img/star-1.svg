@@ -1,4 +1,0 @@
-<svg class="speed-sort__star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 114">
-    <path class="speed-sort__star-outer" fill="#4e5c7b" d="M216.3,6.83c2.2-.57-200.34,100.09-205,104-3.53,3-7.74,1.21-8.83-1A5.77,5.77,0,0,1,6.65,102C14.23,100.16,209.77,8.51,216.3,6.83Z"/>
-    <path class="speed-sort__star-inner" fill="#8aa9c2" d="M208.2,10.95c1.63-.42-193.28,95.14-197.32,98.3-2.7,2.11-5.35,1-6.16-.71s0-4.28,3.21-5.35C13.34,101.41,203.35,12.2,208.2,10.95Z"/><ellipse class="speed-sort__star-ending" fill="#fff" cx="8.07" cy="106.92" rx="5.16" ry="3.6" transform="translate(-45.97 14.31) rotate(-25.95)"/>
-</svg>
